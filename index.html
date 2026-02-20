@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sentient Architect | Forensic Governance</title>
+    <title>The Sentient Architect | Forensic Governance & Capital Assurance</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -29,6 +29,17 @@
 </head>
 <body class="antialiased selection:bg-yellow-500 selection:text-black">
 
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
+        <div class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></div>
+        <div class="hidden md:flex gap-8 text-xs font-mono uppercase tracking-widest">
+            <a href="services/index.html" class="hover:text-yellow-500 transition-colors">Services</a>
+            <a href="#missions" class="hover:text-yellow-500 transition-colors">Upcoming Missions</a>
+            <a href="https://a.co/d/089Xr06d" class="hover:text-yellow-500 transition-colors">The Book</a>
+        </div>
+        <a href="services/index.html#diagnostic" class="gold-bg text-black text-xs font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all">10-DAY AUDIT</a>
+    </nav>
+
     <!-- HERO SECTION -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-20 pb-20 hero-bg">
         <div class="absolute inset-0 z-0 hero-overlay"></div>
@@ -39,25 +50,24 @@
             </div>
             
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight mb-6">
-                Stop Reading Reports. <br>
+                Stop Reading Status Reports. <br>
                 <span class="gold-text glow-text">Start Adjudicating the Physics.</span>
             </h1>
             
-            <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto font-light">
-                The "Manual Era" of project management is dead. <br>
-                It is time to Decommission the Admin Tax.
+            <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                The "Manual Era" of project management is dead. It is time to decommission the Admin Tax and close the Truth Gap.
             </p>
             
             <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <a href="#products" class="gold-bg text-black font-bold py-4 px-8 rounded-lg text-lg hover:bg-yellow-500 transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
-                    ENTER THE WAR ROOM
+                <a href="services/index.html" class="gold-bg text-black font-bold py-4 px-8 rounded-lg text-lg hover:bg-yellow-500 transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                    VIEW SERVICES
                 </a>
                 <a href="https://a.co/d/089Xr06d" class="border border-gray-600 text-gray-300 font-medium py-4 px-8 rounded-lg text-lg hover:border-white hover:text-white transition-all">
                     GET THE BLUEPRINT
                 </a>
             </div>
             
-            <p class="mt-6 text-sm text-gray-500 font-mono uppercase tracking-tighter">
+            <p class="mt-8 text-sm text-gray-500 font-mono uppercase tracking-tighter">
                 <span class="text-red-500 animate-pulse">●</span> Forensic Governance Operating System (v2026.3)
             </p>
         </div>
@@ -75,122 +85,73 @@
         </div>
     </div>
 
-    <!-- THE PROBLEM GRID -->
-    <section class="py-24 bg-zinc-950">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-sm font-mono text-gray-500 mb-12 uppercase tracking-widest text-center">The Structural Failure</h2>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-panel p-8 rounded-xl border-red-900/30">
-                    <div class="text-4xl mb-4">🍉</div>
-                    <h3 class="text-xl font-bold text-white mb-3">The Watermelon Project</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">
-                        Green on the outside. Rotting Red on the inside. dashboards lie because humans optimize for survival, not transparency.
-                    </p>
-                </div>
-
-                <div class="glass-panel p-8 rounded-xl border-yellow-900/30">
-                    <div class="text-4xl mb-4">🔎</div>
-                    <h3 class="text-xl font-bold text-white mb-3">The Truth Gap</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">
-                        The fatal distance between Engineering Reality and Executive Reporting. We close the gap by adjudicating the Digital Exhaust.
-                    </p>
-                </div>
-
-                <div class="glass-panel p-8 rounded-xl border-green-900/30">
-                    <div class="text-4xl mb-4">🧟</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Zombie Spend</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">
-                        Capital incinerated on technically insolvent workstreams. Every dollar of "Silence" destroys $10 of Enterprise Value.
-                    </p>
+    <!-- THE TRUTH GAP VISUAL -->
+    <section class="py-24 bg-black">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="relative rounded-xl overflow-hidden border border-gray-800 shadow-2xl group">
+                <img src="./truth-gap.jpg" alt="The Truth Gap Visualization" class="w-full opacity-90 group-hover:opacity-100 transition-opacity duration-500">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8 text-center">
+                    <p class="font-mono text-sm text-yellow-500">FIG 1.0: ADJUDICATING THE TRUTH GAP</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PRICING / PRODUCTS SECTION -->
-    <section class="py-24 bg-zinc-900 border-t border-gray-800" id="products">
+    <!-- UPCOMING MISSIONS (LUMA) -->
+    <section class="py-24 bg-zinc-950 border-t border-gray-900" id="missions">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-4 text-white uppercase tracking-tight">Choose Your Mission</h2>
-            <p class="text-center text-gray-400 mb-16 max-w-2xl mx-auto">From Foundational Knowledge to Full System Installation.</p>
+            <h2 class="text-4xl font-bold text-center mb-4 text-white">Upcoming War Rooms</h2>
+            <p class="text-center text-gray-400 mb-16 max-w-2xl mx-auto font-mono text-sm uppercase tracking-widest">Select your entry point into the Sentient Era.</p>
             
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
                 
-                <!-- TIER 1: THE MANUAL -->
-                <div class="p-8 border border-gray-700 rounded-xl bg-black hover:border-gray-500 transition-all flex flex-col">
-                    <div class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-4">The Theory</div>
-                    <h3 class="text-2xl font-bold text-white mb-2">The Manual</h3>
-                    <div class="text-3xl font-bold text-white mb-6">$16.99</div>
-                    <p class="text-gray-400 text-sm mb-8 flex-grow">
-                        The #1 Bestselling blueprint. Learn the logic behind the "Zero-Tech Stack" and the end of the Admin Tax.
+                <!-- MISSION 1: EXEC BRIEFING -->
+                <div class="glass-panel p-10 rounded-2xl border-yellow-600/30 flex flex-col items-center text-center">
+                    <div class="text-xs font-mono text-yellow-500 mb-4 uppercase tracking-widest">March 19 // C-Suite Only</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Executive Briefing</h3>
+                    <p class="text-gray-400 text-sm mb-8">
+                        A 90-minute forensic investigation into Fiduciary Liability and Zombie Spend. Stop being the last to know your project is a Watermelon.
                     </p>
-                    <a href="https://a.co/d/089Xr06d" class="block w-full py-3 text-center border border-gray-600 text-white rounded-lg hover:bg-gray-800 transition-all">
-                        Buy on Amazon
-                    </a>
+                    <div class="text-3xl font-bold gold-text mb-8">$495</div>
+                    <a href="https://luma.com/6enr1aek" class="gold-bg text-black font-bold py-3 px-10 rounded-lg hover:bg-yellow-500 transition-all w-full">SECURE BRIEFING</a>
                 </div>
 
-                <!-- TIER 2: THE EXECUTIVE BRIEFING -->
-                <div class="p-8 border border-yellow-600 rounded-xl bg-zinc-900 relative shadow-[0_0_30px_rgba(212,175,55,0.1)] transform md:-translate-y-4 flex flex-col">
-                    <div class="absolute top-0 right-0 bg-yellow-600 text-black text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">CIO STRATEGY</div>
-                    <div class="text-xs font-mono text-yellow-500 uppercase tracking-widest mb-4">90-Minute Briefing</div>
-                    <h3 class="text-2xl font-bold text-white mb-2">The Briefing</h3>
-                    <div class="text-3xl font-bold text-white mb-6">$495</div>
-                    <p class="text-gray-300 text-sm mb-6">
-                        Specifically for C-Suite leaders. Learn to detect the "Truth Gap" and quantify Value Erosion in 10 minutes.
+                <!-- MISSION 2: COHORT 3 -->
+                <div class="glass-panel p-10 rounded-2xl border-green-600/30 flex flex-col items-center text-center">
+                    <div class="text-xs font-mono text-green-500 mb-4 uppercase tracking-widest">March 26 // Operator Class</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">The Masterclass</h3>
+                    <p class="text-gray-400 text-sm mb-8">
+                        4-Hour immersive forensic audit. Learn to build the Project Brain and adjudicate Digital Exhaust. The path to Fractional Governance.
                     </p>
-                    <ul class="text-sm text-gray-400 mb-8 space-y-3 flex-grow">
-                        <li class="flex items-center gap-2"><span class="text-yellow-500">✓</span> Fiduciary Liability Analysis</li>
-                        <li class="flex items-center gap-2"><span class="text-yellow-500">✓</span> Kill vs. Pivot Adjudication</li>
-                        <li class="flex items-center gap-2"><span class="text-yellow-500">✓</span> Decommissioning the Theater</li>
-                    </ul>
-                    <p class="text-xs text-yellow-500 font-mono mb-4 text-center">
-                        ● Date: March 19, 2026
-                    </p>
-                    <a href="https://luma.com/6enr1aek" class="block w-full py-3 text-center bg-yellow-600 text-black font-bold rounded-lg hover:bg-yellow-500 transition-all">
-                        Secure Briefing
-                    </a>
-                </div>
-
-                <!-- TIER 3: THE WAR ROOM (COHORT 3) -->
-                <div class="p-8 border border-gray-700 rounded-xl bg-black hover:border-white transition-all flex flex-col">
-                    <div class="text-xs font-mono text-green-500 uppercase tracking-widest mb-4">Operator Masterclass</div>
-                    <h3 class="text-2xl font-bold text-white mb-2">The War Room</h3>
-                    <div class="text-3xl font-bold text-white mb-6">$995</div>
-                    <p class="text-gray-400 text-sm mb-8 flex-grow">
-                        4-Hour intensive. Learn to build and run the Project Brain. This is the path to Fractional Governance ($12k/mo).
-                    </p>
-                    <ul class="text-sm text-gray-500 mb-8 space-y-2">
-                        <li>• The Ingestion Pipeline</li>
-                        <li>• Adjudication Protocols</li>
-                        <li>• Signals Report Generation</li>
-                    </ul>
-                    <p class="text-xs text-red-500 font-mono mb-4 text-center">
-                        ● Cohort 3: March 26, 2026
-                    </p>
-                    <a href="https://luma.com/aim64nk3" class="block w-full py-3 text-center border border-white text-white rounded-lg hover:bg-white hover:text-black transition-all">
-                        Join Cohort 3
-                    </a>
+                    <div class="text-3xl font-bold text-green-500 mb-8">$995</div>
+                    <a href="https://luma.com/aim64nk3" class="bg-green-600 text-black font-bold py-3 px-10 rounded-lg hover:bg-green-500 transition-all w-full">JOIN COHORT 3</a>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- THE MISSION -->
+    <!-- THE AUTHOR -->
     <section class="py-24 bg-black border-t border-gray-900">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-6 text-white uppercase italic">We don't report the news. <br>We predict the weather.</h2>
-            <p class="text-gray-500 font-mono text-lg leading-relaxed">
-                Archaeology is a cost center. Meteorology is a strategic asset. <br>
-                Choose the Right Lane.
-            </p>
+        <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+            <div class="w-40 h-40 shrink-0">
+                <img src="./profile.jpg" alt="Michael Kaplan" class="w-full h-full object-cover rounded-full border-4 border-zinc-800 shadow-2xl">
+            </div>
+            <div class="text-center md:text-left">
+                <h3 class="text-2xl font-bold text-white mb-2">Michael Kaplan</h3>
+                <p class="gold-text font-mono text-xs mb-4 uppercase tracking-widest">Principal Governance Architect</p>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    Author of <em>The Sentient PMO</em>. 25 years in the trenches of the Pentagon and Wall Street. I don't manage projects; I architect institutional stability.
+                </p>
+                <a href="https://www.linkedin.com/in/makplan/" class="text-sm text-yellow-600 hover:text-yellow-500 font-bold underline decoration-yellow-900 underline-offset-4">CONNECT ON LINKEDIN &rarr;</a>
+            </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="py-12 border-t border-gray-900 text-center bg-black">
-        <p class="text-gray-600 text-sm">
-            &copy; 2026 MAKCON LLC. Home of The Sentient Architect.
+        <p class="text-gray-600 text-xs font-mono uppercase tracking-widest">
+            &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT // CLASS DISMISSED.
         </p>
     </footer>
 
