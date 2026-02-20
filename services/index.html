@@ -13,17 +13,20 @@
         .gold-bg { background-color: #D4AF37; }
         .gold-border { border-color: #D4AF37; border-width: 1px; }
         .glass-panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
-        .glow-blue { box-shadow: 0 0 20px rgba(0, 255, 255, 0.1); }
-        .glow-gold { box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); }
+        .glow-blue { box-shadow: 0 0 30px rgba(0, 255, 255, 0.05); }
+        .glow-gold { box-shadow: 0 0 30px rgba(212, 175, 55, 0.15); }
         html { scroll-behavior: smooth; }
         .hero-bg {
-            background-image: url('../hero-bg.jpg'); /* Points to root image */
+            background-image: url('../hero-bg.jpg');
             background-size: cover;
             background-position: center;
         }
+        .hero-overlay {
+            background: radial-gradient(circle, rgba(10,10,10,0.5) 0%, rgba(10,10,10,1) 100%);
+        }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased selection:bg-yellow-500 selection:text-black">
 
     <!-- NAVIGATION -->
     <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
@@ -34,104 +37,154 @@
             <a href="#fractional" class="hover:text-yellow-500 transition-colors">Fractional Governance</a>
             <a href="#os" class="hover:text-yellow-500 transition-colors">Sentient OS</a>
         </div>
-        <a href="#briefing" class="gold-bg text-black text-xs font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all">SCHEDULE BRIEFING</a>
+        <a href="https://outlook.office.com/book/SentientPMOBriefings@sentientpmo.com/" class="gold-bg text-black text-xs font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all shadow-[0_0_15px_rgba(212,175,55,0.3)]">SCHEDULE BRIEFING</a>
     </nav>
 
     <!-- HEADER SECTION -->
-    <header class="pt-40 pb-20 px-6 text-center hero-bg">
+    <header class="relative pt-48 pb-32 px-6 text-center hero-bg border-b border-zinc-800">
+        <div class="absolute inset-0 z-0 hero-overlay"></div>
         <div class="max-w-4xl mx-auto relative z-10">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-8 tracking-tight leading-tight">
                 Decommission the Theater. <br>
-                <span class="gold-text">Install the Radar.</span>
+                <span class="gold-text glow-text uppercase italic">Install the Radar.</span>
             </h1>
-            <p class="text-xl text-gray-400 font-light max-w-2xl mx-auto">
-                We provide high-fidelity Forensic Governance for the C-Suite. No interviews. No meetings. No "Admin Tax." Just the ground truth.
+            <p class="text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
+                High-fidelity Forensic Governance for the C-Suite. <br>
+                Bypass the human filters and adjudicate the ground truth.
             </p>
         </div>
     </header>
 
     <!-- SERVICE 01: THE 10-DAY DIAGNOSTIC -->
-    <section id="diagnostic" class="py-24 px-6 border-t border-gray-900 bg-black">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <div class="inline-block px-3 py-1 mb-6 text-[10px] font-mono tracking-widest text-yellow-500 border border-yellow-900 rounded-full bg-yellow-900/10">
-                    SERVICE 01 // THE WEDGE
+    <section id="diagnostic" class="py-32 px-6 bg-black">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-start">
+            <div class="sticky top-32">
+                <div class="inline-block px-3 py-1 mb-8 text-[10px] font-mono tracking-widest text-yellow-500 border border-yellow-900 rounded-full bg-yellow-900/10 uppercase">
+                    Service 01 // The Wedge
                 </div>
-                <h2 class="text-3xl md:text-5xl font-bold mb-8">The 10-Day <br><span class="gold-text italic">Forensic Diagnostic</span></h2>
-                <p class="text-gray-400 text-lg mb-8 leading-relaxed">
-                    You suspect a high-stakes project is a "Watermelon"—Green on the outside, Red on the inside. You need ground truth to make a <span class="text-white font-bold">Kill or Pivot</span> decision before the budget is incinerated.
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">The 10-Day <br><span class="gold-text italic underline decoration-yellow-900 underline-offset-8">Forensic Diagnostic</span></h2>
+                <p class="text-gray-400 text-lg mb-10 leading-relaxed">
+                    You suspect a high-stakes initiative is a "Watermelon"—Green on the outside, Red on the inside. We run an MRI on your <strong>Digital Exhaust</strong> to find the Truth Gap before the capital is incinerated.
                 </p>
-                <div class="p-6 gold-border rounded-lg bg-yellow-900/5">
-                    <p class="text-white font-bold text-lg">Outcome: A 5-Page Intelligence Briefing + The Decision Memorandum.</p>
+                
+                <div class="space-y-6 mb-12">
+                    <div class="flex items-start gap-4">
+                        <span class="text-yellow-500 font-mono font-bold">01/</span>
+                        <p class="text-sm text-gray-300"><strong>Zero-Interference Ingestion:</strong> We inhale transcripts, logs, and vendor artifacts without a single disruptive interview or meeting.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="text-yellow-500 font-mono font-bold">02/</span>
+                        <p class="text-sm text-gray-300"><strong>Linguistic Adjudication:</strong> We detect the "softening of verbs" and vendor confidence decay weeks before a human admits failure.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="text-yellow-500 font-mono font-bold">03/</span>
+                        <p class="text-sm text-gray-300"><strong>The Zombie Audit:</strong> We quantify the exact dollar amount of "Hope" currently burning in your portfolio.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 border border-zinc-800 rounded-xl bg-zinc-900/40">
+                    <span class="text-[10px] font-mono text-gray-500 uppercase block mb-3">Deliverable</span>
+                    <p class="text-white font-bold text-lg">A 5-Page Intelligence Briefing + The Decision Memorandum.</p>
                 </div>
             </div>
-            <div class="glass-panel p-8 rounded-2xl glow-gold">
-                <div class="text-center mb-8 border-b border-gray-800 pb-8">
-                    <h3 class="text-2xl font-bold mb-2">The Diagnostic Fee</h3>
-                    <div class="text-5xl font-extrabold gold-text">$15,000</div>
-                    <p class="text-[10px] font-mono text-gray-500 mt-2 uppercase tracking-widest text-center">Fixed Fee // 10-Day Mission</p>
+
+            <div class="glass-panel p-10 rounded-3xl glow-gold border-yellow-600/20">
+                <div class="text-center mb-10 border-b border-zinc-800 pb-10">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Diagnostic Mission</h3>
+                    <div class="text-6xl font-extrabold gold-text">$15,000</div>
+                    <p class="text-[10px] font-mono text-gray-500 mt-4 uppercase tracking-widest">Fixed Fee // 10-Day Tactical Sprint</p>
                 </div>
-                <ul class="space-y-4 mb-10 text-sm text-gray-400">
-                    <li class="flex items-center gap-2">✓ Forensic Linguistic Scan</li>
-                    <li class="flex items-center gap-2">✓ Zombie Spend Calculation</li>
-                    <li class="flex items-center gap-2">✓ Fiduciary Risk Assessment</li>
+                <ul class="space-y-5 mb-12 text-sm text-gray-400 font-light">
+                    <li class="flex items-center gap-3"><span class="text-yellow-500 text-lg">✓</span> Identification of the 38-Day Truth Gap</li>
+                    <li class="flex items-center gap-3"><span class="text-yellow-500 text-lg">✓</span> Calculation of EBITDA Value Erosion</li>
+                    <li class="flex items-center gap-3"><span class="text-yellow-500 text-lg">✓</span> Three "Sniper Questions" for your Board</li>
+                    <li class="flex items-center gap-3"><span class="text-yellow-500 text-lg">✓</span> 100% Data Sovereignty & Discretion</li>
                 </ul>
-                <a href="mailto:michael@sentientpmo.com?subject=Mission: Diagnostic" class="block w-full text-center gold-bg text-black font-bold py-4 rounded-lg hover:bg-yellow-500 transition-all">SECURE THE PERIMETER</a>
+                <a href="https://outlook.office.com/book/SentientPMOBriefings@sentientpmo.com/" class="block w-full text-center gold-bg text-black font-extrabold py-5 rounded-xl hover:bg-yellow-500 transition-all transform hover:scale-[1.02] shadow-xl">
+                    SCHEDULE FORENSIC BRIEFING
+                </a>
             </div>
         </div>
     </section>
 
     <!-- SERVICE 02: FRACTIONAL GOVERNANCE -->
-    <section id="fractional" class="py-24 px-6 bg-zinc-950">
+    <section id="fractional" class="py-32 px-6 bg-zinc-950 border-y border-zinc-900">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-20">
-                <div class="inline-block px-3 py-1 mb-6 text-[10px] font-mono tracking-widest text-cyan-400 border border-cyan-900 rounded-full bg-cyan-900/10">
-                    SERVICE 02 // THE RETAINER
+            <div class="text-center mb-24">
+                <div class="inline-block px-3 py-1 mb-8 text-[10px] font-mono tracking-widest text-cyan-400 border border-cyan-900 rounded-full bg-cyan-900/10 uppercase">
+                    Service 02 // The Retainer
                 </div>
-                <h2 class="text-3xl md:text-5xl font-bold">Fractional <br><span class="text-cyan-400 italic">Forensic Governance</span></h2>
+                <h2 class="text-4xl md:text-6xl font-bold text-white">Fractional <br><span class="text-cyan-400 italic">Forensic Governance</span></h2>
+                <p class="text-gray-500 mt-8 max-w-2xl mx-auto font-light text-lg">Stop practicing Archaeology. Start practicing Meteorology. We become your outsourced System of Intelligence.</p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="glass-panel p-8 rounded-xl glow-blue">
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div class="glass-panel p-10 rounded-2xl glow-blue border-cyan-900/30">
+                    <div class="text-3xl mb-6">📡</div>
                     <h3 class="text-white font-bold text-xl mb-4">Meteorology Report</h3>
-                    <p class="text-gray-400 text-sm">Weekly AI-driven predictions of the storm before the budget is burned.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">Weekly AI-driven predictions. We detect the storm clouds in the engineering logs before the budget is burned.</p>
                 </div>
-                <div class="glass-panel p-8 rounded-xl glow-blue">
-                    <h3 class="text-white font-bold text-xl mb-4">Linguistic Decay</h3>
-                    <p class="text-gray-400 text-sm">Real-time monitoring of technical transcripts to flag vendor erosion.</p>
+                <div class="glass-panel p-10 rounded-2xl glow-blue border-cyan-900/30">
+                    <div class="text-3xl mb-6">🔬</div>
+                    <h3 class="text-white font-bold text-xl mb-4">Continuous Audit</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">We maintain a permanent <strong>Project Bios</strong>—a chronological stack of truth that makes it impossible for risk to go silent.</p>
                 </div>
-                <div class="glass-panel p-8 rounded-xl glow-blue">
+                <div class="glass-panel p-10 rounded-2xl glow-blue border-cyan-900/30">
+                    <div class="text-3xl mb-6">🎯</div>
                     <h3 class="text-white font-bold text-xl mb-4">The Sniper Briefing</h3>
-                    <p class="text-gray-400 text-sm">Specific technical questions for your SteerCo to force the truth to surface.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">Every Friday, you receive the specific data points needed to force the truth to the surface during Steering Committees.</p>
                 </div>
             </div>
 
-            <div class="mt-16 text-center">
-                <div class="text-4xl font-bold text-white mb-8">$12,500 <span class="text-lg text-gray-600">/ MONTH</span></div>
-                <a href="mailto:michael@sentientpmo.com?subject=Mission: Fractional" class="border border-cyan-500 text-cyan-400 font-bold py-3 px-10 rounded-lg hover:bg-cyan-500 hover:text-black transition-all">REQUEST ADVISOR</a>
+            <div class="mt-24 text-center p-12 border border-zinc-800 rounded-3xl bg-zinc-900/20">
+                <div class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-4">Portfolio Oversight Retainer</div>
+                <div class="text-5xl font-bold text-white mb-10">$12,500 <span class="text-xl text-zinc-700">/ MONTH</span></div>
+                <a href="https://outlook.office.com/book/SentientPMOBriefings@sentientpmo.com/" class="border-2 border-cyan-500 text-cyan-400 font-black py-4 px-12 rounded-xl hover:bg-cyan-500 hover:text-black transition-all shadow-lg">
+                    OPEN A CHANNEL
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- THE AUTHOR -->
-    <section class="py-24 bg-black border-t border-gray-900">
-        <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
-            <div class="w-32 h-32 shrink-0">
-                <img src="../profile.jpg" alt="Michael Kaplan" class="w-full h-full object-cover rounded-full border-2 gold-border">
+    <!-- SERVICE 03: THE SENTIENT OS -->
+    <section id="os" class="py-32 px-6 bg-black">
+        <div class="max-w-4xl mx-auto text-center">
+             <div class="inline-block px-3 py-1 mb-8 text-[10px] font-mono tracking-widest text-green-500 border border-green-900 rounded-full bg-green-900/10 uppercase">
+                Service 03 // The Transformation
             </div>
-            <div class="text-center md:text-left">
-                <h3 class="text-2xl font-bold text-white mb-2">Michael Kaplan</h3>
-                <p class="gold-text font-mono text-xs mb-4 uppercase tracking-widest">Principal Governance Architect</p>
-                <p class="text-gray-400 text-sm">
-                    I dismantle "Manual Era" failures and install AI-Enabled Forensic Governance.
-                </p>
+            <h2 class="text-4xl md:text-6xl font-bold mb-8 text-white">The Sentient OS <br><span class="text-green-500 italic">Installation</span></h2>
+            <p class="text-gray-400 text-xl font-light mb-16 leading-relaxed">
+                We decommission your legacy "Manual Era" PMO. We install the <strong>Refinery</strong> and <strong>Generator</strong> protocols directly into your secure infrastructure to repeal the Admin Tax forever.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-[10px] font-mono text-zinc-500 uppercase tracking-widest">
+                <div class="p-6 border border-zinc-800 rounded-lg bg-zinc-900/10">Zero-Tech Stack Setup</div>
+                <div class="p-6 border border-zinc-800 rounded-lg bg-zinc-900/10">Prompt Engine (v5.0)</div>
+                <div class="p-6 border border-zinc-800 rounded-lg bg-zinc-900/10">Architect Certification</div>
+                <div class="p-6 border border-zinc-800 rounded-lg bg-zinc-900/10">Governance Adjudication</div>
+            </div>
+            <p class="mt-16 text-zinc-600 text-xs italic font-mono uppercase tracking-widest italic">Custom Enterprise Quote Required Based on Portfolio Scale.</p>
+        </div>
+    </section>
+
+    <!-- THE MISSION BRIEFING CTA -->
+    <section class="py-40 px-6 bg-gradient-to-t from-zinc-900 to-black text-center">
+        <div class="max-w-4xl mx-auto glass-panel p-16 rounded-[3rem] border-yellow-600/20 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 gold-bg opacity-30"></div>
+            <h2 class="text-5xl font-extrabold mb-8 text-white tracking-tight">Ready to close the <span class="gold-text italic">Truth Gap?</span></h2>
+            <p class="text-gray-400 mb-12 text-xl font-light max-w-2xl mx-auto">
+                Schedule a confidential 15-minute 1-on-1 intelligence briefing with Michael Kaplan.
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center">
+                <a href="https://outlook.office.com/book/SentientPMOBriefings@sentientpmo.com/" class="gold-bg text-black font-black py-5 px-12 rounded-2xl hover:bg-yellow-500 transition-all shadow-xl text-lg">SCHEDULE 1-ON-1 BRIEFING</a>
+                <a href="https://luma.com/6enr1aek" class="border border-zinc-700 text-zinc-300 font-bold py-5 px-12 rounded-2xl hover:border-white hover:text-white transition-all text-lg">MARCH 19TH WAR ROOM</a>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-12 border-t border-gray-900 text-center text-gray-600 text-[10px] font-mono uppercase tracking-widest bg-black">
-        &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT
+    <footer class="py-16 border-t border-zinc-900 text-center text-zinc-600 text-[10px] font-mono uppercase tracking-[0.3em] bg-black">
+        <div class="w-20 h-1 gold-bg mx-auto mb-8 opacity-20"></div>
+        &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT // CLASS DISMISSED.
     </footer>
 
 </body>
