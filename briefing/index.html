@@ -21,11 +21,15 @@
     <!-- NAVIGATION -->
     <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
         <div class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></div>
-        <a href="../index.html" class="text-xs font-mono uppercase tracking-widest hover:text-yellow-500 transition-colors">Return to Base</a>
+        <div class="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
+            <a href="../index.html" class="hover:text-yellow-500 transition-colors">Home</a>
+            <a href="../services/index.html" class="hover:text-yellow-500 transition-colors">Services</a>
+        </div>
+        <a href="https://luma.com/6enr1aek" class="gold-bg text-black text-[10px] font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all">MARCH 19TH WAR ROOM</a>
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="pt-40 pb-20 px-6 text-center">
+    <section class="pt-40 pb-16 px-6 text-center">
         <div class="max-w-4xl mx-auto">
             <div class="inline-block px-3 py-1 mb-6 text-[10px] font-mono tracking-widest text-red-500 border border-red-900 rounded-full bg-red-900/10 uppercase">
                 Classification: Executive Eyes Only
@@ -35,86 +39,100 @@
                 <span class="gold-text">Audit the Reality.</span>
             </h1>
             <p class="text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
-                Access the 33-minute Forensic Briefing: <br>
+                Unsealing the 33-minute Forensic Briefing: <br>
                 <strong>How to find the Truth Gap and Kill Zombie Spend.</strong>
             </p>
         </div>
     </section>
 
-    <!-- VIDEO GATE SECTION -->
+    <!-- BRIEFING GATE SECTION -->
     <section class="pb-32 px-6">
-        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center bg-zinc-900/50 p-8 md:p-12 rounded-[2rem] border border-zinc-800 glow-red">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-5 gap-8 items-stretch">
             
-            <!-- VIDEO PLACEHOLDER / THUMBNAIL -->
-            <div class="relative aspect-video bg-black rounded-xl overflow-hidden border border-zinc-700 group shadow-2xl">
-                <div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:opacity-40 transition-opacity" style="background-image: url('../truth-gap.jpg');"></div>
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-md border border-white/20 group-hover:scale-110 transition-transform">
-                        <svg class="w-8 h-8 text-white translate-x-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.333-5.89a1.5 1.5 0 000-2.538L6.3 2.841z"></path></svg>
+            <!-- VIDEO AREA (3/5 of width) -->
+            <div class="lg:col-span-3 glass-panel p-4 rounded-3xl glow-red flex flex-col justify-center">
+                <div class="relative aspect-video bg-black rounded-xl overflow-hidden border border-zinc-800 shadow-2xl">
+                    <!-- VIMEO EMBED -->
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/1167317032?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                                frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                title="The Sentient Architect: A 33-Minute Forensic Briefing">
+                        </iframe>
                     </div>
-                </div>
-                <div class="absolute bottom-4 left-4 font-mono text-[10px] text-gray-400 uppercase tracking-widest">
-                    Duration: 33:14 // 4 Protocols
+                    <script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
             </div>
 
-            <!-- THE FORM -->
-            <div id="capture-form">
-                <h2 class="text-2xl font-bold mb-6">Request Access</h2>
-                <form action="#" class="space-y-4">
+            <!-- THE FORM AREA (2/5 of width) -->
+            <div class="lg:col-span-2 glass-panel p-10 rounded-3xl border-zinc-800 flex flex-col justify-center">
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold mb-2">Access Intelligence</h2>
+                    <p class="text-xs text-gray-500 font-mono uppercase tracking-widest">Entry Protocol: Adjudication Required</p>
+                </div>
+
+                <!-- Replace '#' with your Formspree or Netlify endpoint later -->
+                <form action="#" method="POST" class="space-y-6">
                     <div>
-                        <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2">Corporate Email</label>
-                        <input type="email" required class="w-full bg-black border border-zinc-800 p-3 rounded focus:border-yellow-600 outline-none transition-all" placeholder="name@company.com">
+                        <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2 tracking-widest">Corporate Email</label>
+                        <input type="email" name="email" required class="w-full bg-black border border-zinc-800 p-4 rounded-lg focus:border-yellow-600 outline-none transition-all text-sm font-light" placeholder="name@company.com">
                     </div>
+                    
                     <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2">Job Title</label>
-                            <input type="text" required class="w-full bg-black border border-zinc-800 p-3 rounded focus:border-yellow-600 outline-none transition-all" placeholder="e.g. CIO">
+                            <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2 tracking-widest">Job Title</label>
+                            <input type="text" name="title" required class="w-full bg-black border border-zinc-800 p-4 rounded-lg focus:border-yellow-600 outline-none transition-all text-sm font-light" placeholder="CIO / CFO">
                         </div>
                         <div>
-                            <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2">Company</label>
-                            <input type="text" required class="w-full bg-black border border-zinc-800 p-3 rounded focus:border-yellow-600 outline-none transition-all">
+                            <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2 tracking-widest">Company</label>
+                            <input type="text" name="company" required class="w-full bg-black border border-zinc-800 p-4 rounded-lg focus:border-yellow-600 outline-none transition-all text-sm font-light">
                         </div>
                     </div>
-                    <button type="submit" class="w-full gold-bg text-black font-black py-4 rounded-lg mt-6 hover:bg-yellow-500 transition-all shadow-lg uppercase tracking-widest text-sm">
-                        Unseal the Briefing
+
+                    <button type="submit" class="w-full gold-bg text-black font-black py-5 rounded-xl mt-4 hover:bg-yellow-500 transition-all shadow-xl uppercase tracking-[0.2em] text-xs">
+                        Acknowledge and Enter
                     </button>
-                    <p class="text-[10px] text-gray-600 mt-4 italic text-center">
-                        *Strictly for C-Suite Leaders and Strategic Stakeholders.
-                    </p>
+
+                    <div class="flex items-center gap-4 pt-6 border-t border-zinc-800">
+                        <div class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
+                        <p class="text-[10px] text-gray-500 font-mono uppercase tracking-tighter">
+                            Mission Log: 22 Veterans Cleared // 350k Signal Reach
+                        </p>
+                    </div>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- CONTENT PREVIEW -->
+    <!-- MISSION MANIFEST -->
     <section class="py-24 px-6 border-t border-zinc-900 bg-black">
         <div class="max-w-4xl mx-auto">
-            <h3 class="text-xs font-mono text-gray-500 uppercase tracking-[0.3em] mb-12 text-center">What is inside the autopsy?</h3>
-            <div class="grid md:grid-cols-2 gap-x-16 gap-y-12">
+            <h3 class="text-xs font-mono text-gray-500 uppercase tracking-[0.3em] mb-16 text-center">Unsealing the Content</h3>
+            <div class="grid md:grid-cols-2 gap-x-20 gap-y-16">
                 <div>
-                    <span class="gold-text font-mono block mb-2">01/ The Indictment</span>
-                    <p class="text-sm text-gray-400 leading-relaxed">Why the "Admin Tax" is a $3 Trillion leak in the global economy and how it blinds the boardroom.</p>
+                    <h4 class="gold-text font-mono text-sm uppercase mb-4 tracking-widest">01/ The Economic Indictment</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed font-light">Why the $3 Trillion "Admin Tax" is the default setting for the modern enterprise, and how it results in total executive blindness.</p>
                 </div>
                 <div>
-                    <span class="gold-text font-mono block mb-2">02/ The Truth Gap</span>
-                    <p class="text-sm text-gray-400 leading-relaxed">A live forensic demonstration finding a 38-day gap between technical failure and executive awareness.</p>
+                    <h4 class="gold-text font-mono text-sm uppercase mb-4 tracking-widest">02/ The Truth Gap Adjudication</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed font-light">A live forensic demonstration finding a 38-day gap between technical failure in the logs and executive awareness on the dashboard.</p>
                 </div>
                 <div>
-                    <span class="gold-text font-mono block mb-2">03/ Linguistic Decay</span>
-                    <p class="text-sm text-gray-400 leading-relaxed">How AI adjudicates the "softening of verbs" to predict failure weeks before a human admits it.</p>
+                    <h4 class="gold-text font-mono text-sm uppercase mb-4 tracking-widest">03/ Linguistic Decay Analysis</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed font-light">The clinical science of tracking how "softened verbs" in technical transcripts predict capital loss weeks before a project turns Red.</p>
                 </div>
                 <div>
-                    <span class="gold-text font-mono block mb-2">04/ The Decision Memo</span>
-                    <p class="text-sm text-gray-400 leading-relaxed">Engineering the "Pragmatic Pivot" and the "Deception Discount" to claw back project capital.</p>
+                    <h4 class="gold-text font-mono text-sm uppercase mb-4 tracking-widest">04/ The Decision Memorandum</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed font-light">Engineering the "Pragmatic Pivot" to save the audit and the "Deception Discount" to claw back capital from non-viable technical paths.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-16 border-t border-zinc-900 text-center text-zinc-600 text-[10px] font-mono uppercase tracking-[0.3em] bg-black">
-        &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT // ALL RIGHTS RESERVED
+    <footer class="py-16 border-t border-zinc-900 text-center text-zinc-600 text-[10px] font-mono uppercase tracking-[0.4em] bg-black">
+        &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT // DATA DOES NOT HAVE AN EGO.
     </footer>
 
 </body>
