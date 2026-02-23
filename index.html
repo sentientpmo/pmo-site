@@ -11,7 +11,6 @@
         .font-mono { font-family: 'JetBrains Mono', monospace; }
         .gold-text { color: #D4AF37; }
         .gold-bg { background-color: #D4AF37; }
-        .gold-border { border-color: #D4AF37; }
         .glass-panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
         .glow-text { text-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
         html { scroll-behavior: smooth; }
@@ -32,12 +31,12 @@
     <!-- NAVIGATION -->
     <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
         <div class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></div>
-        <div class="hidden md:flex gap-8 text-xs font-mono uppercase tracking-widest">
+        <div class="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
+            <a href="briefing/index.html" class="hover:text-yellow-500 transition-colors">The Briefing</a>
             <a href="services/index.html" class="hover:text-yellow-500 transition-colors">Services</a>
-            <a href="#missions" class="hover:text-yellow-500 transition-colors">Upcoming War Rooms</a>
             <a href="https://a.co/d/089Xr06d" class="hover:text-yellow-500 transition-colors">The Book</a>
         </div>
-        <a href="https://outlook.office.com/book/SentientPMOBriefings@sentientpmo.com/" class="gold-bg text-black text-xs font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all shadow-lg">1-ON-1 BRIEFING</a>
+        <a href="https://outlook.office.com/book/SentientPMOBriefings@sentientpmo.com/" class="gold-bg text-black text-[10px] font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all">1-ON-1 BRIEFING</a>
     </nav>
 
     <!-- HERO SECTION -->
@@ -45,7 +44,7 @@
         <div class="absolute inset-0 z-0 hero-overlay"></div>
         
         <div class="relative z-10 max-w-5xl mx-auto text-center">
-            <div class="inline-block px-4 py-1 mb-8 text-xs font-mono tracking-widest text-yellow-400 border border-yellow-900 rounded-full bg-yellow-900/20 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+            <div class="inline-block px-4 py-1 mb-8 text-[10px] font-mono tracking-widest text-yellow-400 border border-yellow-900 rounded-full bg-yellow-900/20 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
                 ★ #1 AMAZON BESTSELLER
             </div>
             
@@ -55,16 +54,16 @@
             </h1>
             
             <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-                The "Manual Era" of project management is dead. <br>
-                Decommission the Admin Tax. Close the Truth Gap.
+                The "Manual Era" is dead. Decommission the Admin Tax. <br>
+                Close the Truth Gap in your portfolio.
             </p>
             
             <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <a href="services/index.html" class="gold-bg text-black font-bold py-4 px-10 rounded-lg text-lg hover:bg-yellow-500 transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
-                    VIEW SERVICES
+                <a href="briefing/index.html" class="gold-bg text-black font-bold py-4 px-10 rounded-lg text-lg hover:bg-yellow-500 transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                    WATCH THE BRIEFING
                 </a>
-                <a href="https://a.co/d/089Xr06d" class="border border-gray-600 text-gray-300 font-medium py-4 px-10 rounded-lg text-lg hover:border-white hover:text-white transition-all">
-                    GET THE BOOK
+                <a href="services/index.html" class="border border-gray-600 text-gray-300 font-medium py-4 px-10 rounded-lg text-lg hover:border-white hover:text-white transition-all">
+                    VIEW SERVICES
                 </a>
             </div>
             
@@ -86,95 +85,60 @@
         </div>
     </div>
 
-    <!-- THE TRUTH GAP VISUAL -->
-    <section class="py-24 bg-black">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="relative rounded-xl overflow-hidden border border-gray-800 shadow-2xl group">
-                <img src="./truth-gap.jpg" alt="The Truth Gap Visualization" class="w-full opacity-80 group-hover:opacity-100 transition-opacity duration-700">
-                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-12 text-center">
-                    <p class="font-mono text-sm text-yellow-500 tracking-widest">ADJUDICATING THE PHYSICS OF THE WORK</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROBLEM CARDS -->
+    <!-- THE PROBLEM -->
     <section class="py-24 bg-zinc-950">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-sm font-mono text-gray-500 mb-16 uppercase tracking-[0.4em] text-center">The Executive Blind Spot</h2>
-            
             <div class="grid md:grid-cols-3 gap-12">
                 <div class="glass-panel p-10 rounded-2xl border-red-900/20">
                     <div class="text-4xl mb-6">🍉</div>
-                    <h3 class="text-xl font-bold text-white mb-4 uppercase">Watermelon Projects</h3>
+                    <h3 class="text-xl font-bold text-white mb-4 uppercase italic">Watermelons</h3>
                     <p class="text-gray-500 text-sm leading-relaxed">
-                        Green dashboards masking Red technical realities. By the time you see the failure, the capital is already incinerated.
+                        Dashboards that stay "Green" until the budget is already burned. We scan the digital exhaust to find the Red.
                     </p>
                 </div>
-
                 <div class="glass-panel p-10 rounded-2xl border-yellow-900/20">
                     <div class="text-4xl mb-6">⚙️</div>
-                    <h3 class="text-xl font-bold text-white mb-4 uppercase">The Admin Tax</h3>
+                    <h3 class="text-xl font-bold text-white mb-4 uppercase italic">The Admin Tax</h3>
                     <p class="text-gray-500 text-sm leading-relaxed">
-                        80% of your leadership capacity is burned on "Archaeology"—manual reporting on the past rather than predicting the future.
+                        Reclaim 80% of your leadership capacity by automating the "Archaeology" of manual status reporting.
                     </p>
                 </div>
-
                 <div class="glass-panel p-10 rounded-2xl border-green-900/20">
-                    <div class="text-4xl mb-6">📉</div>
-                    <h3 class="text-xl font-bold text-white mb-4 uppercase">Decision Latency</h3>
+                    <div class="text-4xl mb-6">⚖️</div>
+                    <h3 class="text-xl font-bold text-white mb-4 uppercase italic">Fiduciary Risk</h3>
                     <p class="text-gray-500 text-sm leading-relaxed">
-                        The 14-day gap between a risk on the ground and a decision in the boardroom. We close this gap in real-time.
+                        In the age of AI, ignorance of project reality is no longer a defense—it’s a choice to be negligent.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- UPCOMING MISSIONS SECTION -->
-    <section class="py-32 bg-zinc-900 border-t border-gray-800" id="missions">
+    <!-- MISSION SCHEDULE (LUMA) -->
+    <section class="py-32 bg-black border-t border-gray-900" id="missions">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-black text-center mb-4 text-white uppercase tracking-tight">Active Mission Schedule</h2>
-            <p class="text-center text-zinc-500 mb-20 max-w-2xl mx-auto font-mono text-xs uppercase tracking-[0.2em]">Deploying Forensic Governance into the field.</p>
+            <h2 class="text-4xl font-black text-center mb-16 text-white uppercase tracking-tight">Active War Rooms</h2>
             
             <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                
                 <!-- MISSION 1: EXEC BRIEFING -->
-                <div class="glass-panel p-12 rounded-3xl border-yellow-600/30 flex flex-col items-center text-center hover:bg-zinc-800/50 transition-all">
-                    <div class="text-xs font-mono text-yellow-500 mb-6 uppercase tracking-widest">March 19 // Fiduciary Intelligence</div>
-                    <h3 class="text-3xl font-extrabold text-white mb-6">Executive Briefing</h3>
+                <div class="glass-panel p-12 rounded-3xl border-yellow-600/30 text-center">
+                    <div class="text-xs font-mono text-yellow-500 mb-6 uppercase tracking-widest">March 19 // 90 Minutes</div>
+                    <h3 class="text-2xl font-extrabold text-white mb-4">Executive Briefing</h3>
                     <p class="text-gray-400 text-sm mb-10 leading-relaxed">
-                        90-minute forensic investigation into the <strong>Truth Gap</strong>. Specifically designed for CIOs, CFOs, and Board Advisors who are tired of being blindsided.
+                        Forensic investigation into the <strong>Truth Gap</strong>. Specifically for C-Suite leaders and Board Advisors.
                     </p>
-                    <div class="text-4xl font-bold gold-text mb-10">$495</div>
-                    <a href="https://luma.com/6enr1aek" class="gold-bg text-black font-black py-4 px-12 rounded-xl hover:bg-yellow-500 transition-all w-full tracking-widest">SECURE BRIEFING</a>
+                    <a href="https://luma.com/6enr1aek" class="gold-bg text-black font-black py-4 px-12 rounded-xl hover:bg-yellow-500 transition-all w-full block uppercase text-xs tracking-widest">Secure Briefing</a>
                 </div>
 
                 <!-- MISSION 2: COHORT 3 -->
-                <div class="glass-panel p-12 rounded-3xl border-green-600/30 flex flex-col items-center text-center hover:bg-zinc-800/50 transition-all">
-                    <div class="text-xs font-mono text-green-500 mb-6 uppercase tracking-widest">March 26 // Operator Masterclass</div>
-                    <h3 class="text-3xl font-extrabold text-white mb-6">Executive War Room</h3>
+                <div class="glass-panel p-12 rounded-3xl border-green-600/30 text-center">
+                    <div class="text-xs font-mono text-green-500 mb-6 uppercase tracking-widest">March 26 // 4 Hours</div>
+                    <h3 class="text-2xl font-extrabold text-white mb-4">Masterclass: Cohort 3</h3>
                     <p class="text-gray-400 text-sm mb-10 leading-relaxed">
-                        4-Hour immersive forensic audit simulation. Learn to build the <strong>Project Brain</strong> and adjudicate Digital Exhaust at scale.
+                        Intensive forensic audit training. Learn to build the <strong>Project Brain</strong> and adjudicate Digital Exhaust.
                     </p>
-                    <div class="text-4xl font-bold text-green-500 mb-10">$995</div>
-                    <a href="https://luma.com/aim64nk3" class="bg-green-600 text-black font-black py-4 px-12 rounded-xl hover:bg-green-500 transition-all w-full tracking-widest">JOIN COHORT 3</a>
+                    <a href="https://luma.com/aim64nk3" class="bg-green-600 text-black font-black py-4 px-12 rounded-xl hover:bg-green-500 transition-all w-full block uppercase text-xs tracking-widest">Join Cohort 3</a>
                 </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA / BOOKINGS -->
-    <section class="py-40 px-6 bg-black text-center border-t border-zinc-900">
-        <div class="max-w-4xl mx-auto glass-panel p-16 rounded-[3rem] border-yellow-600/20 relative shadow-2xl">
-            <h2 class="text-4xl md:text-5xl font-black mb-8 text-white tracking-tight uppercase italic">Ready to Install the Radar?</h2>
-            <p class="text-zinc-500 mb-12 text-xl font-light max-w-2xl mx-auto">
-                Decommission the "Manual Era" in your portfolio. Schedule a private 1-on-1 intelligence briefing.
-            </p>
-            <div class="flex flex-col md:flex-row gap-6 justify-center">
-                <a href="https://outlook.office.com/book/SentientPMOBriefings@sentientpmo.com/" class="gold-bg text-black font-black py-5 px-12 rounded-2xl hover:bg-yellow-500 transition-all shadow-xl text-lg">SCHEDULE 1-ON-1 BRIEFING</a>
-                <a href="services/index.html" class="border border-zinc-700 text-zinc-300 font-bold py-5 px-12 rounded-2xl hover:border-white hover:text-white transition-all text-lg uppercase tracking-widest">VIEW ALL SERVICES</a>
             </div>
         </div>
     </section>
@@ -183,10 +147,7 @@
     <footer class="py-20 border-t border-zinc-900 text-center bg-black">
         <div class="w-16 h-1 gold-bg mx-auto mb-10 opacity-30"></div>
         <p class="text-zinc-600 text-[10px] font-mono uppercase tracking-[0.5em] mb-4">
-            &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT
-        </p>
-        <p class="text-zinc-800 text-[10px] font-mono uppercase">
-            Archaeology is a cost center. Meteorology is a strategic asset.
+            &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT // DATA DOES NOT HAVE AN EGO.
         </p>
     </footer>
 
