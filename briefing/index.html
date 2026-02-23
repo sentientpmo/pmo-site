@@ -13,22 +13,16 @@
         .gold-bg { background-color: #D4AF37; }
         .glass-panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
         .glow-red { box-shadow: 0 0 30px rgba(220, 38, 38, 0.15); }
-        html { scroll-behavior: smooth; }
+        #briefing-room { display: none; } /* THE LOCK */
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- NAVIGATION -->
     <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
         <div class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></div>
-        <div class="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
-            <a href="../index.html" class="hover:text-yellow-500 transition-colors">Home</a>
-            <a href="../services/index.html" class="hover:text-yellow-500 transition-colors">Services</a>
-        </div>
-        <a href="https://luma.com/6enr1aek" class="gold-bg text-black text-[10px] font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all">MARCH 19TH WAR ROOM</a>
+        <a href="../index.html" class="text-xs font-mono uppercase tracking-widest hover:text-yellow-500 transition-colors">Return to Base</a>
     </nav>
 
-    <!-- HERO SECTION -->
     <section class="pt-40 pb-16 px-6 text-center">
         <div class="max-w-4xl mx-auto">
             <div class="inline-block px-3 py-1 mb-6 text-[10px] font-mono tracking-widest text-red-500 border border-red-900 rounded-full bg-red-900/10 uppercase">
@@ -38,101 +32,85 @@
                 Stop Managing Fictions. <br>
                 <span class="gold-text">Audit the Reality.</span>
             </h1>
-            <p class="text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
-                Unsealing the 33-minute Forensic Briefing: <br>
-                <strong>How to find the Truth Gap and Kill Zombie Spend.</strong>
-            </p>
         </div>
     </section>
 
-    <!-- BRIEFING GATE SECTION -->
-    <section class="pb-32 px-6">
-        <div class="max-w-6xl mx-auto grid lg:grid-cols-5 gap-8 items-stretch">
-            
-            <!-- VIDEO AREA (3/5 of width) -->
-            <div class="lg:col-span-3 glass-panel p-4 rounded-3xl glow-red flex flex-col justify-center">
-                <div class="relative aspect-video bg-black rounded-xl overflow-hidden border border-zinc-800 shadow-2xl">
-                    <!-- VIMEO EMBED -->
-                    <div style="padding:56.25% 0 0 0;position:relative;">
-                        <iframe src="https://player.vimeo.com/video/1167317032?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-                                frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                                referrerpolicy="strict-origin-when-cross-origin" 
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                                title="The Sentient Architect: A 33-Minute Forensic Briefing">
-                        </iframe>
-                    </div>
-                    <script src="https://player.vimeo.com/api/player.js"></script>
-                </div>
+    <!-- THE GATEKEEPER SECTION -->
+    <section class="pb-32 px-6" id="gatekeeper">
+        <div class="max-w-xl mx-auto glass-panel p-10 rounded-3xl border-zinc-800 glow-red">
+            <div class="mb-8 text-center">
+                <h2 class="text-2xl font-bold mb-2">Access Intelligence</h2>
+                <p class="text-xs text-gray-500 font-mono uppercase tracking-widest">Provide Credentials to Unseal Briefing</p>
             </div>
 
-            <!-- THE FORM AREA (2/5 of width) -->
-            <div class="lg:col-span-2 glass-panel p-10 rounded-3xl border-zinc-800 flex flex-col justify-center">
-                <div class="mb-8">
-                    <h2 class="text-2xl font-bold mb-2">Access Intelligence</h2>
-                    <p class="text-xs text-gray-500 font-mono uppercase tracking-widest">Entry Protocol: Adjudication Required</p>
+            <!-- REPLACE THE '#' BELOW WITH YOUR FORMSPREE URL -->
+            <form id="access-form" action="https://formspree.io/f/mqedgbkq" method="POST" class="space-y-6">
+                <div>
+                    <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2 tracking-widest">Corporate Email</label>
+                    <input type="email" name="email" required class="w-full bg-black border border-zinc-800 p-4 rounded-lg focus:border-yellow-600 outline-none transition-all text-sm font-light" placeholder="name@company.com">
                 </div>
-
-                <!-- Replace '#' with your Formspree or Netlify endpoint later -->
-                <form action="#" method="POST" class="space-y-6">
+                <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2 tracking-widest">Corporate Email</label>
-                        <input type="email" name="email" required class="w-full bg-black border border-zinc-800 p-4 rounded-lg focus:border-yellow-600 outline-none transition-all text-sm font-light" placeholder="name@company.com">
+                        <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2 tracking-widest">Job Title</label>
+                        <input type="text" name="title" required class="w-full bg-black border border-zinc-800 p-4 rounded-lg focus:border-yellow-600 outline-none transition-all text-sm font-light" placeholder="CIO / CFO">
                     </div>
-                    
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2 tracking-widest">Job Title</label>
-                            <input type="text" name="title" required class="w-full bg-black border border-zinc-800 p-4 rounded-lg focus:border-yellow-600 outline-none transition-all text-sm font-light" placeholder="CIO / CFO">
-                        </div>
-                        <div>
-                            <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2 tracking-widest">Company</label>
-                            <input type="text" name="company" required class="w-full bg-black border border-zinc-800 p-4 rounded-lg focus:border-yellow-600 outline-none transition-all text-sm font-light">
-                        </div>
+                    <div>
+                        <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2 tracking-widest">Company</label>
+                        <input type="text" name="company" required class="w-full bg-black border border-zinc-800 p-4 rounded-lg focus:border-yellow-600 outline-none transition-all text-sm font-light">
                     </div>
-
-                    <button type="submit" class="w-full gold-bg text-black font-black py-5 rounded-xl mt-4 hover:bg-yellow-500 transition-all shadow-xl uppercase tracking-[0.2em] text-xs">
-                        Acknowledge and Enter
-                    </button>
-
-                    <div class="flex items-center gap-4 pt-6 border-t border-zinc-800">
-                        <div class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
-                        <p class="text-[10px] text-gray-500 font-mono uppercase tracking-tighter">
-                            Mission Log: 22 Veterans Cleared // 350k Signal Reach
-                        </p>
-                    </div>
-                </form>
-            </div>
+                </div>
+                <button type="submit" class="w-full gold-bg text-black font-black py-5 rounded-xl mt-4 hover:bg-yellow-500 transition-all shadow-xl uppercase tracking-[0.2em] text-xs">
+                    Acknowledge and Enter
+                </button>
+            </form>
         </div>
     </section>
 
-    <!-- MISSION MANIFEST -->
-    <section class="py-24 px-6 border-t border-zinc-900 bg-black">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-xs font-mono text-gray-500 uppercase tracking-[0.3em] mb-16 text-center">Unsealing the Content</h3>
-            <div class="grid md:grid-cols-2 gap-x-20 gap-y-16">
-                <div>
-                    <h4 class="gold-text font-mono text-sm uppercase mb-4 tracking-widest">01/ The Economic Indictment</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed font-light">Why the $3 Trillion "Admin Tax" is the default setting for the modern enterprise, and how it results in total executive blindness.</p>
-                </div>
-                <div>
-                    <h4 class="gold-text font-mono text-sm uppercase mb-4 tracking-widest">02/ The Truth Gap Adjudication</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed font-light">A live forensic demonstration finding a 38-day gap between technical failure in the logs and executive awareness on the dashboard.</p>
-                </div>
-                <div>
-                    <h4 class="gold-text font-mono text-sm uppercase mb-4 tracking-widest">03/ Linguistic Decay Analysis</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed font-light">The clinical science of tracking how "softened verbs" in technical transcripts predict capital loss weeks before a project turns Red.</p>
-                </div>
-                <div>
-                    <h4 class="gold-text font-mono text-sm uppercase mb-4 tracking-widest">04/ The Decision Memorandum</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed font-light">Engineering the "Pragmatic Pivot" to save the audit and the "Deception Discount" to claw back capital from non-viable technical paths.</p>
+    <!-- THE HIDDEN BRIEFING ROOM -->
+    <section class="pb-32 px-6" id="briefing-room">
+        <div class="max-w-5xl mx-auto glass-panel p-6 rounded-3xl glow-red">
+            <div class="relative aspect-video bg-black rounded-xl overflow-hidden border border-zinc-800 shadow-2xl">
+                <!-- VIMEO EMBED -->
+                <div style="padding:56.25% 0 0 0;position:relative;">
+                    <iframe src="https://player.vimeo.com/video/1167317032?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                            title="The Sentient Architect: A 33-Minute Forensic Briefing">
+                    </iframe>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="mt-8 text-center">
+                <p class="text-xs text-gray-500 font-mono uppercase tracking-[0.3em]">Status: Intelligence Unsealed // Source: MAKCON Refinery</p>
+                <a href="https://luma.com/6enr1aek" class="mt-8 inline-block gold-bg text-black font-bold py-3 px-8 rounded-lg uppercase text-xs tracking-widest">Join the Live War Room</a>
+            </div>
+        </section>
 
-    <!-- FOOTER -->
+    <script>
+        // THE GATING SCRIPT
+        const form = document.getElementById('access-form');
+        const gate = document.getElementById('gatekeeper');
+        const room = document.getElementById('briefing-room');
+
+        form.onsubmit = async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            
+            // 1. SEND THE DATA TO MICHAEL
+            await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            // 2. UNSEAL THE VIDEO
+            gate.style.display = 'none';
+            room.style.display = 'block';
+            window.scrollTo(0, 0);
+        };
+    </script>
+
     <footer class="py-16 border-t border-zinc-900 text-center text-zinc-600 text-[10px] font-mono uppercase tracking-[0.4em] bg-black">
-        &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT // DATA DOES NOT HAVE AN EGO.
+        &copy; 2026 MAKCON LLC // DATA DOES NOT HAVE AN EGO.
     </footer>
 
 </body>
