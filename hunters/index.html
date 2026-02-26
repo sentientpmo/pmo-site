@@ -12,13 +12,11 @@
         .gold-text { color: #D4AF37; }
         .gold-bg { background-color: #D4AF37; }
         .glass-panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
-        .glow-text { text-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
         .glow-red { box-shadow: 0 0 30px rgba(220, 38, 38, 0.1); }
     </style>
 </head>
 <body class="antialiased selection:bg-yellow-500 selection:text-black">
 
-    <!-- NAVIGATION -->
     <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
         <div class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></div>
         <div class="flex gap-6 items-center">
@@ -27,7 +25,6 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <section class="pt-40 pb-20 px-6 max-w-5xl mx-auto text-center">
         <div class="inline-block px-4 py-1 mb-8 text-[10px] font-mono tracking-widest text-red-500 border border-red-900 rounded-full bg-red-900/20">
             MERCENARY BRIEFING // REVENUE OPS
@@ -41,37 +38,29 @@
         </p>
     </section>
 
-    <!-- MARKET WRECKAGE SECTION -->
+    <!-- MARKET WRECKAGE -->
     <section class="py-20 bg-zinc-900/50 border-y border-white/5">
         <div class="max-w-6xl mx-auto px-6 text-center">
             <h2 class="text-3xl font-black text-white mb-4 uppercase italic">The Market is Pricing the Admin Tax at Zero</h2>
             <p class="text-gray-500 mb-12 font-mono uppercase tracking-widest text-xs">Forensic Evidence: 12-Month Category Collapse</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 opacity-80 hover:opacity-100 transition-opacity">
-                <div class="glass-panel p-4 rounded-xl glow-red">
-                    <img src="../images/atlassian.png" alt="Atlassian Crash" class="rounded-lg mb-4 grayscale hover:grayscale-0 transition-all">
-                    <div class="text-red-500 font-bold text-xl">-74%</div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 opacity-80">
+                <div class="glass-panel p-6 rounded-xl border-red-900/20">
+                    <div class="text-red-500 font-bold text-2xl mb-1">-74%</div>
                     <div class="text-[10px] text-gray-500 uppercase font-mono">Atlassian (TEAM)</div>
                 </div>
-                <div class="glass-panel p-4 rounded-xl glow-red">
-                    <img src="../images/monday.png" alt="Monday.com Crash" class="rounded-lg mb-4 grayscale hover:grayscale-0 transition-all">
-                    <div class="text-red-500 font-bold text-xl">-75%</div>
+                <div class="glass-panel p-6 rounded-xl border-red-900/20">
+                    <div class="text-red-500 font-bold text-2xl mb-1">-75%</div>
                     <div class="text-[10px] text-gray-500 uppercase font-mono">Monday.com (MNDY)</div>
                 </div>
-                <div class="glass-panel p-4 rounded-xl glow-red">
-                    <img src="../images/asana.png" alt="Asana Crash" class="rounded-lg mb-4 grayscale hover:grayscale-0 transition-all">
-                    <div class="text-red-500 font-bold text-xl">-62%</div>
+                <div class="glass-panel p-6 rounded-xl border-red-900/20">
+                    <div class="text-red-500 font-bold text-2xl mb-1">-62%</div>
                     <div class="text-[10px] text-gray-500 uppercase font-mono">Asana (ASAN)</div>
                 </div>
             </div>
-            
-            <p class="mt-12 text-gray-400 max-w-2xl mx-auto italic text-sm leading-relaxed">
-                "The 'Pretty Filing Cabinet' era is over. Investors are fleeing 'Visualization' and looking for 'Verification.' This is your window to pivot from selling a sinking ship to selling the radar."
-            </p>
         </div>
     </section>
 
-    <!-- THE BOUNTY SECTION -->
+    <!-- THE BOUNTY -->
     <section class="py-24 px-6 max-w-6xl mx-auto">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -101,21 +90,14 @@
                         <div class="text-gold-text font-bold">01/</div>
                         <div>
                             <div class="text-xs font-bold uppercase tracking-widest">No Training</div>
-                            <p class="text-gray-500 text-[10px] mt-1">You either have the C-Suite network or you don't. We don't hold hands or teach sales basics.</p>
+                            <p class="text-gray-500 text-[10px] mt-1">You either have the C-Suite network or you don't. We don't hold hands.</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
                         <div class="text-gold-text font-bold">02/</div>
                         <div>
                             <div class="text-xs font-bold uppercase tracking-widest">Zero Friction</div>
-                            <p class="text-gray-500 text-[10px] mt-1">Unique Hunter Codes lock your commission for the life of the account. The logs prove the sale.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="text-gold-text font-bold">03/</div>
-                        <div>
-                            <div class="text-xs font-bold uppercase tracking-widest">Forensic Leverage</div>
-                            <p class="text-gray-500 text-[10px] mt-1">You don't sell a tool. You sell the MRI that finds the $1.5M bleed in their portfolio.</p>
+                            <p class="text-gray-500 text-[10px] mt-1">Hardcoded attribution. You get paid when the client pays. Period.</p>
                         </div>
                     </div>
                 </div>
@@ -123,28 +105,11 @@
         </div>
     </section>
 
-    <!-- CALL TO ACTION -->
     <section class="py-32 text-center bg-black border-t border-zinc-900">
-        <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-4xl font-black text-white mb-8 uppercase italic">Claim Your Hunter Code</h2>
-            <p class="text-gray-400 mb-12 leading-relaxed">
-                To activate your hardcoded attribution, email Michael Kaplan with your target sector. You will receive a unique 1% discount code that locks your 20% bounty for the life of the account.
-            </p>
-            <div class="flex flex-col items-center gap-6">
-                <a href="mailto:michael@sentientpmo.com?subject=HUNTER APPLICATION" class="gold-bg text-black font-black py-6 px-16 rounded-xl text-xl hover:bg-yellow-500 transition-all shadow-[0_0_30px_rgba(212,175,55,0.4)] uppercase tracking-widest">
-                    Apply for Hunter Code
-                </a>
-                <p class="text-zinc-600 text-[10px] font-mono uppercase tracking-widest">
-                    Already an authorized partner? <a href="arsenal.html" class="text-gold-text underline hover:text-yellow-500">Enter the Arsenal</a>
-                </p>
-            </div>
-        </div>
+        <a href="mailto:michael@sentientpmo.com?subject=HUNTER APPLICATION" class="gold-bg text-black font-black py-6 px-16 rounded-xl text-xl hover:bg-yellow-500 transition-all shadow-[0_0_30px_rgba(212,175,55,0.4)] uppercase tracking-widest">
+            Apply for Hunter Code
+        </a>
     </section>
-
-    <!-- FOOTER -->
-    <footer class="py-16 border-t border-zinc-900 text-center text-zinc-600 text-[10px] font-mono uppercase tracking-[0.3em]">
-        &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT // HUNT THE TRUTH.
-    </footer>
 
 </body>
 </html>
