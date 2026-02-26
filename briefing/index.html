@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Executive Briefing | The Sentient Architect</title>
+    <title>The Briefing | The Sentient Architect | Forensic Intelligence</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -13,25 +13,38 @@
         .gold-bg { background-color: #D4AF37; }
         .glass-panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
         .glow-red { box-shadow: 0 0 30px rgba(220, 38, 38, 0.15); }
-        #briefing-room { display: none; } /* THE LOCK */
+        #briefing-room { display: none; } 
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased selection:bg-red-500 selection:text-white">
 
+    <!-- NAVIGATION -->
     <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
         <div class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></div>
-        <a href="../index.html" class="text-xs font-mono uppercase tracking-widest hover:text-yellow-500 transition-colors">Return to Base</a>
+        <div class="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
+            <a href="../index.html" class="hover:text-yellow-500 transition-colors">Home</a>
+            <a href="https://buy.stripe.com/5kQ8wIf8H3Pb1blb165sA00" class="hover:text-yellow-500 transition-colors">The Black Box</a>
+            <a href="../services/index.html" class="hover:text-yellow-500 transition-colors">Services</a>
+            <a href="https://a.co/d/089Xr06d" class="hover:text-yellow-500 transition-colors">The Book</a>
+            <a href="../hunters/index.html" class="text-red-500 hover:text-red-400 transition-colors">Hunters</a>
+        </div>
+        <a href="../index.html" class="text-[10px] font-mono uppercase tracking-widest hover:text-yellow-500 transition-colors">Return to Base</a>
     </nav>
 
+    <!-- HEADER SECTION -->
     <section class="pt-40 pb-16 px-6 text-center">
         <div class="max-w-4xl mx-auto">
             <div class="inline-block px-3 py-1 mb-6 text-[10px] font-mono tracking-widest text-red-500 border border-red-900 rounded-full bg-red-900/10 uppercase">
                 Classification: Executive Eyes Only
             </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-8 tracking-tight">
-                Stop Managing Fictions. <br>
-                <span class="gold-text">Audit the Reality.</span>
+            <h1 class="text-4xl md:text-6xl font-black mb-8 tracking-tighter uppercase italic leading-none">
+                Stop Funding the Theater. <br>
+                <span class="gold-text">Watch the Briefing.</span>
             </h1>
+            <p class="text-gray-500 text-lg font-light max-w-2xl mx-auto leading-relaxed">
+                A 33-minute forensic autopsy of the $3 Trillion Admin Tax. <br>
+                Learn how to detect the Truth Gap before the budget is burned.
+            </p>
         </div>
     </section>
 
@@ -39,11 +52,10 @@
     <section class="pb-32 px-6" id="gatekeeper">
         <div class="max-w-xl mx-auto glass-panel p-10 rounded-3xl border-zinc-800 glow-red">
             <div class="mb-8 text-center">
-                <h2 class="text-2xl font-bold mb-2">Access Intelligence</h2>
-                <p class="text-xs text-gray-500 font-mono uppercase tracking-widest">Provide Credentials to Unseal Briefing</p>
+                <h2 class="text-2xl font-bold mb-2 uppercase italic">Access Intelligence</h2>
+                <p class="text-[10px] text-gray-500 font-mono uppercase tracking-widest">Provide Credentials to Unseal Briefing</p>
             </div>
 
-            <!-- REPLACE THE '#' BELOW WITH YOUR FORMSPREE URL -->
             <form id="access-form" action="https://formspree.io/f/mqedgbkq" method="POST" class="space-y-6">
                 <div>
                     <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2 tracking-widest">Corporate Email</label>
@@ -52,7 +64,7 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2 tracking-widest">Job Title</label>
-                        <input type="text" name="title" required class="w-full bg-black border border-zinc-800 p-4 rounded-lg focus:border-yellow-600 outline-none transition-all text-sm font-light" placeholder="CIO / CFO">
+                        <input type="text" name="title" required class="w-full bg-black border border-zinc-800 p-4 rounded-lg focus:border-yellow-600 outline-none transition-all text-sm font-light" placeholder="CIO / VP">
                     </div>
                     <div>
                         <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2 tracking-widest">Company</label>
@@ -67,7 +79,7 @@
     </section>
 
     <!-- THE HIDDEN BRIEFING ROOM -->
-    <section class="pb-32 px-6" id="briefing-room" style="display: none;">
+    <section class="pb-32 px-6" id="briefing-room">
         <div class="max-w-5xl mx-auto glass-panel p-8 rounded-3xl glow-red border-red-900/30">
             
             <!-- THE MISSION CODE DISPLAY -->
@@ -76,11 +88,10 @@
                 <h3 class="text-2xl font-bold text-white uppercase tracking-tighter">
                     MISSION CODE: <span class="gold-text select-all font-mono ml-2">Mission-C03-Access!</span>
                 </h3>
-                <p class="text-[10px] text-gray-500 mt-2">Enter this code into the player below to begin the briefing.</p>
+                <p class="text-[10px] text-gray-500 mt-2 uppercase">Enter this code into the player below to begin.</p>
             </div>
 
             <div class="relative aspect-video bg-black rounded-xl overflow-hidden border border-zinc-800 shadow-2xl">
-                <!-- VIMEO EMBED (Make sure password protection is ON in Vimeo settings) -->
                 <div style="padding:56.25% 0 0 0;position:relative;">
                     <iframe src="https://player.vimeo.com/video/1167317032?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
                             frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
@@ -92,8 +103,8 @@
 
             <div class="mt-12 text-center border-t border-zinc-800 pt-10">
                 <p class="text-sm text-gray-400 font-light mb-8 italic">"Truth is not a social construct. It is a forensic fact."</p>
-                <a href="https://luma.com/6enr1aek" class="gold-bg text-black font-black py-4 px-10 rounded-xl uppercase text-xs tracking-widest hover:bg-yellow-500 transition-all shadow-lg">
-                    Join the March 19th War Room
+                <a href="https://luma.com/6enr1aek" class="gold-bg text-black font-black py-5 px-12 rounded-xl uppercase text-xs tracking-widest hover:bg-yellow-500 transition-all shadow-lg">
+                    Join the March 19th Executive Briefing
                 </a>
             </div>
         </div>
@@ -123,7 +134,7 @@
     </script>
 
     <footer class="py-16 border-t border-zinc-900 text-center text-zinc-600 text-[10px] font-mono uppercase tracking-[0.4em] bg-black">
-        &copy; 2026 MAKCON LLC // DATA DOES NOT HAVE AN EGO.
+        &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT // DATA DOES NOT HAVE AN EGO.
     </footer>
 
 </body>
