@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Project RRI'25 | The Sentient Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #e5e5e5; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .gold-text { color: #D4AF37; }
+        .gold-bg { background-color: #D4AF37; }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
+        .glow-red { box-shadow: 0 0 30px rgba(220, 38, 38, 0.2); }
+        .truth-gap-table td { padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    </style>
+</head>
+<body class="antialiased selection:bg-yellow-500 selection:text-black">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
+        <div class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></div>
+        <div class="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
+            <a href="../index.html" class="hover:text-yellow-500 transition-colors">Home</a>
+            <a href="../briefing/index.html" class="hover:text-yellow-500 transition-colors">The Briefing</a>
+            <a href="../black-box/index.html" class="hover:text-yellow-500 transition-colors">The Black Box</a>
+            <a href="../services/index.html" class="hover:text-yellow-500 transition-colors">Services</a>
+        </div>
+        <a href="https://outlook.office.com/book/SentientPMOBriefings@sentientpmo.com/" class="gold-bg text-black text-[10px] font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all shadow-lg">SCHEDULE MRI</a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="pt-48 pb-20 px-6 text-center border-b border-zinc-900">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-block px-3 py-1 mb-8 text-[10px] font-mono tracking-widest text-red-500 border border-red-900 rounded-full bg-red-900/10 uppercase">
+                Forensic Dossier // Case Study RRI'25
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black mb-8 tracking-tighter uppercase italic leading-none">
+                THE <span class="gold-text">TRUTH GAP</span> IN ACTION.
+            </h1>
+            <p class="text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
+                How we detected a material breach in a $1M Grid Modernization project and recovered $170,000 in 10 days.
+            </p>
+        </div>
+    </header>
+
+    <!-- THE SETUP -->
+    <section class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-6 uppercase italic">The Patient: Project RRI'25</h2>
+                <p class="text-gray-400 mb-6 leading-relaxed">
+                    A major energy utility was integrating <strong>ServiceNow</strong> with a legacy <strong>ChangeGear</strong> system to meet federal NERC CIP compliance.
+                </p>
+                <div class="space-y-4 font-mono text-xs uppercase tracking-widest">
+                    <div class="flex justify-between border-b border-white/10 pb-2">
+                        <span class="text-gray-500">Portfolio Value</span>
+                        <span class="text-white">$25,000,000</span>
+                    </div>
+                    <div class="flex justify-between border-b border-white/10 pb-2">
+                        <span class="text-gray-500">Project Budget</span>
+                        <span class="text-white">$1,000,000</span>
+                    </div>
+                    <div class="flex justify-between border-b border-white/10 pb-2">
+                        <span class="text-gray-500">Regulatory Risk</span>
+                        <span class="text-red-500">$1M / Day Fines</span>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-panel p-8 rounded-3xl border-yellow-600/20">
+                <h3 class="text-sm font-mono text-yellow-500 mb-4 uppercase tracking-widest">The Reported Status</h3>
+                <div class="bg-green-900/20 border border-green-500/50 p-6 rounded-xl mb-6">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-3 h-3 rounded-full bg-green-500 shadow-[0_0_10px_#22c55e]"></div>
+                        <span class="font-bold text-green-500 uppercase">Status: Green</span>
+                    </div>
+                    <p class="text-gray-300 text-sm italic">"Connectivity established. Evaluating authentication protocols to optimize performance. On track for June 1st Go-Live."</p>
+                </div>
+                <p class="text-[10px] text-gray-500 uppercase tracking-widest text-center italic">This was the lie being told to the Board.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE EVIDENCE -->
+    <section class="py-24 bg-zinc-950 border-y border-zinc-900 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-black text-white mb-16 uppercase italic text-center">The Forensic Evidence</h2>
+            
+            <div class="glass-panel rounded-3xl overflow-hidden border-white/5">
+                <table class="w-full text-left truth-gap-table">
+                    <thead class="bg-white/5 font-mono text-[10px] uppercase tracking-widest text-gray-500">
+                        <tr>
+                            <th>Feature</th>
+                            <th>The Lie (Status Report)</th>
+                            <th>The Reality (Vendor Email)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr>
+                            <td class="font-bold text-white uppercase italic">Status</td>
+                            <td class="text-green-500">GREEN</td>
+                            <td class="text-red-500 font-bold">CRITICAL FAILURE</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-white uppercase italic">Narrative</td>
+                            <td class="text-gray-400">"Evaluating protocols to <strong>optimize</strong> performance."</td>
+                            <td class="text-gray-400 italic">"The current version... definitely does <strong>NOT</strong> support the OAuth 2.0 handshake."</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-white uppercase italic">Intent</td>
+                            <td class="text-gray-500">To imply progress is being made.</td>
+                            <td class="text-gray-500">To hide the failure until it is too late to cancel.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-12 p-8 bg-red-900/10 border border-red-900/30 rounded-2xl">
+                <h4 class="text-red-500 font-bold uppercase text-xs mb-2 tracking-widest">The Verdict</h4>
+                <p class="text-gray-300 font-light leading-relaxed">
+                    The vendor knowingly committed a <strong>Material Breach</strong>. By using the word "Optimizing," the PM denied the Steering Committee the executive right to intervene, resulting in 6 weeks of <strong>Zombie Spend.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE MATH -->
+    <section class="py-24 px-6 max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl font-black text-white mb-4 uppercase italic">The Receipt</h2>
+        <p class="text-gray-500 mb-16 font-light">We don't manage by feelings. We manage by physics.</p>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="p-12 glass-panel rounded-[3rem] border-red-900/20 glow-red">
+                <div class="text-xs font-mono text-gray-500 mb-4 uppercase tracking-widest">Direct Cash Burn</div>
+                <div class="text-6xl font-black text-white mb-4">$150,000</div>
+                <p class="text-gray-500 text-sm">Wasted OpEx during the 6-week "Silence Signal."</p>
+            </div>
+            <div class="p-12 glass-panel rounded-[3rem] border-yellow-600/20">
+                <div class="text-xs font-mono text-gray-500 mb-4 uppercase tracking-widest">Enterprise Value Erosion</div>
+                <div class="text-6xl font-black gold-text mb-4">$1,500,000</div>
+                <p class="text-gray-500 text-sm">Total destruction of shareholder value (at 10x Multiple).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE OUTCOME -->
+    <section class="py-32 bg-zinc-950 border-t border-zinc-900 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="text-5xl mb-10 text-white/20">"</div>
+            <blockquote class="text-2xl md:text-4xl font-light text-white leading-tight mb-10 italic">
+                I wish I had a Michael on every one of my projects. Whenever we hit a major blocker, he immediately understood the problem and drove us to a solution within days.
+            </blockquote>
+            <cite class="block font-mono text-sm uppercase tracking-widest text-gold-text not-italic">
+                — Nate White, Program Sponsor, Ameren
+            </cite>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-40 px-6 text-center bg-black border-t border-zinc-900">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-black text-white mb-8 uppercase italic">Stop Managing Fictions.</h2>
+            <p class="text-gray-500 text-xl mb-12 font-light">Schedule a 10-Day Forensic Diagnostic for your portfolio.</p>
+            <a href="https://outlook.office.com/book/SentientPMOBriefings@sentientpmo.com/" class="gold-bg text-black font-black py-6 px-16 rounded-2xl text-xl hover:bg-yellow-500 transition-all shadow-2xl uppercase tracking-widest">
+                Request a Briefing
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-16 border-t border-zinc-900 text-center text-zinc-600 text-[10px] font-mono uppercase tracking-[0.3em]">
+        &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT // DATA DOES NOT HAVE AN EGO.
+    </footer>
+
+</body>
+</html>
