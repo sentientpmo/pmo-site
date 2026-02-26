@@ -1,1 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Black Box | The Sentient Architect | Solo Forensic Audit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #e5e5e5; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .gold-text { color: #D4AF37; }
+        .gold-bg { background-color: #D4AF37; }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
+        .glow-gold { box-shadow: 0 0 50px rgba(212, 175, 55, 0.1); }
+        .hero-bg {
+            background-image: url('../hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-overlay {
+            background: radial-gradient(circle, rgba(10,10,10,0.6) 0%, rgba(10,10,10,1) 100%);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-yellow-500 selection:text-black">
 
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
+        <div class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></div>
+        <div class="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
+            <a href="../index.html" class="hover:text-yellow-500 transition-colors">Home</a>
+            <a href="../briefing/index.html" class="hover:text-yellow-500 transition-colors">The Briefing</a>
+            <a href="../services/index.html" class="hover:text-yellow-500 transition-colors">Services</a>
+            <a href="../hunters/index.html" class="text-red-500 hover:text-red-400 transition-colors">Hunters</a>
+        </div>
+        <a href="https://buy.stripe.com/5kQ8wIf8H3Pb1blb165sA00" class="gold-bg text-black text-[10px] font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all shadow-lg">GET THE BOX</a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative pt-48 pb-32 px-6 text-center hero-bg border-b border-zinc-800">
+        <div class="absolute inset-0 z-0 hero-overlay"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="inline-block px-3 py-1 mb-8 text-[10px] font-mono tracking-widest text-yellow-500 border border-yellow-900 rounded-full bg-yellow-900/10 uppercase">
+                Product // The Black Box Edition
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black mb-8 tracking-tighter leading-none uppercase italic">
+                UNBOX THE <span class="gold-text glow-text">RADAR.</span>
+            </h1>
+            <p class="text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed mb-12">
+                The exact toolkit I use to find $1.5M Truth Gaps in enterprise portfolios. <br>
+                No safety net. No facilitator. Just you, the evidence, and the AI.
+            </p>
+            <a href="https://buy.stripe.com/5kQ8wIf8H3Pb1blb165sA00" class="gold-bg text-black font-black py-6 px-16 rounded-2xl text-xl hover:bg-yellow-500 transition-all shadow-[0_0_30px_rgba(212,175,55,0.3)] uppercase tracking-widest">
+                Download Now — $249
+            </a>
+        </div>
+    </header>
+
+    <!-- THE INVENTORY -->
+    <section class="py-32 px-6 bg-black">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-black text-white mb-16 uppercase italic text-center tracking-tight">The System Manifest</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- ITEM 1 -->
+                <div class="glass-panel p-8 rounded-2xl border-white/5">
+                    <div class="text-gold-text font-mono text-xs mb-4">01 / THE INSTRUCTOR</div>
+                    <h3 class="text-lg font-bold text-white mb-4 uppercase">The Field Manual</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">A 35-page step-by-step guide to the simulation. Includes the "Sealed Artifacts" (Answer Keys) to verify your findings.</p>
+                </div>
+                <!-- ITEM 2 -->
+                <div class="glass-panel p-8 rounded-2xl border-white/5">
+                    <div class="text-gold-text font-mono text-xs mb-4">02 / THE EVIDENCE</div>
+                    <h3 class="text-lg font-bold text-white mb-4 uppercase">The Evidence Locker</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">10 sanitized forensic files from Project RRI'25. Raw transcripts, SOWs, and logs ready for AI ingestion.</p>
+                </div>
+                <!-- ITEM 3 -->
+                <div class="glass-panel p-8 rounded-2xl border-white/5">
+                    <div class="text-gold-text font-mono text-xs mb-4">03 / THE ENGINE</div>
+                    <h3 class="text-lg font-bold text-white mb-4 uppercase">Prompt Library v5.0</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">The proprietary algorithms used to detect Linguistic Decay, Zombie Spend, and Material Breaches.</p>
+                </div>
+                <!-- ITEM 4 -->
+                <div class="glass-panel p-8 rounded-2xl border-white/5">
+                    <div class="text-gold-text font-mono text-xs mb-4">04 / THE BIBLE</div>
+                    <h3 class="text-lg font-bold text-white mb-4 uppercase">The Sentient PMO</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">Full digital edition of the #1 Bestselling blueprint. The theory behind the Zero-Tech Stack.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE "NO SAFETY NET" SECTION -->
+    <section class="py-24 bg-zinc-950 border-y border-zinc-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-black text-white mb-8 uppercase italic">No Safety Net.</h2>
+            <p class="text-gray-400 text-lg font-light leading-relaxed mb-12">
+                The Black Box is not a "course." It is a <strong>Solo Operation.</strong> <br><br>
+                Unlike the live War Room, there is no facilitator to guide you. You are the Lead Auditor. You must use the Refinery Protocol to find the Truth Gap yourself. If you fail to ask the right questions, the Zombie Spend continues.
+            </p>
+            <div class="inline-block p-8 border border-red-900/30 bg-red-900/5 rounded-3xl">
+                <p class="text-red-500 font-mono text-xs uppercase tracking-widest mb-4">Requirement</p>
+                <p class="text-gray-300 text-sm">Requires a Flagship Reasoning Engine (GPT-4o, Claude 3.5, or Gemini 1.5 Pro).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-40 px-6 text-center bg-black">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-5xl font-black text-white mb-8 tracking-tighter uppercase italic">Stop Funding the Theater.</h2>
+            <p class="text-gray-500 text-xl mb-12 font-light">Install the radar into your career today.</p>
+            <a href="https://buy.stripe.com/5kQ8wIf8H3Pb1blb165sA00" class="gold-bg text-black font-black py-6 px-20 rounded-2xl text-2xl hover:bg-yellow-500 transition-all shadow-2xl uppercase tracking-widest">
+                Download the Black Box
+            </a>
+            <p class="mt-10 text-zinc-700 text-[10px] font-mono uppercase tracking-[0.4em]">Instant Digital Delivery // Secure Checkout via Stripe</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-16 border-t border-zinc-900 text-center text-zinc-600 text-[10px] font-mono uppercase tracking-[0.3em]">
+        &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT // DATA DOES NOT HAVE AN EGO.
+    </footer>
+
+</body>
+</html>
