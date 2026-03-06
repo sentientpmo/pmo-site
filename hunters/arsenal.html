@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Arsenal | Sentient PMO</title>
+    <title>The Arsenal | Hunter Division | Sentient PMO</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -14,49 +14,72 @@
         .glass-panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
         .copy-box { background: #111; border: 1px solid #333; padding: 1.5rem; border-radius: 0.75rem; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; position: relative; }
         .copy-btn { position: absolute; top: 0.5rem; right: 0.5rem; background: #D4AF37; color: black; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 10px; font-weight: bold; cursor: pointer; }
+        .status-dot { height: 8px; width: 8px; background-color: #ef4444; border-radius: 50%; display: inline-block; }
     </style>
 </head>
 <body class="antialiased">
 
     <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
         <div class="font-extrabold tracking-tighter text-xl uppercase italic">Hunter <span class="gold-text">Arsenal</span></div>
-        <div class="text-[10px] font-mono uppercase tracking-widest text-red-500 animate-pulse">● Live Revenue Ops // v5.0</div>
+        <div class="flex items-center gap-4">
+            <span class="status-dot animate-pulse"></span>
+            <div class="text-[10px] font-mono uppercase tracking-widest text-red-500">Live Revenue Ops // v5.0</div>
+        </div>
     </nav>
 
     <header class="pt-40 pb-16 px-6 text-center border-b border-zinc-900">
         <h1 class="text-4xl md:text-6xl font-black mb-8 tracking-tighter uppercase italic">Load Your <span class="gold-text">Weapon.</span></h1>
         <p class="text-gray-500 text-lg font-light max-w-2xl mx-auto leading-relaxed">
-            This is your central repository for graphics, scripts, and math. <br>
-            Stop selling software. Start hunting <strong>Zombie Spend.</strong>
+            Direct outreach assets for the <strong>April 23 Executive Briefing.</strong> <br>
+            Target the "Admin Tax." Liquidate the Truth Gap.
         </p>
     </header>
 
     <section class="py-24 px-6 max-w-4xl mx-auto">
-        <h2 class="text-2xl font-bold text-white mb-12 uppercase italic tracking-widest border-l-4 border-gold-text pl-6">01 / The Kill Shot Scripts</h2>
         
-        <div class="mb-12">
-            <h3 class="text-sm font-mono text-yellow-500 mb-4 uppercase">A. The LinkedIn Narrative</h3>
+        <div class="mb-20">
+            <h2 class="text-2xl font-bold text-white mb-8 uppercase italic tracking-widest border-l-4 border-red-600 pl-6">01 / Wave 1: Category Collapse</h2>
+            <p class="text-zinc-500 text-sm mb-8 italic">Use this for LinkedIn posts or long-form DMs. It leverages the market decline of legacy PMO tools to create urgency.</p>
+            
             <div class="copy-box">
-                <button class="copy-btn" onclick="copyText('script-a')">COPY</button>
-                <p id="script-a">
+                <button class="copy-btn" onclick="copyText('wave-1')">COPY</button>
+                <div id="wave-1">
                     The market is liquidating the "Admin Tax" in real-time. Look at the charts for Atlassian, Monday, and Asana. This isn't a tech winter; it's a structural rejection of Reporting Theater. <br><br>
                     Your CIO doesn't need another "Pretty Board." They need a Radar System. <br><br>
-                    I am running Forensic Audits that find the Truth Gap and Zombie Spend these tools hide. Stop being the middleware. Become the Architect. <br><br>
-                    [Insert Your Hunter Link Here]
-                </p>
+                    We are running Forensic Audits that find the Truth Gap and Zombie Spend these tools hide. Stop being the middleware. Become the Architect. <br><br>
+                    Join Michael Kaplan and Marianne Bachynski (Former CIO, Corebridge/AIG) on April 23rd for a Surgical Strike on your portfolio. <br><br>
+                    [Your Luma Referral Link Here]
+                </div>
             </div>
         </div>
 
-        <div class="mb-12">
-            <h3 class="text-sm font-mono text-yellow-500 mb-4 uppercase">B. The Sniper DM</h3>
+        <div class="mb-20">
+            <h2 class="text-2xl font-bold text-white mb-8 uppercase italic tracking-widest border-l-4 border-gold-text pl-6">02 / The Sniper DM</h2>
+            <p class="text-zinc-500 text-sm mb-8 italic">High-precision outreach for targeted CIOs/CFOs.</p>
+            
             <div class="copy-box">
-                <button class="copy-btn" onclick="copyText('script-b')">COPY</button>
-                <p id="script-b">
-                    [Name], I saw your portfolio is currently reported as "Green." In my experience auditing $25M portfolios, 80% of those reports are either lagging or masking a material breach. <br><br>
-                    We’ve built a forensic engine that detects "Zombie Spend" in 10 days. I have one guest pass for an executive briefing on March 19th. Want to see the radar?
-                </p>
+                <button class="copy-btn" onclick="copyText('sniper-dm')">COPY</button>
+                <div id="sniper-dm">
+                    [Name], saw your portfolio is currently reported as "Green." In my experience auditing $25M portfolios, 80% of those reports are either lagging or masking a material breach. <br><br>
+                    We’ve built a forensic engine that detects "Zombie Spend" in 10 days. Michael Kaplan is hosting an executive briefing on April 23rd with Marianne Bachynski to show how it's done. Want a guest pass to see the radar?
+                </div>
             </div>
         </div>
+
+        <div class="bg-zinc-950 border border-zinc-800 p-10 rounded-3xl text-center">
+            <h2 class="text-xl font-bold text-white mb-6 uppercase tracking-widest">Tactical Asset Downloads</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="#" class="flex items-center justify-between glass-panel p-4 rounded-xl hover:border-gold-text transition-all group">
+                    <span class="text-[10px] font-mono uppercase text-gray-400 group-hover:text-white">Battle Card (v5.0)</span>
+                    <span class="text-gold-text font-bold">.PDF</span>
+                </a>
+                <a href="#" class="flex items-center justify-between glass-panel p-4 rounded-xl hover:border-gold-text transition-all group">
+                    <span class="text-[10px] font-mono uppercase text-gray-400 group-hover:text-white">Strike Radar Sample</span>
+                    <span class="text-gold-text font-bold">.PDF</span>
+                </a>
+            </div>
+        </div>
+
     </section>
 
     <script>
