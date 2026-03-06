@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Briefing | The Sentient Architect | Forensic Intelligence</title>
+    <title>Executive Briefing | The Sentient Architect</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -12,128 +12,112 @@
         .gold-text { color: #D4AF37; }
         .gold-bg { background-color: #D4AF37; }
         .glass-panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
-        .glow-red { box-shadow: 0 0 30px rgba(220, 38, 38, 0.15); }
-        #briefing-room { display: none; } 
+        .glow-text { text-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
+        .border-gold { border-color: rgba(212, 175, 55, 0.3); }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
-<body class="antialiased selection:bg-red-500 selection:text-white">
+<body class="antialiased selection:bg-yellow-500 selection:text-black">
 
-    <!-- NAVIGATION -->
     <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
         <div class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></div>
         <div class="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
             <a href="../index.html" class="hover:text-yellow-500 transition-colors">Home</a>
-            <a href="https://buy.stripe.com/5kQ8wIf8H3Pb1blb165sA00" class="hover:text-yellow-500 transition-colors">The Black Box</a>
+            <a href="../case-study/index.html" class="hover:text-yellow-500 transition-colors">Case Study</a>
             <a href="../services/index.html" class="hover:text-yellow-500 transition-colors">Services</a>
-            <a href="https://a.co/d/089Xr06d" class="hover:text-yellow-500 transition-colors">The Book</a>
             <a href="../hunters/index.html" class="text-red-500 hover:text-red-400 transition-colors">Hunters</a>
         </div>
-        <a href="../index.html" class="text-[10px] font-mono uppercase tracking-widest hover:text-yellow-500 transition-colors">Return to Base</a>
+        <a href="https://luma.com/xh2r0z47" class="gold-bg text-black text-[10px] font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all shadow-lg">REQUEST APRIL 23 PASS</a>
     </nav>
 
-    <!-- HEADER SECTION -->
-    <section class="pt-40 pb-16 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <div class="inline-block px-3 py-1 mb-6 text-[10px] font-mono tracking-widest text-red-500 border border-red-900 rounded-full bg-red-900/10 uppercase">
-                Classification: Executive Eyes Only
-            </div>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 tracking-tighter uppercase italic leading-none">
-                Stop Funding the Theater. <br>
-                <span class="gold-text">Watch the Briefing.</span>
-            </h1>
-            <p class="text-gray-500 text-lg font-light max-w-2xl mx-auto leading-relaxed">
-                A 33-minute forensic autopsy of the $3 Trillion Admin Tax. <br>
-                Learn how to detect the Truth Gap before the budget is burned.
-            </p>
+    <header class="pt-40 pb-20 px-6 text-center border-b border-zinc-900">
+        <div class="inline-block px-3 py-1 mb-6 text-[10px] font-mono tracking-widest text-yellow-500 border border-yellow-900 rounded-full bg-yellow-900/10 uppercase">
+            Now Declassifying: The Forensic MRI
         </div>
-    </section>
+        <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tighter uppercase italic">
+            Watch the <span class="gold-text glow-text">33-Minute Briefing.</span>
+        </h1>
+        <p class="text-gray-500 text-lg font-light max-w-2xl mx-auto leading-relaxed">
+            Stop reporting the news. Start predicting the weather. <br>
+            Witness the clinical deconstruction of the <strong>Truth Gap.</strong>
+        </p>
+    </header>
 
-    <!-- THE GATEKEEPER SECTION -->
-    <section class="pb-32 px-6" id="gatekeeper">
-        <div class="max-w-xl mx-auto glass-panel p-10 rounded-3xl border-zinc-800 glow-red">
-            <div class="mb-8 text-center">
-                <h2 class="text-2xl font-bold mb-2 uppercase italic">Access Intelligence</h2>
-                <p class="text-[10px] text-gray-500 font-mono uppercase tracking-widest">Provide Credentials to Unseal Briefing</p>
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="glass-panel p-4 md:p-8 rounded-[2rem] border-gold shadow-2xl overflow-hidden mb-12">
+            <div class="aspect-video w-full rounded-xl overflow-hidden bg-black shadow-inner border border-zinc-800">
+                <iframe 
+                    src="https://player.vimeo.com/video/1167317032?h=f7683d84bb&title=0&byline=0&portrait=0" 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
             </div>
-
-            <form id="access-form" action="https://formspree.io/f/mqedgbkq" method="POST" class="space-y-6">
-                <div>
-                    <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2 tracking-widest">Corporate Email</label>
-                    <input type="email" name="email" required class="w-full bg-black border border-zinc-800 p-4 rounded-lg focus:border-yellow-600 outline-none transition-all text-sm font-light" placeholder="name@company.com">
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2 tracking-widest">Job Title</label>
-                        <input type="text" name="title" required class="w-full bg-black border border-zinc-800 p-4 rounded-lg focus:border-yellow-600 outline-none transition-all text-sm font-light" placeholder="CIO / VP">
-                    </div>
-                    <div>
-                        <label class="block text-[10px] font-mono text-gray-500 uppercase mb-2 tracking-widest">Company</label>
-                        <input type="text" name="company" required class="w-full bg-black border border-zinc-800 p-4 rounded-lg focus:border-yellow-600 outline-none transition-all text-sm font-light">
-                    </div>
-                </div>
-                <button type="submit" class="w-full gold-bg text-black font-black py-5 rounded-xl mt-4 hover:bg-yellow-500 transition-all shadow-xl uppercase tracking-[0.2em] text-xs">
-                    Acknowledge and Enter
-                </button>
-            </form>
         </div>
-    </section>
 
-    <!-- THE HIDDEN BRIEFING ROOM -->
-    <section class="pb-32 px-6" id="briefing-room">
-        <div class="max-w-5xl mx-auto glass-panel p-8 rounded-3xl glow-red border-red-900/30">
-            
-            <!-- THE MISSION CODE DISPLAY -->
-            <div class="mb-8 text-center bg-red-900/20 p-6 rounded-xl border border-red-900/50">
-                <p class="text-xs font-mono text-red-500 uppercase tracking-widest mb-2">Access Granted // Identity Verified</p>
-                <h3 class="text-2xl font-bold text-white uppercase tracking-tighter">
-                    MISSION CODE: <span class="gold-text select-all font-mono ml-2">Mission-C03-Access!</span>
-                </h3>
-                <p class="text-[10px] text-gray-500 mt-2 uppercase">Enter this code into the player below to begin.</p>
+        <div class="grid md:grid-cols-2 gap-8 items-center bg-zinc-900/30 p-8 rounded-3xl border border-zinc-800">
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4 uppercase italic tracking-wider">The Sovereign Intelligence Deck</h3>
+                <p class="text-sm text-gray-500 leading-relaxed mb-6">
+                    Access the complete visual framework for the <strong>Forensic MRI</strong> and the <strong>EBITDA Strike Radar.</strong> This is the data used to adjudicate the silence of a "Green" dashboard.
+                </p>
             </div>
-
-            <div class="relative aspect-video bg-black rounded-xl overflow-hidden border border-zinc-800 shadow-2xl">
-                <div style="padding:56.25% 0 0 0;position:relative;">
-                    <iframe src="https://player.vimeo.com/video/1167317032?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                            title="The Sentient Architect: A 33-Minute Forensic Briefing">
-                    </iframe>
-                </div>
-            </div>
-
-            <div class="mt-12 text-center border-t border-zinc-800 pt-10">
-                <p class="text-sm text-gray-400 font-light mb-8 italic">"Truth is not a social construct. It is a forensic fact."</p>
-                <a href="https://luma.com/6enr1aek" class="gold-bg text-black font-black py-5 px-12 rounded-xl uppercase text-xs tracking-widest hover:bg-yellow-500 transition-all shadow-lg">
-                    Join the March 19th Executive Briefing
+            <div class="flex justify-end">
+                <a href="#" class="border border-zinc-700 text-zinc-300 py-4 px-8 rounded-xl hover:border-white hover:text-white transition-all text-[10px] font-mono uppercase tracking-[0.2em]">
+                    Download Executive Intel Pack (.PDF)
                 </a>
             </div>
         </div>
     </section>
 
-    <script>
-        const form = document.getElementById('access-form');
-        const gate = document.getElementById('gatekeeper');
-        const room = document.getElementById('briefing-room');
+    <section class="py-32 px-6 bg-zinc-950 border-y border-zinc-900 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-yellow-500/5 blur-[120px] rounded-full"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <div class="text-[10px] font-mono text-red-500 mb-4 tracking-[0.3em] uppercase animate-pulse">● Live Strategic Intelligence Event</div>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white uppercase italic leading-tight">
+                    The 45-Minute <span class="gold-text">Surgical Strike</span>
+                </h2>
+                <p class="text-gray-400 mt-6 text-lg font-light">
+                    Join Michael Kaplan and Marianne Bachynski (Former CIO, Corebridge Financial) for a high-density forensic briefing on <strong>April 23rd.</strong>
+                </p>
+            </div>
 
-        form.onsubmit = async (e) => {
-            e.preventDefault();
-            const formData = new FormData(form);
-            
-            // 1. Send data to Formspree in the background
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            });
+            <div class="glass-panel p-8 rounded-3xl border-gold">
+                <div class="grid md:grid-cols-3 gap-8 text-center border-b border-zinc-800 pb-8 mb-8">
+                    <div>
+                        <span class="block text-[10px] font-mono text-gray-500 uppercase mb-2">Date</span>
+                        <span class="text-white font-bold">April 23, 2026</span>
+                    </div>
+                    <div>
+                        <span class="block text-[10px] font-mono text-gray-500 uppercase mb-2">Time</span>
+                        <span class="text-white font-bold">10:00 AM CDT</span>
+                    </div>
+                    <div>
+                        <span class="block text-[10px] font-mono text-gray-500 uppercase mb-2">Format</span>
+                        <span class="text-white font-bold">Virtual // Vetted</span>
+                    </div>
+                </div>
 
-            // 2. Instantly show the video and password
-            gate.style.display = 'none';
-            room.style.display = 'block';
-            window.scrollTo(0, 0);
-        };
-    </script>
+                <div class="space-y-6 mb-10">
+                    <p class="text-sm text-gray-400"><strong class="text-white">The Indictment:</strong> We define the Decision Latency costing your firm millions.</p>
+                    <p class="text-sm text-gray-400"><strong class="text-white">The Methodology:</strong> Live demonstration of AI detecting Linguistic Decay from "Will" to "Hope."</p>
+                    <p class="text-sm text-gray-400"><strong class="text-white">The Save:</strong> Engineering a win using the Decision Memorandum to claw back the Deception Discount.</p>
+                </div>
 
-    <footer class="py-16 border-t border-zinc-900 text-center text-zinc-600 text-[10px] font-mono uppercase tracking-[0.4em] bg-black">
+                <a href="https://luma.com/xh2r0z47" class="block w-full text-center gold-bg text-black font-black py-5 rounded-2xl hover:bg-yellow-500 transition-all shadow-xl text-lg tracking-widest uppercase">
+                    REQUEST AN INVITATION
+                </a>
+                <p class="text-[10px] font-mono text-center text-zinc-600 mt-6 uppercase tracking-widest">
+                    Registration Policy: Senior Executives Only // Approval Required
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 text-center text-zinc-600 text-[10px] font-mono uppercase tracking-[0.3em] bg-black">
         &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT // DATA DOES NOT HAVE AN EGO.
     </footer>
 
