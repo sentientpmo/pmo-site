@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sentient Architect | Forensic Governance & Capital Assurance</title>
+    <title>Michael Kaplan | The Sentient Architect | Forensic Governance</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -12,217 +12,74 @@
         .gold-text { color: #D4AF37; }
         .gold-bg { background-color: #D4AF37; }
         .glass-panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
-        .glow-text { text-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
-        html { scroll-behavior: smooth; }
-        
-        .hero-bg {
-            background-image: url('./hero-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        .hero-overlay {
-            background: radial-gradient(circle, rgba(10,10,10,0.4) 0%, rgba(10,10,10,1) 90%);
-        }
+        .hero-bg { background-image: url('./hero-bg.jpg'); background-size: cover; background-position: center; }
+        .hero-overlay { background: radial-gradient(circle, rgba(10,10,10,0.4) 0%, rgba(10,10,10,1) 100%); }
     </style>
 </head>
 <body class="antialiased selection:bg-yellow-500 selection:text-black">
 
-    <!-- NAVIGATION -->
     <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
-        <div class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></div>
+        <div class="flex items-center gap-4">
+            <div class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></div>
+        </div>
         <div class="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
             <a href="briefing/index.html" class="hover:text-yellow-500 transition-colors">The Briefing</a>
-            <a href="https://buy.stripe.com/5kQ8wIf8H3Pb1blb165sA00" class="hover:text-yellow-500 transition-colors">The Black Box</a>
             <a href="services/index.html" class="hover:text-yellow-500 transition-colors">Services</a>
-            <a href="https://a.co/d/089Xr06d" class="hover:text-yellow-500 transition-colors">The Book</a>
+            <a href="https://mkaplan.substack.com/" target="_blank" class="hover:text-yellow-500 transition-colors">Substack</a>
             <a href="hunters/index.html" class="text-red-500 hover:text-red-400 transition-colors">Hunters</a>
         </div>
-        <a href="https://outlook.office.com/book/SentientPMOBriefings@sentientpmo.com/" class="gold-bg text-black text-[10px] font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all">1-ON-1 BRIEFING</a>
+        <a href="https://luma.com/xh2r0z47" class="gold-bg text-black text-[10px] font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all shadow-lg">APRIL 23 BRIEFING</a>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-20 pb-20 hero-bg">
+    <header class="relative min-h-screen flex items-center pt-20 px-6 hero-bg">
         <div class="absolute inset-0 z-0 hero-overlay"></div>
-        
-        <div class="relative z-10 max-w-5xl mx-auto text-center">
-            <div class="inline-block px-4 py-1 mb-8 text-[10px] font-mono tracking-widest text-yellow-400 border border-yellow-900 rounded-full bg-yellow-900/20 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
-                ★ #1 AMAZON BESTSELLER
-            </div>
-            
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight mb-6 uppercase italic">
-                The Admin Tax is being <br>
-                <span class="gold-text glow-text">Liquidated.</span>
-            </h1>
-            
-            <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-                The "Manual Era" is dead. Stop funding the theater. <br>
-                Adjudicate the Physics of your portfolio.
-            </p>
-            
-            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <a href="briefing/index.html" class="gold-bg text-black font-bold py-4 px-10 rounded-lg text-lg hover:bg-yellow-500 transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
-                    WATCH THE BRIEFING
-                </a>
-                <a href="services/index.html" class="border border-gray-600 text-gray-300 font-medium py-4 px-10 rounded-lg text-lg hover:border-white hover:text-white transition-all">
-                    VIEW SERVICES
-                </a>
-            </div>
-            
-            <p class="mt-12 text-sm text-gray-500 font-mono uppercase tracking-widest">
-                <span class="text-red-500 animate-pulse">●</span> Forensic Governance Engine (v2026.3)
-            </p>
-        </div>
-    </section>
-
-    <!-- THE PROPHECY SECTION (GARTNER) -->
-    <section class="py-24 bg-black relative overflow-hidden border-y border-gray-900">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
             <div>
-                <div class="inline-block px-3 py-1 mb-6 text-[10px] font-mono tracking-widest text-red-500 border border-red-900 rounded bg-red-900/10">
-                    MARKET SIGNAL: 2019-2030
+                <div class="inline-block px-3 py-1 mb-6 text-[10px] font-mono tracking-widest text-yellow-500 border border-yellow-900 rounded-full bg-yellow-900/10 uppercase">
+                    Forensic Governance // Michael Kaplan
                 </div>
-                <h2 class="text-4xl font-black text-white mb-6 uppercase italic leading-tight">
-                    They Warned You <br><span class="gold-text">Six Years Ago.</span>
-                </h2>
-                <p class="text-gray-400 mb-8 leading-relaxed">
-                    In 2019, Gartner predicted that <strong>80% of project management tasks</strong> would be eliminated by AI by 2030. 
+                <h1 class="text-5xl md:text-7xl font-black mb-8 tracking-tighter leading-tight uppercase italic">
+                    Adjudicating the <br><span class="gold-text">Truth Gap.</span>
+                </h1>
+                <p class="text-xl text-gray-400 font-light max-w-lg mb-10 leading-relaxed">
+                    We decommission the "Admin Tax" and install a <strong>System of Intelligence</strong> that protects your capital from Reporting Theater.
                 </p>
-                <p class="text-gray-400 mb-8 leading-relaxed">
-                    We are now in the final stretch. The "Manual Era" is being decommissioned. If your PMO is still manually typing status reports, you aren't running a department—you're running a museum.
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="briefing/index.html" class="gold-bg text-black font-black py-4 px-8 rounded-xl hover:bg-yellow-500 transition-all text-center uppercase tracking-widest text-sm">Watch the 33m Movie</a>
+                    <a href="https://luma.com/xh2r0z47" class="border border-zinc-700 text-white font-bold py-4 px-8 rounded-xl hover:border-white transition-all text-center uppercase tracking-widest text-sm">April 23 Workshop</a>
+                </div>
+            </div>
+            
+            <div class="glass-panel p-8 rounded-[2rem] border-zinc-800">
+                <img src="./profile.jpg" alt="Michael Kaplan" class="w-32 h-32 rounded-2xl mb-6 object-cover border-2 border-gold-text shadow-xl">
+                <h2 class="text-2xl font-bold text-white mb-2 uppercase italic">Michael Kaplan</h2>
+                <p class="text-xs font-mono text-yellow-500 uppercase tracking-widest mb-6">Principal Governance Architect</p>
+                <p class="text-sm text-gray-400 leading-relaxed mb-8">
+                    Author of the #1 Bestseller <em>The Sentient PMO</em>. Former Master Scheduler for the Pentagon Renovation. We detect <strong>Linguistic Decay</strong> in your portfolio before it turns into a financial breach.
                 </p>
-                <div class="border-l-2 border-gold-text pl-6 italic text-gray-500 text-sm">
-                    "The tools available to them do not meet the requirements of digital business." <br>
-                    — Daniel Stang, VP Analyst, Gartner
+                <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/in/makplan/" target="_blank" class="text-gray-500 hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://mkaplan.substack.com/" target="_blank" class="text-gray-500 hover:text-white transition-colors font-mono text-[10px] uppercase tracking-widest">
+                        Read on Substack →
+                    </a>
                 </div>
             </div>
-            <div class="relative">
-                <div class="absolute -inset-4 bg-gold-text/10 blur-3xl rounded-full"></div>
-                <img src="./images/gartner.png" alt="Gartner Prediction" class="relative rounded-2xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
-            </div>
+        </div>
+    </header>
+
+    <section class="py-12 bg-black border-y border-zinc-900 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-between items-center opacity-40 grayscale">
+            <span class="font-black text-xl tracking-tighter uppercase italic">MAKCON</span>
+            <span class="font-mono text-[10px] tracking-[0.4em]">PMI SME</span>
+            <span class="font-mono text-[10px] tracking-[0.4em]">AMEREN '22-25</span>
+            <span class="font-mono text-[10px] tracking-[0.4em]">PENTAGON RENOVATION</span>
         </div>
     </section>
 
-    <!-- LOGO TICKER -->
-    <div class="py-8 bg-black/80 text-center relative z-20 backdrop-blur-sm">
-        <p class="text-gray-600 text-[10px] font-mono mb-4 tracking-[0.3em] uppercase">Validated by Scars From</p>
-        <div class="flex flex-wrap justify-center gap-8 md:gap-16 text-gray-500 font-bold text-lg md:text-xl opacity-60">
-            <span>AMEREN</span>
-            <span>AIG</span>
-            <span>MORGAN STANLEY</span>
-            <span>METLIFE</span>
-            <span>THE PENTAGON</span>
-        </div>
-    </div>
-
-    <!-- THE PROBLEM -->
-    <section class="py-24 bg-zinc-950">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="glass-panel p-10 rounded-2xl border-red-900/20">
-                    <div class="text-4xl mb-6">🍉</div>
-                    <h3 class="text-xl font-bold text-white mb-4 uppercase italic">Watermelons</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
-                        Dashboards that stay "Green" until the budget is already burned. We scan the digital exhaust to find the Red.
-                    </p>
-                </div>
-                <div class="glass-panel p-10 rounded-2xl border-yellow-900/20">
-                    <div class="text-4xl mb-6">⚙️</div>
-                    <h3 class="text-xl font-bold text-white mb-4 uppercase italic">The Admin Tax</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
-                        Reclaim 80% of your leadership capacity by automating the "Archaeology" of manual status reporting.
-                    </p>
-                </div>
-                <div class="glass-panel p-10 rounded-2xl border-green-900/20">
-                    <div class="text-4xl mb-6">⚖️</div>
-                    <h3 class="text-xl font-bold text-white mb-4 uppercase italic">Fiduciary Risk</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
-                        In the age of AI, ignorance of project reality is no longer a defense—it’s a choice to be negligent.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- PRICING / VALUE LADDER -->
-    <section class="py-24 bg-black border-t border-gray-900">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-black text-center mb-4 text-white uppercase tracking-tight">Choose Your Weapon</h2>
-            <p class="text-gray-500 text-center mb-16 font-light">Three ways to install the Sentient Operating System into your career.</p>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- TIER 1: THE BOOK -->
-                <div class="glass-panel p-8 rounded-2xl flex flex-col">
-                    <div class="text-[10px] font-mono text-gray-500 mb-2 uppercase tracking-widest">The Foundation</div>
-                    <h3 class="text-2xl font-bold text-white mb-2">The Manual</h3>
-                    <div class="text-3xl font-black gold-text mb-6">$16.99</div>
-                    <p class="text-gray-400 text-sm mb-8 flex-grow leading-relaxed">
-                        The #1 Bestselling blueprint. Learn the theory behind the "Zero-Tech Stack" and the "Refinery Protocol."
-                    </p>
-                    <a href="https://a.co/d/089Xr06d" class="border border-gray-700 text-white text-center py-3 rounded-lg font-bold hover:bg-white hover:text-black transition-all uppercase text-xs tracking-widest">Buy on Amazon</a>
-                </div>
-
-                <!-- TIER 2: THE BLACK BOX -->
-                <div class="glass-panel p-8 rounded-2xl border-yellow-500/30 flex flex-col relative scale-105 shadow-[0_0_40px_rgba(212,175,55,0.1)]">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 gold-bg text-black text-[8px] font-black px-3 py-1 rounded-full uppercase tracking-tighter">Most Popular</div>
-                    <div class="text-[10px] font-mono text-yellow-500 mb-2 uppercase tracking-widest">Self-Paced Simulation</div>
-                    <h3 class="text-2xl font-bold text-white mb-2">The Black Box</h3>
-                    <div class="text-3xl font-black gold-text mb-6">$249</div>
-                    <p class="text-gray-400 text-sm mb-8 flex-grow leading-relaxed">
-                        The complete "Project RRI'25" forensic audit. Download the evidence and run the simulation on your own timeline. Includes the full Prompt Engine (v5.0).
-                    </p>
-                    <a href="https://buy.stripe.com/5kQ8wIf8H3Pb1blb165sA00" class="gold-bg text-black text-center py-3 rounded-lg font-bold hover:bg-yellow-500 transition-all uppercase text-xs tracking-widest shadow-[0_0_15px_rgba(212,175,55,0.3)]">Download Now</a>
-                </div>
-
-                <!-- TIER 3: THE WAR ROOM -->
-                <div class="glass-panel p-8 rounded-2xl flex flex-col">
-                    <div class="text-[10px] font-mono text-green-500 mb-2 uppercase tracking-widest">Live Cohort</div>
-                    <h3 class="text-2xl font-bold text-white mb-2">The War Room</h3>
-                    <div class="text-3xl font-black gold-text mb-6">$995</div>
-                    <p class="text-gray-400 text-sm mb-8 flex-grow leading-relaxed">
-                        Join Michael Kaplan live. We run the "Project RRI'25" audit together in a 4-hour immersive simulation. Networking + Direct Coaching.
-                    </p>
-                    <a href="#missions" class="border border-gray-700 text-white text-center py-3 rounded-lg font-bold hover:bg-white hover:text-black transition-all uppercase text-xs tracking-widest">Secure Seat</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- MISSION SCHEDULE (LUMA) -->
-    <section class="py-32 bg-black border-t border-gray-900" id="missions">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-black text-center mb-16 text-white uppercase tracking-tight">Active War Rooms</h2>
-            
-            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                <!-- MISSION 1: EXEC BRIEFING -->
-                <div class="glass-panel p-12 rounded-3xl border-yellow-600/30 text-center">
-                    <div class="text-xs font-mono text-yellow-500 mb-6 uppercase tracking-widest">March 19 // 90 Minutes</div>
-                    <h3 class="text-2xl font-extrabold text-white mb-4 italic uppercase">Executive Briefing</h3>
-                    <p class="text-gray-400 text-sm mb-10 leading-relaxed">
-                        A surgical strike on <strong>Zombie Spend</strong>. Learn to find the Truth Gap in your portfolio in under 90 minutes.
-                    </p>
-                    <a href="https://luma.com/6enr1aek" class="gold-bg text-black font-black py-4 px-12 rounded-xl hover:bg-yellow-500 transition-all w-full block uppercase text-xs tracking-widest">Secure Briefing</a>
-                </div>
-
-                <!-- MISSION 2: COHORT 3 -->
-                <div class="glass-panel p-12 rounded-3xl border-green-600/30 text-center">
-                    <div class="text-xs font-mono text-green-500 mb-6 uppercase tracking-widest">March 26 // 4 Hours</div>
-                    <h3 class="text-2xl font-extrabold text-white mb-4 italic uppercase">Forensic War Room</h3>
-                    <p class="text-gray-400 text-sm mb-10 leading-relaxed">
-                        The full immersive simulation. Build the <strong>Project Brain</strong> and learn to decommission the Admin Tax.
-                    </p>
-                    <a href="https://luma.com/aim64nk3" class="bg-green-600 text-black font-black py-4 px-12 rounded-xl hover:bg-green-500 transition-all w-full block uppercase text-xs tracking-widest">Join Cohort 3</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="py-20 border-t border-zinc-900 text-center bg-black">
-        <div class="w-16 h-1 gold-bg mx-auto mb-10 opacity-30"></div>
-        <p class="text-zinc-600 text-[10px] font-mono uppercase tracking-[0.5em] mb-4">
-            &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT // DATA DOES NOT HAVE AN EGO.
-        </p>
+    <footer class="py-12 text-center text-zinc-700 text-[10px] font-mono uppercase tracking-[0.3em]">
+        &copy; 2026 MAKCON LLC // DATA DOES NOT HAVE AN EGO.
     </footer>
 
 </body>
