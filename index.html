@@ -3,76 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Executive Intelligence Briefing | Sentient PMO</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>System Update | Sentient PMO</title>
+    <style>
+        :root {
+            --black-pure: #000000;
+            --radiant-gold: #D4AF37;
+            --glass-border: rgba(212, 175, 55, 0.3);
+        }
+        body {
+            background-color: var(--black-pure);
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+        .maintenance-shield {
+            border: 1px solid var(--glass-border);
+            padding: 3rem;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+        }
+        .mono-label {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--radiant-gold);
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0 0 1.5rem 0;
+            line-height: 1.1;
+        }
+        p {
+            color: #cccccc;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+        }
+        .btn-command {
+            background: transparent;
+            border: 1px solid var(--radiant-gold);
+            color: var(--radiant-gold);
+            padding: 1rem 2rem;
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .btn-command:hover {
+            background: var(--radiant-gold);
+            color: var(--black-pure);
+        }
+    </style>
 </head>
-<body class="the-refinery">
-    <nav class="nav-command-center">
-        <div class="logo-container">
-            <span class="mono-label gold-text">Sovereign Intelligence / v6.1</span>
-        </div>
-        <div class="nav-links">
-            <a href="index.html" class="nav-link" data-section="home">COMMAND CENTER</a>
-            <a href="intelligence/index.html" class="nav-link" data-section="intelligence">INTELLIGENCE</a>
-            <a href="services/index.html" class="nav-link" data-section="services">SERVICES</a>
-            <a href="black-box/index.html" class="nav-link" data-section="black-box">BLACK BOX</a>
-        </div>
-    </nav>
-
-    <main>
-        <section class="hero-section">
-            <div class="governance-shield briefing-card">
-                <div class="status-indicator status-active"></div>
-                <span class="mono-data">STATUS: LIVE FEED ACTIVATED</span>
-                <h1>DECOMMISSION THE MANUAL ERA.<br>INSTALL THE RADAR.</h1>
-                <p class="briefing-header">Stop funding the Sanitization Factory. Start adjudicating the physics of your capital.</p>
-                <div class="mono-data" style="margin-top: 2rem;">[SYSTEM READY FOR DEPLOYMENT]</div>
-            </div>
-        </section>
-
-        <section class="indictment-section" style="margin-top: 4rem;">
-            <div class="governance-shield briefing-card">
-                <h2>THE INDICTMENT: THE $3 TRILLION ADMIN TAX</h2>
-                <div class="grid-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                    <div>
-                        <p>The global enterprise is suffering from a <strong>"Human API" crisis</strong>. Organizations are currently paying elite leadership salaries to highly skilled individuals whose primary function has been reduced to manual labor: translating messy, inconvenient reality into polite, sanitized PowerPoints.</p>
-                    </div>
-                    <div>
-                        <p>This is the <strong>Admin Tax</strong>—a massive, silent drain on capital where project "progress" is a narrative construction rather than a reflection of physical work completed.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="truth-gap-section" style="margin-top: 4rem;">
-            <div class="governance-shield briefing-card">
-                <h2>THE TRUTH GAP: THE EXECUTIVE BLIND SPOT</h2>
-                <div style="text-align: center; padding: 2rem 0;">
-                    <span style="font-size: 5.5rem; font-weight: 800; color: var(--radiant-gold); display: block; line-height: 1;">38 DAYS</span>
-                    <p class="mono-label" style="margin-top: 1rem;">Average latency between a frontline failure and executive awareness</p>
-                </div>
-                <p>The <strong>Truth Gap</strong> is the delta between what is happening in the code, the logs, and the transcripts, and what arrives on your desk in the weekly status report.</p>
-            </div>
-        </section>
-
-        <section class="wedge-section" style="margin: 6rem 0;">
-            <div class="governance-shield briefing-card" style="border-width: 2px; text-align: center;">
-                <div class="status-indicator status-critical"></div>
-                <span class="mono-data alert-text">ACTION REQUIRED: IMMEDIATE PERIMETER CHECK</span>
-                <h2 style="border: none; padding: 0; margin: 1rem 0;">10-DAY FORENSIC DIAGNOSTIC</h2>
-                <p style="max-width: 600px; margin: 0 auto;">We will expose the Truth Gap in your highest-stakes program in 10 days. Fixed Fee: <span class="gold-text">$15,000</span>.</p>
-                <div style="margin-top: 2rem;">
-                    <button class="btn-command" onclick="window.location.href='mailto:michael@makcon.com?subject=Initiate%20Forensic%20Diagnostic'">SECURE THE PERIMETER</button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer style="padding: 4rem 2rem; border-top: 1px solid var(--glass-border); text-align: center;">
-        <span class="mono-label">&copy; 2026 MAKCON LLC | FORENSIC GOVERNANCE | SOVEREIGN INTELLIGENCE</span>
-    </footer>
-
-    <script src="js/navigation.js" defer></script>
+<body>
+    <div class="maintenance-shield">
+        <span class="mono-label">SOVEREIGN INTELLIGENCE / v6.1</span>
+        <h1>PERIMETER UNDER<br>CONSOLIDATION.</h1>
+        <p>We are currently decommissioning the Manual Era and installing the Radar. The Truth Gap remains active, but our Command Center is undergoing structural refactoring.</p>
+        
+        <a href="mailto:michael@makcon.com?subject=Initiate%20Forensic%20Diagnostic" class="btn-command">
+            SECURE THE PERIMETER ($15K)
+        </a>
+    </div>
 </body>
 </html>
