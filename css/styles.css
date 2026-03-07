@@ -1,175 +1,87 @@
-/* * The Sentient Architect | Global Design System v6.0
- * Theme: "War Room / Forensic Command Center"
- * Lead Developer: MAKCON / Michael Kaplan
- */
-
- :root {
-    /* Primary Color Palette */
-    --war-room-bg: #0a0a0a;
-    --radiant-gold: #d4af37;
-    --gold-hover: #f1c40f;
+/* TAILWIND-STYLE UTILITIES & HUD THEME */
+:root {
+    --gold: #d4af37;
+    --void: #0a0a0a;
+    --red-strike: #8b0000;
     --surgical-blue: #005f73;
-    --blood-red: #8b0000;
-    
-    /* UI Utility Colors */
-    --zinc-900: #18181b;
-    --zinc-800: #27272a;
-    --glass-border: rgba(212, 175, 55, 0.15);
-    --glass-bg: rgba(10, 10, 10, 0.85);
-    
-    /* Typography */
-    --font-briefing: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-}
-
-/* 1. Base Physics & Layout */
-* {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    background-color: var(--war-room-bg);
-    color: #ffffff;
-    font-family: var(--font-briefing);
-    line-height: 1.6;
-    margin: 0;
-    overflow-x: hidden;
+    background-color: var(--void);
+    color: white;
+    font-family: 'Inter', sans-serif;
 }
 
-/* 2. The Refinery (Data-Grid Background Pattern) */
-.the-refinery {
+.bg-void { background-color: var(--void); }
+.text-gold { color: var(--gold); }
+.border-gold { border-color: var(--gold); }
+
+/* DATA GRID OVERLAY */
+.data-grid {
     background-image: 
-        linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+        linear-gradient(to right, rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
-    background-position: center center;
 }
 
-/* 3. Typography: Forensic Briefing Style */
-h1, h2, h3, .briefing-header {
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    font-weight: 800;
-    border-left: 4px solid var(--radiant-gold);
-    padding-left: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-h1 { font-size: 2.5rem; }
-h2 { font-size: 1.75rem; color: var(--radiant-gold); }
-
-.mono-data {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--surgical-blue);
-    text-transform: uppercase;
-}
-
-/* 4. The Governance Shield (Glowing Border Effect) */
-.governance-shield {
-    position: relative;
-    border: 1px solid var(--radiant-gold);
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.1),
-                inset 0 0 10px rgba(212, 175, 55, 0.05);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-}
-
-.governance-shield:hover {
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.3),
-                inset 0 0 15px rgba(212, 175, 55, 0.1);
-    border-color: var(--gold-hover);
-}
-
-/* 5. Indicators & Alerts */
-.status-indicator {
-    height: 8px;
-    width: 8px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 8px;
-}
-
-.status-active { background-color: var(--surgical-blue); box-shadow: 0 0 8px var(--surgical-blue); }
-.status-critical { background-color: var(--blood-red); box-shadow: 0 0 10px var(--blood-red); }
-
-/* 6. Command UI Components */
-.briefing-card {
-    background: var(--zinc-900);
-    border: 1px solid var(--zinc-800);
-    padding: 2rem;
-    position: relative;
-}
-
-.btn-command {
-    background-color: var(--radiant-gold);
-    color: var(--war-room-bg);
-    padding: 0.75rem 2rem;
-    font-family: var(--font-mono);
-    font-weight: bold;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.btn-command:hover {
-    background-color: var(--gold-hover);
-    transform: translateY(-2px);
-}
-
-/* 7. Forensic Navigation */
-.nav-command-center {
-    border-bottom: 1px solid var(--glass-border);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(10, 10, 10, 0.95);
-    position: sticky;
+/* RADAR ANIMATION */
+.radar-sweep {
+    position: absolute;
+    width: 50%;
+    height: 50%;
     top: 0;
-    z-index: 100;
+    left: 50%;
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.3) 0%, transparent 100%);
+    transform-origin: bottom left;
+    animation: sweep 4s linear infinite;
+    border-left: 1px solid var(--gold);
 }
 
-.nav-link {
-    color: #ffffff;
-    text-decoration: none;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
+@keyframes sweep {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
-.nav-link:hover {
-    color: var(--radiant-gold);
-}
-
-/* 8. Utility Classes */
-.surgical-text { color: var(--surgical-blue); }
-.alert-text { color: var(--blood-red); font-weight: bold; }
-.gold-text { color: var(--radiant-gold); }
-
-/* Selection */
-::selection {
-    background-color: var(--radiant-gold);
-    color: var(--war-room-bg);
-}
-
-/* Scrollbar Engineering */
-::-webkit-scrollbar {
+.radar-blip {
+    position: absolute;
     width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--gold);
+    animation: blink 2s ease-in-out infinite;
 }
-::-webkit-scrollbar-track {
-    background: var(--war-room-bg);
+
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
 }
-::-webkit-scrollbar-thumb {
-    background: var(--zinc-800);
-    border-radius: 3px;
+
+/* TYPOGRAPHY */
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+
+/* CUSTOM INPUTS */
+input[type="range"] {
+    -webkit-appearance: none;
+    background: rgba(212, 175, 55, 0.1);
+    height: 4px;
 }
-::-webkit-scrollbar-thumb:hover {
-    background: var(--radiant-gold);
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: var(--gold);
+    cursor: pointer;
+    border-radius: 0;
+}
+
+/* VIBRATING TEXT EFFECT FOR CRITICAL DATA */
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: .8; transform: scale(1.02); }
 }
