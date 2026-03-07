@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forensic Command Center | Sentient PMO</title>
+    
+    <!-- GLOBAL ASSETS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- BACKGROUND LAYER -->
+    <div class="data-grid"></div>
+
+    <!-- NAVIGATION HUD -->
+    <nav class="nav-hud">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; height: 100%;">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div class="status-pulse"></div>
+                <span class="font-mono text-gold uppercase" style="font-size: 10px; letter-spacing: 0.2em;">Sovereign Intelligence / v7.1.0</span>
+            </div>
+            <div class="font-mono" style="font-size: 11px; display: flex; gap: 30px;">
+                <a href="index.html" class="nav-link" style="color: var(--gold);">01. COMMAND_CENTER</a>
+                <a href="intelligence/index.html" class="nav-link">02. THE_VAULT</a>
+                <a href="case-study/index.html" class="nav-link">03. EVIDENCE</a>
+                <a href="mailto:michael@makcon.com" style="color: var(--red-bright); text-decoration: none; border: 1px solid var(--red-strike); padding: 5px 10px;">[ SECURE PERIMETER ]</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="radar">
+                <div class="radar-sweep"></div>
+                <!-- STATIC BLIPS -->
+                <div style="position: absolute; top: 25%; left: 35%; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 15px var(--gold);"></div>
+                <div style="position: absolute; bottom: 30%; right: 25%; width: 4px; height: 4px; background: var(--red-bright); border-radius: 50%; box-shadow: 0 0 10px var(--red-bright);"></div>
+            </div>
+            <h1 class="hero-title">STOP SUBSIDIZING <br><span class="text-gold">A FICTION.</span></h1>
+            <p style="color: var(--zinc-400); font-size: 1.25rem; max-width: 700px; margin: 0 auto;">Your "Green" status reports are a social construct. We adjudicate the physics. This is the end of the Sanitization Factory.</p>
+        </section>
+
+        <!-- EBITDA STRIKE CALCULATOR -->
+        <section class="section-calc">
+            <div class="container">
+                <div class="calc-grid">
+                    <div>
+                        <span class="font-mono text-gold uppercase" style="font-size: 11px; letter-spacing: 0.3em;">MODULE: FORENSIC_FINANCE</span>
+                        <h2 style="font-size: 3.5rem; font-weight: 900; margin: 1rem 0 2.5rem; text-transform: uppercase; line-height: 1;">Adjudicate <br>the Strike</h2>
+                        
+                        <div style="margin-bottom: 2.5rem;">
+                            <label class="font-mono" style="font-size: 10px; color: var(--zinc-500); letter-spacing: 0.1em;">ZOMBIE SPEND (MONTHLY LEAKAGE)</label>
+                            <input type="number" id="zombieSpend" value="150000" class="input-box">
+                        </div>
+                        
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+                                <label class="font-mono" style="font-size: 10px; color: var(--zinc-500); letter-spacing: 0.1em;">VALUATION MULTIPLE</label>
+                                <span id="multipleVal" class="text-gold font-mono" style="font-size: 1.5rem; font-weight: 700;">10x</span>
+                            </div>
+                            <input type="range" id="multiple" min="1" max="25" value="10">
+                        </div>
+                    </div>
+
+                    <div class="forensic-card">
+                        <span class="font-mono text-red uppercase" style="font-size: 10px; position: absolute; top: 20px; right: 20px; letter-spacing: 0.2em;">CRITICAL_EXPOSURE</span>
+                        <div style="color: var(--zinc-500); font-family: var(--font-mono); font-size: 11px; margin-bottom: 1rem;">TOTAL VALUE ERASURE</div>
+                        <div id="totalErasure" class="erasure-value">$1,500,000</div>
+                        <p class="font-mono" style="font-size: 13px; color: var(--zinc-400); border-top: 1px solid var(--zinc-900); padding-top: 1.5rem; margin-top: 2rem; line-height: 1.8;">
+                            VERDICT: Every dollar of silence destroys <span style="color: #fff; font-weight: 700;">$10</span> of enterprise value. The "Truth Gap" is not a delay; it is a capital strike.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUTH GAP TIMELINE -->
+        <section style="padding: 10rem 0;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 5rem;">
+                    <span class="font-mono text-gold uppercase" style="font-size: 11px; letter-spacing: 0.3em;">CASE STUDY: PROJECT RRI'25</span>
+                    <h2 style="font-size: 3.5rem; font-weight: 900; text-transform: uppercase;">The 38-Day Truth Gap</h2>
+                </div>
+
+                <div class="truth-grid">
+                    <div class="truth-panel">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem;">
+                            <span class="font-mono" style="background: var(--zinc-800); padding: 6px 12px; font-size: 10px; text-transform: uppercase; color: var(--zinc-400);">The Narrative</span>
+                            <span class="font-mono text-zinc-500" style="font-size: 10px; letter-spacing: 0.1em;">ARCHAEOLOGY</span>
+                        </div>
+                        <div class="timeline-row"><span>FEB 20</span> <span class="text-green">STATUS: GREEN</span></div>
+                        <div class="timeline-row"><span>MAR 05</span> <span class="text-green">STATUS: GREEN</span></div>
+                        <div class="timeline-row"><span>MAR 15</span> <span class="text-green">STATUS: GREEN</span></div>
+                        <div class="timeline-row" style="border: none;"><span>APR 25</span> <span style="color: var(--gold);">STATUS: AMBER</span></div>
+                        <p class="font-mono" style="margin-top: 3rem; font-style: italic; color: var(--zinc-700); font-size: 12px; line-height: 1.6;">"The team is optimizing authentication protocols to ensure a seamless Q2 transition."</p>
+                    </div>
+                    
+                    <div class="truth-panel" style="border-left: 1px solid var(--zinc-800);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem;">
+                            <span class="font-mono" style="background: var(--red-strike); padding: 6px 12px; font-size: 10px; text-transform: uppercase; color: #fff;">The Physics</span>
+                            <span class="font-mono text-zinc-500" style="font-size: 10px; letter-spacing: 0.1em;">METEOROLOGY</span>
+                        </div>
+                        <div class="timeline-row"><span>FEB 20</span> <span class="text-red">BREACH DETECTED</span></div>
+                        <div class="timeline-row"><span>MAR 16</span> <span class="text-red">SYSTEMIC COLLAPSE</span></div>
+                        <div class="timeline-row"><span>MAR 30</span> <span class="text-red">PROJECT TERMINATED</span></div>
+                        <div class="timeline-row" style="border: none;"><span>APR 25</span> <span class="text-red">AUDIT FAILURE</span></div>
+                        <p class="font-mono text-red" style="margin-top: 3rem; font-style: italic; opacity: 0.6; font-size: 12px; line-height: 1.6;">"Digital exhaust indicated total OAuth incompatibility 38 days prior to executive disclosure."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section style="padding: 10rem 0; text-align: center; background: var(--black-pure);">
+            <div class="container">
+                <div style="border: 1px solid rgba(212, 175, 55, 0.2); padding: 6rem 2rem; background: var(--zinc-950);">
+                    <h2 style="font-size: 3rem; font-weight: 900; text-transform: uppercase; margin-bottom: 1.5rem; letter-spacing: -0.02em;">Secure the Perimeter</h2>
+                    <p class="font-mono text-zinc-500" style="margin-bottom: 4rem; font-size: 14px;">We expose the Truth Gap in your highest-stakes program in 10 days. Fixed Fee: $15,000.</p>
+                    <a href="mailto:michael@makcon.com?subject=Initiate%20Forensic%20Diagnostic" class="btn-perimeter">Initiate Diagnostic</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- GLOBAL ENGINES -->
+    <script src="js/navigation.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
