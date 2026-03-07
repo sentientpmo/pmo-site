@@ -11,7 +11,7 @@
 <body class="antialiased selection-gold">
 
     <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
-        <a href="../index.html" class="font-extrabold tracking-tighter text-xl uppercase italic">
+        <a href="../index.html" class="font-extrabold tracking-tighter text-xl uppercase italic hover:opacity-80 transition-opacity">
             The Sentient <span class="gold-text">Architect</span>
         </a>
         
@@ -33,11 +33,10 @@
 
     <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-black/95 flex flex-col items-center justify-center gap-8 font-mono text-sm uppercase tracking-[0.3em]">
         <a href="../index.html" class="hover:text-yellow-500">Home</a>
-        <a href="../briefing/index.html" class="hover:text-yellow-500">Briefing</a>
+        <a href="../briefing/index.html" class="hover:text-yellow-500">The Briefing</a>
+        <a href="../intelligence/index.html" class="hover:text-yellow-500">Vault</a>
         <a href="../services/index.html" class="hover:text-yellow-500">Services</a>
-        <a href="../intelligence/index.html" class="gold-text">Vault</a>
-        <a href="../hunters/index.html" class="text-red-500">Hunters</a>
-        <button id="menu-close" class="mt-8 text-[10px] border border-zinc-800 px-4 py-2 rounded text-zinc-500 uppercase tracking-widest">Close Menu</button>
+        <button id="menu-close" class="mt-8 text-[10px] border border-zinc-800 px-6 py-3 rounded text-zinc-400 uppercase tracking-widest">Close Menu</button>
     </div>
 
     <header class="pt-48 pb-20 px-6 max-w-4xl mx-auto text-center">
@@ -47,17 +46,16 @@
         <h1 class="text-4xl md:text-6xl font-black mb-8 tracking-tighter uppercase italic leading-tight">
             EBITDA <span class="gold-text">Strike Radar</span>
         </h1>
-        <p class="text-gray-500 text-lg font-light leading-relaxed">
+        <p class="text-gray-400 text-lg font-light leading-relaxed">
             Adjudicating the financial impact of <strong>Decision Latency</strong>. Stop treating project delays as administrative friction and start treating them as capital strikes.
         </p>
     </header>
 
     <section class="py-12 px-6 max-w-6xl mx-auto">
         <div class="glass-panel rounded-[2rem] border-zinc-800 p-4 md:p-12 mb-16 text-center">
-            <h2 class="text-xs font-mono text-zinc-500 uppercase tracking-[0.4em] mb-8">Visual Evidence: The Truth Gap Timeline</h2>
+            <h2 class="text-xs font-mono text-zinc-500 uppercase tracking-[0.4em] mb-8 italic">Visual Evidence: The Truth Gap Timeline</h2>
             <div class="max-w-5xl mx-auto border border-zinc-900 rounded-xl overflow-hidden shadow-2xl relative group">
                 <img src="../images/strike-radar-visual.png" alt="EBITDA Strike Radar Visual" class="w-full opacity-90 group-hover:opacity-100 transition-opacity duration-700">
-                <div class="absolute inset-0 pointer-events-none border border-white/5 rounded-xl"></div>
             </div>
             <p class="mt-8 text-[10px] font-mono text-zinc-600 uppercase italic tracking-widest">"DATA DOES NOT HAVE AN EGO."</p>
         </div>
@@ -66,8 +64,8 @@
             <div class="space-y-8">
                 <h2 class="text-sm font-mono text-yellow-500 uppercase tracking-[0.4em]">The Indictment</h2>
                 <div class="space-y-6 text-gray-400 font-light leading-relaxed">
-                    <p>Traditional PMOs rely on <strong class="text-white text-base">Human APIs</strong>—Project Managers who manually translate technical noise into sanitized status reports. This creates the <strong>Sanitization Factory</strong>.</p>
-                    <p>The result is a <strong class="text-white text-base">38-Day Truth Gap</strong>. By the time a dashboard turns "Red," the capital required to fix the issue has already been incinerated in the silence.</p>
+                    <p>Traditional PMOs rely on <strong class="text-white">Human APIs</strong>—Project Managers who manually translate technical noise into sanitized status reports. This creates the <strong>Sanitization Factory</strong>.</p>
+                    <p>The result is a <strong class="text-white">38-Day Truth Gap</strong>. By the time a dashboard turns "Red," the capital required to fix the issue has already been incinerated in the silence.</p>
                     <p>At a 10x multiple, an unmitigated IT delay functions as a direct strike against your P&L. We identify the fracture before it erodes your enterprise value.</p>
                 </div>
             </div>
@@ -90,12 +88,12 @@
 
         <div class="py-12 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
             <div>
-                <p class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-2 italic">Previous Asset</p>
+                <p class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-2 italic">Previous Evidence Asset</p>
                 <a href="rri25-briefing.html" class="text-sm font-mono uppercase hover:text-yellow-500 transition-colors">← 03. RRI'25 Case Evidence</a>
             </div>
 
             <div class="flex flex-col items-center gap-4 order-last md:order-none">
-                <a href="assets/EBITDA_Strike_Radar_Visual_v1.0.pdf" download="EBITDA_Strike_Radar_Visual_v1.0.pdf" class="gold-bg text-black font-black py-4 px-12 rounded-xl hover:bg-yellow-500 transition-all uppercase tracking-widest text-sm shadow-2xl shadow-yellow-500/20">
+                <a href="assets/EBITDA_Strike_Radar_Visual_v1.0.pdf" download="EBITDA_Strike_Radar_Visual_v1.0.pdf" class="gold-bg text-black font-black py-4 px-12 rounded-xl hover:bg-yellow-500 transition-all uppercase tracking-widest text-sm shadow-2xl">
                     Download Forensic Record (PDF)
                 </a>
                 <a href="index.html" class="text-[10px] font-mono text-zinc-600 hover:text-white transition-colors uppercase tracking-[0.3em]">
@@ -112,7 +110,7 @@
 
     <footer class="py-16 text-center bg-black border-t border-zinc-900">
         <div class="text-zinc-700 text-[10px] font-mono uppercase tracking-[0.3em]">
-            &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT
+            &copy; 2026 MAKCON LLC // DATA DOES NOT HAVE AN EGO.
         </div>
     </footer>
 
