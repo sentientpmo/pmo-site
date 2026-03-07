@@ -7,82 +7,76 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-void text-white font-sans antialiased overflow-x-hidden">
+<body class="bg-void">
     <!-- DATA GRID OVERLAY -->
-    <div class="fixed inset-0 z-0 opacity-10 pointer-events-none data-grid"></div>
+    <div class="data-grid"></div>
 
-    <nav class="nav-hud border-b border-gold/20 sticky top-0 bg-void/80 backdrop-blur-md z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav class="nav-hud">
+        <div class="container nav-container">
             <div class="flex items-center gap-4">
-                <div class="w-3 h-3 bg-gold animate-pulse shadow-[0_0_10px_#d4af37]"></div>
-                <span class="font-mono text-xs tracking-widest text-gold uppercase">Sovereign Intelligence / v6.2</span>
+                <div class="status-pulse"></div>
+                <span class="font-mono text-xs text-gold uppercase tracking-widest">Sovereign Intelligence / v6.2</span>
             </div>
-            <div class="hidden md:flex gap-8 font-mono text-xs tracking-tighter">
-                <a href="#hero" class="hover:text-gold transition-colors text-gold">01. COMMAND_CENTER</a>
-                <a href="#calculator" class="hover:text-gold transition-colors">02. EBITDA_STRIKE</a>
-                <a href="#truth-gap" class="hover:text-gold transition-colors">03. TRUTH_GAP</a>
-                <a href="mailto:michael@makcon.com" class="text-red-500 hover:text-red-400">[ SECURE PERIMETER ]</a>
+            <div class="nav-links font-mono text-xs">
+                <a href="#hero" class="nav-link active">01. COMMAND_CENTER</a>
+                <a href="#calculator" class="nav-link">02. EBITDA_STRIKE</a>
+                <a href="#truth-gap" class="nav-link">03. TRUTH_GAP</a>
+                <a href="mailto:michael@makcon.com" class="text-red-bright">[ SECURE PERIMETER ]</a>
             </div>
         </div>
     </nav>
 
     <main class="relative z-10">
         <!-- HERO SECTION -->
-        <section id="hero" class="min-h-screen flex flex-col items-center justify-center px-6 py-20">
-            <div class="radar-container relative mb-12">
-                <div class="radar-circle border border-gold/30 rounded-full w-64 h-64 md:w-96 md:h-96 relative flex items-center justify-center">
+        <section id="hero" class="hero-section">
+            <div class="radar-container">
+                <div class="radar-circle">
                     <div class="radar-sweep"></div>
-                    <div class="radar-blip top-1/4 left-1/3"></div>
-                    <div class="radar-blip bottom-1/3 right-1/4"></div>
-                    <div class="absolute inset-0 border border-gold/10 rounded-full scale-75"></div>
-                    <div class="absolute inset-0 border border-gold/10 rounded-full scale-50"></div>
+                    <div class="radar-blip blip-1"></div>
+                    <div class="radar-blip blip-2"></div>
                 </div>
-                <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 font-mono text-[10px] text-gold/50 tracking-[0.5em]">SCANNING_PHYSICS...</div>
+                <div class="radar-label font-mono text-gold">SCANNING_PHYSICS...</div>
             </div>
 
-            <div class="text-center max-w-4xl">
-                <h1 class="text-5xl md:text-8xl font-black mb-6 leading-tight tracking-tighter">
+            <div class="hero-content">
+                <h1 class="hero-title">
                     STOP SUBSIDIZING <br><span class="text-gold">A FICTION.</span>
                 </h1>
-                <p class="text-xl md:text-2xl text-zinc-400 font-light max-w-2xl mx-auto leading-relaxed">
-                    Your "Green" status reports are a social construct. We adjudicate the physics. This is the end of the <span class="text-white border-b border-red-800">Sanitization Factory</span>.
+                <p class="hero-subtitle">
+                    Your "Green" status reports are a social construct. We adjudicate the physics. This is the end of the <span class="sanitization-factory">Sanitization Factory</span>.
                 </p>
             </div>
         </section>
 
         <!-- EBITDA STRIKE CALCULATOR -->
-        <section id="calculator" class="py-24 px-6 border-y border-gold/10 bg-zinc-900/30">
-            <div class="max-w-5xl mx-auto">
-                <div class="flex flex-col md:flex-row gap-12 items-center">
-                    <div class="w-full md:w-1/2 space-y-8">
-                        <div>
-                            <span class="font-mono text-xs text-gold uppercase tracking-widest">Module: Forensic_Finance</span>
-                            <h2 class="text-4xl font-bold mt-2">ADJUDICATE THE STRIKE</h2>
-                        </div>
+        <section id="calculator" class="calculator-section">
+            <div class="container">
+                <div class="grid-2-col">
+                    <div class="calc-inputs">
+                        <span class="font-mono text-xs text-gold uppercase tracking-widest">Module: Forensic_Finance</span>
+                        <h2 class="section-title">ADJUDICATE THE STRIKE</h2>
                         
-                        <div class="space-y-6">
-                            <div class="space-y-2">
-                                <label class="font-mono text-xs text-zinc-500 uppercase">Zombie Spend (Monthly Leakage)</label>
-                                <input type="number" id="zombieSpend" value="150000" class="w-full bg-void border border-gold/20 p-4 font-mono text-gold focus:outline-none focus:border-gold transition-colors">
-                            </div>
-                            <div class="space-y-2">
-                                <label class="font-mono text-xs text-zinc-500 uppercase flex justify-between">
-                                    <span>Valuation Multiple</span>
-                                    <span id="multipleVal" class="text-gold">10x</span>
-                                </label>
-                                <input type="range" id="multiple" min="1" max="25" value="10" class="w-full accent-gold">
-                            </div>
+                        <div class="input-group">
+                            <label class="font-mono text-xs text-zinc-500 uppercase">Zombie Spend (Monthly Leakage)</label>
+                            <input type="number" id="zombieSpend" value="150000" class="forensic-input">
+                        </div>
+                        <div class="input-group">
+                            <label class="font-mono text-xs text-zinc-500 uppercase flex justify-between">
+                                <span>Valuation Multiple</span>
+                                <span id="multipleVal" class="text-gold">10x</span>
+                            </label>
+                            <input type="range" id="multiple" min="1" max="25" value="10" class="forensic-slider">
                         </div>
                     </div>
 
-                    <div class="w-full md:w-1/2 bg-void border-2 border-red-900/50 p-8 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 p-2 font-mono text-[10px] text-red-900">CRITICAL_EXPOSURE</div>
+                    <div class="calc-output-card">
+                        <div class="card-header font-mono text-red-strike">CRITICAL_EXPOSURE</div>
                         <span class="font-mono text-xs text-zinc-500 uppercase">Total Value Erasure</span>
-                        <div id="totalErasure" class="text-5xl md:text-7xl font-black text-red-600 mt-4 mb-6 animate-pulse">
+                        <div id="totalErasure" class="erasure-value animate-pulse">
                             $1,500,000
                         </div>
-                        <p class="font-mono text-sm text-zinc-400 leading-relaxed">
-                            VERDICT: Every dollar of silence destroys <span class="text-white">$10</span> of enterprise value. The "Truth Gap" is not a delay; it is a <span class="text-red-500">EBITDA Strike</span>.
+                        <p class="font-mono text-sm text-zinc-400">
+                            VERDICT: Every dollar of silence destroys <span class="text-white">$10</span> of enterprise value. The "Truth Gap" is not a delay; it is a <span class="text-red-bright">EBITDA Strike</span>.
                         </p>
                     </div>
                 </div>
@@ -90,78 +84,59 @@
         </section>
 
         <!-- THE 38-DAY TRUTH GAP -->
-        <section id="truth-gap" class="py-24 px-6">
-            <div class="max-w-6xl mx-auto">
+        <section id="truth-gap" class="truth-gap-section">
+            <div class="container">
                 <div class="text-center mb-16">
                     <span class="font-mono text-xs text-gold uppercase tracking-widest">Case Study: Project RRI'25</span>
-                    <h2 class="text-4xl font-bold mt-2">THE 38-DAY TRUTH GAP</h2>
+                    <h2 class="section-title">THE 38-DAY TRUTH GAP</h2>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-1 border border-gold/10 bg-gold/10">
+                <div class="truth-grid">
                     <!-- THE NARRATIVE -->
-                    <div class="bg-void p-8 space-y-6">
-                        <div class="flex justify-between items-center">
-                            <span class="font-mono text-xs px-2 py-1 bg-zinc-800 text-zinc-400 uppercase">The Narrative</span>
+                    <div class="truth-card narrative">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="label-tag">The Narrative</span>
                             <span class="font-mono text-xs text-zinc-500">ARCHAEOLOGY</span>
                         </div>
-                        <div class="space-y-4">
-                            <div class="flex justify-between border-b border-zinc-800 pb-2">
-                                <span class="text-zinc-500">Feb 20</span>
-                                <span class="text-green-500 font-bold">STATUS: GREEN</span>
-                            </div>
-                            <div class="flex justify-between border-b border-zinc-800 pb-2">
-                                <span class="text-zinc-500">Mar 05</span>
-                                <span class="text-green-500 font-bold">STATUS: GREEN</span>
-                            </div>
-                            <div class="flex justify-between border-b border-zinc-800 pb-2">
-                                <span class="text-zinc-500">Mar 15</span>
-                                <span class="text-green-500 font-bold">STATUS: GREEN</span>
-                            </div>
+                        <div class="timeline">
+                            <div class="timeline-item"><span>Feb 20</span> <span class="text-green">STATUS: GREEN</span></div>
+                            <div class="timeline-item"><span>Mar 05</span> <span class="text-green">STATUS: GREEN</span></div>
+                            <div class="timeline-item"><span>Mar 15</span> <span class="text-green">STATUS: GREEN</span></div>
                         </div>
-                        <p class="text-xs font-mono text-zinc-600 italic">"Everything is on track for Q2 delivery."</p>
+                        <p class="quote">"Everything is on track for Q2 delivery."</p>
                     </div>
 
                     <!-- THE PHYSICS -->
-                    <div class="bg-void p-8 space-y-6 border-l-0 md:border-l border-gold/20 relative">
-                        <div class="absolute inset-0 bg-red-900/5 pointer-events-none"></div>
-                        <div class="flex justify-between items-center">
-                            <span class="font-mono text-xs px-2 py-1 bg-red-900/20 text-red-500 uppercase">The Physics</span>
+                    <div class="truth-card physics">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="label-tag alert">The Physics</span>
                             <span class="font-mono text-xs text-zinc-500">METEOROLOGY</span>
                         </div>
-                        <div class="space-y-4">
-                            <div class="flex justify-between border-b border-zinc-800 pb-2">
-                                <span class="text-zinc-500">Feb 20</span>
-                                <span class="text-red-500 font-bold">BREACH DETECTED</span>
-                            </div>
-                            <div class="flex justify-between border-b border-zinc-800 pb-2">
-                                <span class="text-zinc-500">Mar 16</span>
-                                <span class="text-red-500 font-bold">SYSTEMIC COLLAPSE</span>
-                            </div>
-                            <div class="flex justify-between border-b border-zinc-800 pb-2">
-                                <span class="text-zinc-500">Mar 30</span>
-                                <span class="text-red-500 font-bold">PROJECT TERMINATED</span>
-                            </div>
+                        <div class="timeline">
+                            <div class="timeline-item"><span>Feb 20</span> <span class="text-red-bright">BREACH DETECTED</span></div>
+                            <div class="timeline-item"><span>Mar 16</span> <span class="text-red-bright">SYSTEMIC COLLAPSE</span></div>
+                            <div class="timeline-item"><span>Mar 30</span> <span class="text-red-bright">PROJECT TERMINATED</span></div>
                         </div>
-                        <p class="text-xs font-mono text-red-400 italic">"Digital exhaust indicated failure 38 days prior to disclosure."</p>
+                        <p class="quote alert">"Digital exhaust indicated failure 38 days prior to disclosure."</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- CTA SECTION -->
-        <section class="py-24 text-center px-6">
-            <div class="max-w-3xl mx-auto border border-gold/30 p-12 bg-zinc-900/50 backdrop-blur-sm">
-                <h2 class="text-3xl font-bold mb-6 uppercase tracking-tighter">Initiate Forensic Diagnostic</h2>
-                <p class="text-zinc-400 mb-8 font-mono text-sm">We expose the Truth Gap in your highest-stakes program in 10 days. Fixed Fee: $15,000.</p>
-                <a href="mailto:michael@makcon.com?subject=Initiate%20Forensic%20Diagnostic" class="inline-block bg-gold text-void px-10 py-4 font-bold uppercase tracking-widest hover:bg-white transition-all transform hover:scale-105">
+        <section class="cta-section">
+            <div class="cta-card">
+                <h2 class="cta-title">Initiate Forensic Diagnostic</h2>
+                <p class="cta-text font-mono">We expose the Truth Gap in your highest-stakes program in 10 days. Fixed Fee: $15,000.</p>
+                <a href="mailto:michael@makcon.com?subject=Initiate%20Forensic%20Diagnostic" class="btn-command">
                     SECURE THE PERIMETER
                 </a>
             </div>
         </section>
     </main>
 
-    <footer class="py-12 border-t border-gold/10 text-center relative z-10">
-        <p class="font-mono text-[10px] text-zinc-600 tracking-[0.3em]">
+    <footer class="footer">
+        <p class="font-mono text-zinc-600 tracking-widest">
             &copy; 2026 MAKCON LLC | FORENSIC GOVERNANCE | SOVEREIGN INTELLIGENCE
         </p>
     </footer>
