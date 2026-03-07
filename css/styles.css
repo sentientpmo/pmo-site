@@ -1,37 +1,105 @@
-/* TAILWIND-STYLE UTILITIES & HUD THEME */
+/* 
+ * SENTIENT PMO | FORENSIC GOVERNANCE ENGINE 
+ * CORE ARCHITECTURE: V6.2.1
+ */
+
 :root {
     --gold: #d4af37;
+    --gold-muted: rgba(212, 175, 55, 0.2);
     --void: #0a0a0a;
     --red-strike: #8b0000;
+    --red-bright: #ef4444;
     --surgical-blue: #005f73;
+    --glass-border: rgba(212, 175, 55, 0.15);
+    --font-main: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* 1. BASE RESET & HUD FOUNDATION */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: var(--void);
-    color: white;
-    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-.bg-void { background-color: var(--void); }
-.text-gold { color: var(--gold); }
-.border-gold { border-color: var(--gold); }
-
-/* DATA GRID OVERLAY */
+/* DATA GRID OVERLAY - THE "PHYSICS" LAYER */
 .data-grid {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.08;
     background-image: 
-        linear-gradient(to right, rgba(212, 175, 55, 0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
+        linear-gradient(to right, var(--gold) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--gold) 1px, transparent 1px);
+    background-size: 50px 50px;
 }
 
-/* RADAR ANIMATION */
+/* 2. TYPOGRAPHY ADJUDICATION */
+h1, h2, h3 {
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+}
+
+.font-mono {
+    font-family: var(--font-mono);
+    letter-spacing: -0.02em;
+}
+
+.text-gold { color: var(--gold); }
+.text-red-500 { color: var(--red-bright); }
+.text-zinc-400 { color: #a1a1aa; }
+.text-zinc-500 { color: #71717a; }
+.text-zinc-600 { color: #52525b; }
+
+/* 3. NAVIGATION COMMAND CENTER */
+.nav-hud {
+    border-bottom: 1px solid var(--glass-border);
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-link {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--gold);
+}
+
+/* 4. RADAR ANIMATION ENGINE */
+.radar-container {
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.2));
+}
+
+.radar-circle {
+    border: 1px solid var(--gold-muted);
+    position: relative;
+    overflow: hidden;
+}
+
 .radar-sweep {
     position: absolute;
     width: 50%;
     height: 50%;
     top: 0;
     left: 50%;
-    background: linear-gradient(90deg, rgba(212, 175, 55, 0.3) 0%, transparent 100%);
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.4) 0%, transparent 100%);
     transform-origin: bottom left;
     animation: sweep 4s linear infinite;
     border-left: 1px solid var(--gold);
@@ -44,8 +112,8 @@ body {
 
 .radar-blip {
     position: absolute;
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     background: var(--gold);
     border-radius: 50%;
     box-shadow: 0 0 15px var(--gold);
@@ -53,35 +121,134 @@ body {
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
 }
 
-/* TYPOGRAPHY */
-.font-mono { font-family: 'JetBrains Mono', monospace; }
+/* 5. EBITDA STRIKE CALCULATOR - CROSS-BROWSER COMPATIBILITY */
+input[type="number"] {
+    appearance: none;
+    -moz-appearance: textfield;
+}
 
-/* CUSTOM INPUTS */
-input[type="range"] {
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="range"] {
+    -webkit-appearance: none; /* Legacy */
+    appearance: none;         /* Standard */
+    width: 100%;
     background: rgba(212, 175, 55, 0.1);
     height: 4px;
+    outline: none;
+    cursor: pointer;
 }
 
+/* Webkit (Chrome/Safari/Edge) Thumb */
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 15px;
-    height: 15px;
+    appearance: none;
+    width: 18px;
+    height: 18px;
     background: var(--gold);
+    border: none;
     cursor: pointer;
-    border-radius: 0;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+    transition: transform 0.1s ease;
 }
 
-/* VIBRATING TEXT EFFECT FOR CRITICAL DATA */
+input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.2);
+}
+
+/* Firefox Thumb */
+input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: var(--gold);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+}
+
+/* 6. COMPONENT ARCHITECTURE */
+.bg-void { background-color: var(--void); }
+.bg-zinc-900\/30 { background-color: rgba(24, 24, 27, 0.3); }
+
+.border-gold\/10 { border-color: rgba(212, 175, 55, 0.1); }
+.border-gold\/20 { border-color: rgba(212, 175, 55, 0.2); }
+.border-gold\/30 { border-color: rgba(212, 175, 55, 0.3); }
+
 .animate-pulse {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 @keyframes pulse {
     0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: .8; transform: scale(1.02); }
+    50% { opacity: 0.85; transform: scale(1.01); }
+}
+
+/* 7. BUTTONS & CTAs */
+.btn-command {
+    background: var(--gold);
+    color: var(--void);
+    padding: 1rem 2.5rem;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-command:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* 8. RESPONSIVE GRID SYSTEM */
+.max-w-7xl { max-width: 80rem; }
+.max-w-5xl { max-width: 64rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.grid { display: grid; }
+.md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-8 { gap: 2rem; }
+.gap-12 { gap: 3rem; }
+
+.p-8 { padding: 2rem; }
+.py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+
+/* 9. UTILITIES */
+.sticky { position: sticky; }
+.top-0 { top: 0; }
+.z-50 { z-index: 50; }
+.backdrop-blur-md { backdrop-filter: blur(12px); }
+
+/* 10. TRUTH GAP TIMELINE SPECIFICS */
+#truth-gap .bg-red-900\/5 {
+    background-color: rgba(139, 0, 0, 0.05);
+}
+
+#truth-gap .border-l-0 {
+    border-left-width: 0;
+}
+
+@media (min-width: 768px) {
+    #truth-gap .md\:border-l {
+        border-left-width: 1px;
+    }
 }
