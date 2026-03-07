@@ -1,0 +1,54 @@
+/* The Sentient Architect | Global Design System 
+    Author: Michael Kaplan
+    Governance: Forensic Minimalist
+*/
+
+/* --- Base Configuration --- */
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #0a0a0a; 
+    color: #e5e5e5; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-mono { 
+    font-family: 'JetBrains Mono', monospace; 
+}
+
+/* --- Brand Colors --- */
+.gold-text { color: #D4AF37; }
+.gold-bg { background-color: #D4AF37; }
+
+/* --- UI Components --- */
+.glass-panel { 
+    background: rgba(255, 255, 255, 0.03); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* --- Navigation & Interaction --- */
+html { scroll-behavior: smooth; }
+
+.selection-gold::selection {
+    background-color: #D4AF37;
+    color: #000;
+}
+
+#mobile-menu.hidden { 
+    display: none; 
+}
+
+/* --- Layout Elements --- */
+.hero-overlay { 
+    background: radial-gradient(circle, rgba(10,10,10,0.4) 0%, rgba(10,10,10,1) 100%); 
+}
+
+.timeline-border { 
+    border-left: 1px solid rgba(212, 175, 55, 0.3); 
+}
+
+.glow-cyan { 
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.05); 
+}
