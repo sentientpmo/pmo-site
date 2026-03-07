@@ -1,42 +1,37 @@
-/* * Sovereign Intelligence / Navigation Logic v6.1
- * Protocol: Root-Relative Pathing & Active State Persistence
- * Author: MAKCON / Michael Kaplan
+/**
+ * SOVEREIGN NAVIGATION PROTOCOL v6.1.1
+ * Hardened DOM Integration Wrapper
  */
-
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Path Normalization: Capture the current URL path
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-link');
+    console.log("Sovereign Intelligence: Initializing Perimeter Logic...");
 
+    // Select all navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    if (navLinks.length === 0) {
+        console.warn("Sovereign Navigation: No menu elements detected in DOM.");
+        return; // Safe exit to prevent console crash
+    }
+
+    // Determine the current path and identify the active section
+    const currentPath = window.location.pathname;
+    
     navLinks.forEach(link => {
-        // Retrieve the data-section attribute to identify the target area
+        // Extract the section name from the data attribute
         const section = link.getAttribute('data-section');
         
-        // 2. Active State Logic: High-fidelity visual feedback
-        // Check if the current URL contains the section directory name
-        if (section !== 'home' && currentPath.includes(`/${section}/`)) {
-            link.style.color = 'var(--radiant-gold)';
-            link.style.borderBottom = '2px solid var(--radiant-gold)';
-            link.style.paddingBottom = '5px';
-        } 
-        
-        // 3. Command Center (Home) Logic: Primary Entry Point
-        // Highlights the home link only if at the root or main index.html
-        else if (section === 'home') {
-            const isAtRoot = currentPath === '/' || currentPath.endsWith('index.html');
-            const inSubFolder = currentPath.includes('/services/') || 
-                                currentPath.includes('/intelligence/') || 
-                                currentPath.includes('/black-box/') ||
-                                currentPath.includes('/about/');
-
-            if (isAtRoot && !inSubFolder) {
-                link.style.color = 'var(--radiant-gold)';
-                link.style.borderBottom = '2px solid var(--radiant-gold)';
-                link.style.paddingBottom = '5px';
-            }
+        // Logical match for current pathing
+        // Handles root (index.html) and sub-directories (intelligence/, services/, etc.)
+        if (
+            (currentPath === '/' || currentPath.endsWith('index.html')) && section === 'home' ||
+            currentPath.includes(`/${section}/`)
+        ) {
+            link.classList.add('active');
+            console.log(`Perimeter Secure: Active Section [${section.toUpperCase()}]`);
+        } else {
+            link.classList.remove('active');
         }
     });
 
-    // Console Log for Technical Validation
-    console.log("[SYSTEM]: Forensic Navigation v6.1 Active. Root-Relative Perimeter Secured.");
+    // Optional: Add hover sound or visual glitch effect initialization here
 });
