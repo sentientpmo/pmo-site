@@ -3,39 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intelligence Vault | Protocol v5.0 | The Sentient Architect</title>
+    <title>Intelligence Vault | The Sentient Architect | Protocol v5.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #e5e5e5; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .gold-text { color: #D4AF37; }
+        .gold-bg { background-color: #D4AF37; }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
+        .border-gold { border-color: rgba(212, 175, 55, 0.2); }
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
-<body class="antialiased selection-gold">
+<body class="antialiased selection:bg-yellow-500 selection:text-black">
 
     <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
         <a href="../index.html" class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></a>
-        
         <div class="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
             <a href="../briefing/index.html" class="hover:text-yellow-500 transition-colors">Briefing</a>
             <a href="../services/index.html" class="hover:text-yellow-500 transition-colors">Services</a>
-            <a href="../intelligence/index.html" class="hover:text-yellow-500 transition-colors gold-text">Vault</a>
             <a href="https://mkaplan.substack.com/" target="_blank" class="hover:text-yellow-500 transition-colors">Substack</a>
             <a href="../hunters/index.html" class="text-red-500 hover:text-red-400 transition-colors">Hunters</a>
         </div>
-
-        <div class="flex items-center gap-4">
-            <a href="https://luma.com/xh2r0z47" class="gold-bg text-black text-[10px] font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all shadow-lg border-gold uppercase">April 23 Pass</a>
-            <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
+        <a href="https://luma.com/xh2r0z47" class="gold-bg text-black text-[10px] font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all shadow-lg uppercase">April 23 Pass</a>
     </nav>
-
-    <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-black/95 flex flex-col items-center justify-center gap-8 font-mono text-sm uppercase tracking-[0.3em]">
-        <a href="../index.html" class="hover:text-yellow-500">Home</a>
-        <a href="../briefing/index.html" class="hover:text-yellow-500">Briefing</a>
-        <a href="../services/index.html" class="hover:text-yellow-500">Services</a>
-        <a href="../intelligence/index.html" class="gold-text">Vault</a>
-        <button id="menu-close" class="mt-8 text-[10px] border border-zinc-800 px-4 py-2 rounded">Close</button>
-    </div>
 
     <header class="pt-48 pb-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center border-b border-zinc-900">
         <div>
@@ -43,71 +35,52 @@
                 Protocol v5.0 // Forensic Intelligence
             </div>
             <h1 class="text-4xl md:text-6xl font-black mb-8 tracking-tighter uppercase italic leading-tight">
-                Forensic <span class="gold-text">Intelligence.</span>
+                The <span class="gold-text">Intelligence</span> Vault
             </h1>
             <p class="text-gray-500 text-lg font-light max-w-lg leading-relaxed">
-                Download the protocols and clinical evidence required to adjudicate <strong>Scientific Insolvency</strong>.
+                Download the forensic frameworks and clinical evidence required to adjudicate <strong>Scientific Insolvency</strong>.
             </p>
         </div>
         
         <div class="glass-panel p-6 rounded-3xl border-zinc-800 flex items-center gap-6">
-            <img src="../images/michael_kaplan.jpg" alt="Michael Kaplan" class="w-24 h-24 rounded-xl object-cover border border-zinc-800 shadow-xl">
+            <img src="../images/michael_kaplan.jpg" alt="Michael Kaplan" class="w-24 h-24 rounded-xl object-cover border border-gold">
             <div>
-                <p class="text-[10px] font-mono text-yellow-500 uppercase tracking-widest mb-1">Architect Signature</p>
+                <p class="text-[10px] font-mono text-yellow-500 uppercase tracking-widest mb-1">Authenticated By</p>
                 <p class="text-lg font-bold italic uppercase tracking-tighter text-white">Michael Kaplan</p>
-                <a href="https://mkaplan.substack.com/p/the-anatomy-of-a-fiduciary-verdict" target="_blank" class="text-[10px] font-mono text-zinc-500 hover:text-white transition-colors">View Fiduciary Verdict →</a>
+                <a href="https://mkaplan.substack.com/p/the-anatomy-of-a-fiduciary-verdict" target="_blank" class="text-[10px] font-mono text-zinc-500 hover:text-white transition-colors">View Forensic Audit →</a>
             </div>
         </div>
     </header>
 
-    <section class="py-24 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section class="py-24 px-6 max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         
         <div class="glass-panel p-8 rounded-2xl border-gold hover:bg-white/5 transition-all group">
-            <div class="text-[10px] font-mono text-yellow-500 mb-4 uppercase tracking-widest">Protocol 5.0</div>
+            <div class="text-[10px] font-mono text-yellow-500 mb-4 uppercase tracking-widest">Strategic Asset</div>
             <h3 class="text-xl font-bold mb-4 uppercase italic">Architect Battle Card</h3>
-            <p class="text-xs text-gray-500 mb-8 leading-relaxed">The high-density counter-narrative against legacy PMO reporting theater.</p>
-            <a href="assets/Sentient_Architect_Battle_Card_v1.0.pdf" download="Sentient_Architect_Battle_Card_v1.0.pdf" class="text-[10px] font-mono uppercase tracking-widest text-white border-b border-yellow-500 pb-1 hover:text-yellow-500 transition-colors">Download PDF</a>
+            <p class="text-xs text-gray-500 mb-8 leading-relaxed">The high-density counter-narrative against legacy PMO reporting theater. Decommission the Admin Tax.</p>
+            <a href="assets/Sentient_Architect_Battle_Card_v1.0.pdf" download class="text-[10px] font-mono uppercase tracking-widest text-white border-b border-yellow-500 pb-1 hover:text-yellow-500 transition-colors">Download PDF</a>
         </div>
 
         <div class="glass-panel p-8 rounded-2xl border-zinc-800 hover:border-gold transition-all group">
-            <div class="text-[10px] font-mono text-zinc-500 mb-4 uppercase tracking-widest">Visual Framework</div>
+            <div class="text-[10px] font-mono text-zinc-500 mb-4 uppercase tracking-widest">Executive Deck</div>
             <h3 class="text-xl font-bold mb-4 uppercase italic">Forensic Briefing Protocol</h3>
-            <p class="text-xs text-gray-500 mb-8 leading-relaxed">The visual intelligence framework for the EBITDA Strike Radar.</p>
-            <a href="assets/Sovereign_Intelligence_Forensic_Briefing_Protocol_v1.0.pdf" download="Sovereign_Intelligence_Forensic_Briefing_Protocol_v1.0.pdf" class="text-[10px] font-mono uppercase tracking-widest text-white border-b border-zinc-500 pb-1 hover:text-white transition-colors">Download Deck</a>
-        </div>
-
-        <div class="glass-panel p-8 rounded-2xl border-zinc-800 hover:border-gold transition-all group">
-            <div class="text-[10px] font-mono text-cyan-500 mb-4 uppercase tracking-widest">Case Evidence</div>
-            <h3 class="text-xl font-bold mb-4 uppercase italic">RRI'25 Intelligence Briefing</h3>
-            <p class="text-xs text-gray-500 mb-8 leading-relaxed">A clinical sample identifying the 38-day Truth Gap and recovered capital.</p>
-            <a href="assets/Intelligence_Briefing_RRI25_Sample_v1.0.pdf" download="Intelligence_Briefing_RRI25_Sample_v1.0.pdf" class="text-[10px] font-mono uppercase tracking-widest text-white border-b border-cyan-500 pb-1 hover:text-cyan-500 transition-colors">Download Sample</a>
-        </div>
-
-        <div class="glass-panel p-8 rounded-2xl border-zinc-800 hover:border-gold transition-all group">
-            <div class="text-[10px] font-mono text-yellow-500 mb-4 uppercase tracking-widest">Board Visual</div>
-            <h3 class="text-xl font-bold mb-4 uppercase italic">EBITDA Strike Radar</h3>
-            <p class="text-xs text-gray-500 mb-8 leading-relaxed">The visual asset used to communicate Truth Gaps to the CFO.</p>
-            <a href="assets/EBITDA_Strike_Radar_Visual_v1.0.pdf" download="EBITDA_Strike_Radar_Visual_v1.0.pdf" class="text-[10px] font-mono uppercase tracking-widest text-white border-b border-yellow-500 pb-1 hover:text-yellow-500 transition-colors">Download Visual</a>
+            <p class="text-xs text-gray-500 mb-8 leading-relaxed">The visual intelligence framework for the EBITDA Strike Radar and Truth Gap adjudication.</p>
+            <a href="assets/Sovereign_Intelligence_Forensic_Briefing_Protocol_v1.0.pdf" download class="text-[10px] font-mono uppercase tracking-widest text-white border-b border-zinc-500 pb-1 hover:text-white transition-colors">Download Deck</a>
         </div>
 
         <div class="glass-panel p-8 rounded-2xl border-zinc-800 hover:border-red-600 transition-all group">
-            <div class="text-[10px] font-mono text-red-500 mb-4 uppercase tracking-widest">Narrative Audit</div>
+            <div class="text-[10px] font-mono text-red-500 mb-4 uppercase tracking-widest">Case Evidence // Deep Dive</div>
             <h3 class="text-xl font-bold mb-4 uppercase italic">The $1.5M Truth Gap</h3>
-            <p class="text-xs text-gray-400 mb-8 leading-relaxed">A forensic breakdown of the technical breach and monetized silence.</p>
-            <a href="https://mkaplan.substack.com/p/the-anatomy-of-a-fiduciary-verdict" target="_blank" class="text-[10px] font-mono uppercase tracking-widest text-white border-b border-red-900 pb-1">Investigate on Substack</a>
+            <p class="text-xs text-gray-400 mb-8 leading-relaxed">A forensic breakdown of the RRI'25 technical breach and how we monetized the silence of the PMO.</p>
+            <a href="https://mkaplan.substack.com/p/the-anatomy-of-a-fiduciary-verdict" target="_blank" class="text-[10px] font-mono uppercase tracking-widest text-white border-b border-red-900 pb-1">Read on Substack</a>
         </div>
 
     </section>
 
-    <footer class="py-16 text-center bg-black border-t border-zinc-900">
-        <div class="mb-8">
-            <a href="https://mkaplan.substack.com/" target="_blank" class="text-[10px] font-mono uppercase tracking-[0.4em] text-zinc-500 hover:text-white transition-colors">Follow the Investigation on Substack →</a>
-        </div>
-        <div class="text-zinc-700 text-[10px] font-mono uppercase tracking-[0.3em]">
-            &copy; 2026 MAKCON LLC // DATA DOES NOT HAVE AN EGO.
-        </div>
+    <footer class="py-16 text-center text-zinc-700 text-[10px] font-mono uppercase tracking-[0.3em] bg-black">
+        <div class="w-20 h-1 gold-bg mx-auto mb-8 opacity-20"></div>
+        &copy; 2026 MAKCON LLC // DATA DOES NOT HAVE AN EGO.
     </footer>
 
-    <script src="../js/navigation.js"></script>
 </body>
 </html>
