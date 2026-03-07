@@ -1,80 +1,262 @@
-/* 
- * SENTIENT PMO | FORENSIC GOVERNANCE ENGINE 
- * CORE ARCHITECTURE: V6.2.2 (STANDALONE)
+/**
+ * SOVEREIGN ARCHITECTURE v7.1.0
+ * Theme: Forensic Command Center / War Room
+ * Logic: Physics over Poetry
  */
 
-:root {
+ :root {
+    /* Primary Palette */
     --gold: #d4af37;
+    --gold-glow: rgba(212, 175, 55, 0.3);
     --void: #0a0a0a;
+    --black-pure: #000000;
+    
+    /* Alert & Action Palette */
     --red-strike: #8b0000;
     --red-bright: #ef4444;
-    --green: #10b981;
-    --zinc-400: #a1a1aa;
-    --zinc-500: #71717a;
-    --zinc-600: #52525b;
-    --zinc-800: #27272a;
+    --surgical-blue: #005f73;
+    --green-status: #10b981;
+    
+    /* UI Zinc Scale */
+    --zinc-950: #09090b;
     --zinc-900: #18181b;
-    --font-main: 'Inter', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
+    --zinc-800: #27272a;
+    --zinc-700: #3f3f46;
+    --zinc-500: #71717a;
+    --zinc-400: #a1a1aa;
+
+    /* Typography */
+    --font-main: 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
-/* 1. RESET & BASE */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { 
-    background-color: var(--void); 
-    color: #ffffff; 
-    font-family: var(--font-main); 
+/* 1. BASE PHYSICS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: var(--void);
+    color: #ffffff;
+    font-family: var(--font-main);
+    line-height: 1.6;
     overflow-x: hidden;
-    line-height: 1.5;
 }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-.relative { position: relative; }
-.z-10 { z-index: 10; }
-.flex { display: flex; }
-.items-center { align-items: center; }
-.justify-between { justify-content: space-between; }
-.text-center { text-align: center; }
-.gap-4 { gap: 1rem; }
-.mb-6 { margin-bottom: 1.5rem; }
-.mb-16 { margin-bottom: 4rem; }
-.font-mono { font-family: var(--font-mono); }
-.text-xs { font-size: 0.75rem; }
-.text-sm { font-size: 0.875rem; }
-.text-gold { color: var(--gold); }
-.text-red-bright { color: var(--red-bright); }
-.text-zinc-400 { color: var(--zinc-400); }
-.text-zinc-500 { color: var(--zinc-500); }
-.text-zinc-600 { color: var(--zinc-600); }
-.text-white { color: #ffffff; }
 
-/* 2. DATA GRID OVERLAY */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+/* 2. THE DATA GRID (Background Layer) */
 .data-grid {
     position: fixed;
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.05;
+    opacity: 0.07;
     background-image: 
         linear-gradient(to right, var(--gold) 1px, transparent 1px),
         linear-gradient(to bottom, var(--gold) 1px, transparent 1px);
-    background-size: 40px 40px;
+    background-size: 50px 50px;
 }
 
-/* 3. NAVIGATION */
+/* 3. NAVIGATION HUD */
 .nav-hud {
     position: sticky;
     top: 0;
-    z-index: 50;
-    background: rgba(10, 10, 10, 0.9);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    z-index: 100;
+    background: rgba(10, 10, 10, 0.85);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    backdrop-filter: blur(12px);
+    height: 4.5rem;
 }
-.nav-container {
+
+.nav-link {
+    color: var(--zinc-400);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+    color: var(--gold);
+}
+
+/* 4. HERO & RADAR COMPONENTS */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.radar {
+    width: 300px;
+    height: 300px;
+    border: 1px solid var(--gold-glow);
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 4rem;
+    overflow: hidden;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+}
+
+.radar-sweep {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 0;
+    left: 50%;
+    background: linear-gradient(90deg, var(--gold-glow) 0%, transparent 100%);
+    transform-origin: bottom left;
+    animation: sweep 4s linear infinite;
+    border-left: 1px solid var(--gold);
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+/* 5. FORENSIC CALCULATOR HUD */
+.section-calc {
+    padding: 8rem 0;
+    background: var(--zinc-950);
+    border-top: 1px solid var(--zinc-900);
+    border-bottom: 1px solid var(--zinc-900);
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+@media (max-width: 968px) {
+    .calc-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+.forensic-card {
+    background: var(--black-pure);
+    border: 2px solid var(--red-strike);
+    padding: 3.5rem;
+    position: relative;
+    box-shadow: 0 0 40px rgba(139, 0, 0, 0.15);
+}
+
+.erasure-value {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 900;
+    color: var(--red-bright);
+    font-family: var(--font-mono);
+    margin: 1rem 0;
+    letter-spacing: -0.05em;
+}
+
+/* 6. INPUT ARCHITECTURE */
+.input-box {
+    width: 100%;
+    background: var(--black-pure);
+    border: 1px solid var(--zinc-800);
+    padding: 1.25rem;
+    color: var(--gold);
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    transition: border-color 0.3s;
+}
+
+.input-box:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+input[type="range"] {
+    width: 100%;
+    appearance: none;
+    background: var(--zinc-800);
+    height: 4px;
+    margin: 2rem 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--gold);
+    cursor: pointer;
+    border-radius: 0;
+}
+
+/* 7. TRUTH GAP TIMELINE */
+.truth-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--zinc-800);
+    margin-top: 4rem;
+    border: 1px solid var(--zinc-800);
+}
+
+.truth-panel {
+    background: var(--void);
+    padding: 3rem;
+}
+
+.timeline-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 4rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--zinc-900);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
 }
+
+/* 8. COMMAND BUTTONS */
+.btn-perimeter {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black-pure);
+    padding: 1.25rem 3rem;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-perimeter:hover {
+    background: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* 9. UTILITIES & ANIMATIONS */
+.font-mono { font-family: var(--font-mono); }
+.text-gold { color: var(--gold); }
+.text-red { color: var(--red-bright); }
+.text-green { color: var(--green-status); }
+.uppercase { text-transform: uppercase; }
+
 .status-pulse {
     width: 8px;
     height: 8px;
@@ -83,191 +265,19 @@ body {
     box-shadow: 0 0 10px var(--gold);
     animation: pulse 2s infinite;
 }
-.nav-links { display: flex; gap: 2rem; }
-.nav-link { 
-    color: #fff; 
-    text-decoration: none; 
-    transition: color 0.3s; 
-}
-.nav-link:hover, .nav-link.active { color: var(--gold); }
 
-/* 4. HERO SECTION */
-.hero-section {
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem 2rem;
-}
-.radar-container {
-    position: relative;
-    margin-bottom: 3rem;
-}
-.radar-circle {
-    width: 300px;
-    height: 300px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
-}
-.radar-sweep {
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    top: 0;
-    left: 50%;
-    background: linear-gradient(90deg, rgba(212, 175, 55, 0.3) 0%, transparent 100%);
-    transform-origin: bottom left;
-    animation: sweep 4s linear infinite;
-    border-left: 1px solid var(--gold);
-}
-.radar-blip {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: var(--gold);
-    border-radius: 50%;
-    box-shadow: 0 0 10px var(--gold);
-    animation: blink 2s infinite;
-}
-.blip-1 { top: 30%; left: 40%; }
-.blip-2 { bottom: 40%; right: 30%; animation-delay: 1s; }
-.radar-label {
-    position: absolute;
-    bottom: -2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 10px;
-    letter-spacing: 0.4em;
-}
-.hero-title {
-    font-size: clamp(3rem, 8vw, 6rem);
-    font-weight: 900;
-    text-align: center;
-    line-height: 0.9;
-    margin-bottom: 2rem;
-}
-.hero-subtitle {
-    font-size: 1.25rem;
-    color: var(--zinc-400);
-    max-width: 700px;
-    text-align: center;
-    margin: 0 auto;
-}
-.sanitization-factory { border-bottom: 1px solid var(--red-strike); color: #fff; }
-
-/* 5. CALCULATOR */
-.calculator-section {
-    padding: 6rem 0;
-    background: rgba(24, 24, 27, 0.4);
-    border-top: 1px solid rgba(212, 175, 55, 0.1);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-}
-.grid-2-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-@media (max-width: 768px) { .grid-2-col { grid-template-columns: 1fr; } }
-.section-title { font-size: 2.5rem; margin: 0.5rem 0 2rem; }
-.input-group { margin-bottom: 2rem; }
-.forensic-input {
-    width: 100%;
-    background: var(--void);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    padding: 1rem;
-    color: var(--gold);
-    font-family: var(--font-mono);
-    margin-top: 0.5rem;
-}
-.forensic-slider {
-    width: 100%;
-    appearance: none;
-    background: rgba(212, 175, 55, 0.1);
-    height: 4px;
-    margin-top: 1rem;
-}
-.forensic-slider::-webkit-slider-thumb {
-    appearance: none;
-    width: 16px;
-    height: 16px;
-    background: var(--gold);
-    cursor: pointer;
-}
-.calc-output-card {
-    background: var(--void);
-    border: 2px solid rgba(139, 0, 0, 0.4);
-    padding: 3rem;
-    position: relative;
-}
-.card-header { position: absolute; top: 0.5rem; right: 0.5rem; font-size: 10px; }
-.erasure-value {
-    font-size: 4rem;
-    font-weight: 900;
-    color: var(--red-bright);
-    margin: 1rem 0 2rem;
+@keyframes sweep { 
+    from { transform: rotate(0deg); } 
+    to { transform: rotate(360deg); } 
 }
 
-/* 6. TRUTH GAP */
-.truth-gap-section { padding: 6rem 0; }
-.truth-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
-    background: rgba(212, 175, 55, 0.1);
-    border: 1px solid rgba(212, 175, 55, 0.1);
+@keyframes pulse { 
+    0%, 100% { opacity: 1; transform: scale(1); } 
+    50% { opacity: 0.4; transform: scale(1.2); } 
 }
-@media (max-width: 768px) { .truth-grid { grid-template-columns: 1fr; } }
-.truth-card { background: var(--void); padding: 3rem; }
-.label-tag {
-    background: var(--zinc-800);
-    padding: 0.25rem 0.75rem;
-    font-size: 10px;
-    text-transform: uppercase;
-    font-family: var(--font-mono);
-}
-.label-tag.alert { background: rgba(139, 0, 0, 0.3); color: var(--red-bright); }
-.timeline-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--zinc-900);
-    font-family: var(--font-mono);
-    font-size: 0.875rem;
-}
-.text-green { color: var(--green); font-weight: bold; }
-.quote { font-style: italic; color: var(--zinc-600); margin-top: 2rem; font-size: 0.875rem; }
-.quote.alert { color: var(--red-bright); opacity: 0.7; }
 
-/* 7. CTA & FOOTER */
-.cta-section { padding: 6rem 0; text-align: center; }
-.cta-card {
-    max-width: 800px;
-    margin: 0 auto;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    padding: 4rem;
-    background: rgba(24, 24, 27, 0.5);
-}
-.cta-title { font-size: 2rem; margin-bottom: 1rem; }
-.cta-text { color: var(--zinc-400); margin-bottom: 2.5rem; }
-.btn-command {
-    display: inline-block;
-    background: var(--gold);
-    color: var(--void);
-    padding: 1.25rem 3rem;
-    text-decoration: none;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    transition: transform 0.2s, background 0.2s;
-}
-.btn-command:hover { transform: scale(1.05); background: #fff; }
-.footer { padding: 4rem 0; text-align: center; border-top: 1px solid var(--zinc-900); }
-
-/* ANIMATIONS */
-@keyframes sweep { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-@keyframes blink { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
-@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.1); } }
-.animate-pulse { animation: pulse 2s infinite; }
+/* 10. SCROLLBAR RIGOR */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--void); }
+::-webkit-scrollbar-thumb { background: var(--zinc-800); }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
