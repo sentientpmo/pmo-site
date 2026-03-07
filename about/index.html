@@ -3,92 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Architect | Michael Kaplan | Sentient PMO</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>The Principal Architect | Michael Kaplan | Sentient PMO</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="antialiased selection:bg-yellow-500 selection:text-black">
-
-    <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
-        <a href="../index.html" class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></a>
-        
-        <div class="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
-            <a href="../briefing/index.html" class="hover:text-yellow-500 transition-colors">Briefing</a>
-            <a href="../intelligence/index.html" class="hover:text-yellow-500 transition-colors">Vault</a>
-            <a href="../services/index.html" class="hover:text-yellow-500 transition-colors">Services</a>
-            <a href="../hunters/index.html" class="text-red-500 hover:text-red-400 transition-colors">Hunters</a>
+<body class="the-refinery">
+    <nav class="nav-command-center">
+        <div class="logo-container">
+            <span class="mono-label gold-text">Sovereign Intelligence / v6.0</span>
         </div>
-
-        <div class="flex items-center gap-4">
-            <a href="https://luma.com/xh2r0z47" class="gold-bg text-black text-[10px] font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all shadow-lg">APRIL 23 BRIEFING</a>
-            <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
+        <div class="nav-links">
+            <a href="../index.html" class="nav-link">COMMAND CENTER</a>
+            <a href="../intelligence/index.html" class="nav-link">INTELLIGENCE</a>
+            <a href="../services/index.html" class="nav-link">SERVICES</a>
+            <a href="../black-box/index.html" class="nav-link">BLACK BOX</a>
         </div>
     </nav>
 
-    <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-black/95 flex flex-col items-center justify-center gap-8 font-mono text-sm uppercase tracking-[0.3em]">
-        <a href="../index.html" class="hover:text-yellow-500">Home</a>
-        <a href="../briefing/index.html" class="hover:text-yellow-500">Briefing</a>
-        <a href="../intelligence/index.html" class="hover:text-yellow-500">Vault</a>
-        <a href="../services/index.html" class="hover:text-yellow-500">Services</a>
-        <a href="../hunters/index.html" class="text-red-500">Hunters</a>
-        <button id="menu-close" class="mt-8 text-[10px] border border-zinc-800 px-4 py-2 rounded">Close</button>
-    </div>
+    <main style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
+        <header style="margin-bottom: 4rem;">
+            <span class="mono-data surgical-text">PERSONNEL DOSSIER // SUBJECT: KAPLAN, MICHAEL</span>
+            <h1 style="border-left: 4px solid var(--radiant-gold); padding-left: 1.5rem;">THE PRINCIPAL ARCHITECT.</h1>
+        </header>
 
-    <header class="pt-48 pb-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-        <div>
-            <div class="inline-block px-3 py-1 mb-6 text-[10px] font-mono tracking-widest text-yellow-500 border border-yellow-900 rounded-full bg-yellow-900/10 uppercase">
-                Principal Governance Architect
+        <section class="architect-mandate" style="margin-bottom: 6rem;">
+            <div class="governance-shield briefing-card">
+                <div style="display: grid; grid-template-columns: 300px 1fr; gap: 3rem; align-items: start;">
+                    <div class="forensic-frame" style="border: 2px solid var(--radiant-gold); padding: 5px; background: var(--black-pure);">
+                        <img src="../images/michael_kaplan.jpg" alt="Michael Kaplan" style="width: 100%; display: block; filter: grayscale(100%) contrast(110%);">
+                    </div>
+                    <div>
+                        <div class="status-indicator status-active"></div>
+                        <span class="mono-data">MANDATE: ARCHITECTING CLARITY IN THE AGE OF AI</span>
+                        <h2 style="border: none; padding: 0; margin: 1rem 0;">THE ORIGIN STORY</h2>
+                        <p>Michael Kaplan has spent three decades at the epicenter of capital delivery physics. From serving as the <strong>Master Scheduler for the Pentagon Renovation</strong> to architecting the global PPM systems for <strong>Morgan Stanley (2000)</strong>, his career has been defined by the management of extreme complexity.</p>
+                        
+                        <p class="briefing-header" style="margin-top: 2rem;">The Transition</p>
+                        <p>As a key <strong>PMI SME contributor</strong> to global PMO frameworks, Michael helped build the foundations of the "Manual Era." Today, he is decommissioning it. Having seen the failure of traditional "Paper General" governance, he founded MAKCON to replace sanitized narratives with <strong>Forensic Governance</strong>—extracting truth directly from the systems of work.</p>
+                    </div>
+                </div>
             </div>
-            <h1 class="text-5xl md:text-7xl font-black mb-8 tracking-tighter uppercase italic">Michael <br><span class="gold-text">Kaplan</span></h1>
-            <p class="text-xl text-gray-400 font-light leading-relaxed mb-8">
-                I adjudicate the physics of high-stakes technical work. I don't manage projects; I engineer the <strong>Transparency of Intent.</strong>
-            </p>
-            <div class="flex gap-6">
-                <a href="https://www.linkedin.com/in/makplan/" class="text-gray-500 hover:text-white transition-all underline text-xs font-mono uppercase tracking-widest">LinkedIn</a>
-                <a href="https://mkaplan.substack.com/" class="text-gray-500 hover:text-white transition-all underline text-xs font-mono uppercase tracking-widest">Substack</a>
-            </div>
-        </div>
-        <div class="relative">
-            <img src="../images/profile.jpg" alt="Michael Kaplan" class="rounded-3xl grayscale hover:grayscale-0 transition-all duration-700 border border-zinc-800 shadow-2xl">
-            <div class="absolute -bottom-6 -right-6 glass-panel p-6 rounded-2xl border-gold">
-                <p class="text-[10px] font-mono text-yellow-500 uppercase mb-1">Author Of</p>
-                <p class="text-sm font-bold italic">The Sentient PMO</p>
-            </div>
-        </div>
-    </header>
+        </section>
 
-    <section class="py-24 px-6 max-w-4xl mx-auto">
-        <h2 class="text-sm font-mono text-zinc-500 mb-16 uppercase tracking-[0.4em]">Forensic Heritage // Case History</h2>
-        
-        <div class="timeline-border pl-8 space-y-16">
-            <div class="relative">
-                <div class="absolute -left-[37px] top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_15px_rgba(212,175,55,0.5)]"></div>
-                <h3 class="text-xl font-bold text-white mb-2 uppercase italic">Ameren <span class="text-zinc-600 font-light text-sm ml-4">2022 – 2025</span></h3>
-                <p class="text-sm text-gray-400 leading-relaxed">Deployed forensic oversight across a $25M+ portfolio, identifying Truth Gaps in high-stakes regulatory and infrastructure workstreams.</p>
+        <section class="professional-lineage" style="margin-bottom: 6rem;">
+            <div class="governance-shield briefing-card">
+                <span class="mono-data gold-text">SERVICE RECORD / KEY SIGNALS</span>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem;">
+                    <div style="border-left: 1px solid var(--zinc-800); padding-left: 1.5rem;">
+                        <span class="mono-data surgical-text">2022 – 2025</span>
+                        <h3 style="font-size: 1.1rem; margin: 0.5rem 0; border: none; padding: 0;">AMEREN</h3>
+                        <p class="mono-data" style="font-size: 0.75rem;">Strategic Advisor: Enterprise Transformation & Governance Hardening.</p>
+                    </div>
+                    <div style="border-left: 1px solid var(--zinc-800); padding-left: 1.5rem;">
+                        <span class="mono-data surgical-text">2013</span>
+                        <h3 style="font-size: 1.1rem; margin: 0.5rem 0; border: none; padding: 0;">PMI GLOBAL SME</h3>
+                        <p class="mono-data" style="font-size: 0.75rem;">Subject Matter Expert: Contributor to the PMO Frameworks standard.</p>
+                    </div>
+                    <div style="border-left: 1px solid var(--zinc-800); padding-left: 1.5rem;">
+                        <span class="mono-data surgical-text">PUBLISHED</span>
+                        <h3 style="font-size: 1.1rem; margin: 0.5rem 0; border: none; padding: 0;">THE SENTIENT PMO</h3>
+                        <p class="mono-data" style="font-size: 0.75rem;">Author: Defining the transition from manual management to AI-driven oversight.</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="relative">
-                <div class="absolute -left-[37px] top-0 w-4 h-4 rounded-full bg-zinc-800 border border-zinc-600"></div>
-                <h3 class="text-xl font-bold text-white mb-2 uppercase italic">Pentagon Renovation <span class="text-zinc-600 font-light text-sm ml-4">Master Scheduler</span></h3>
-                <p class="text-sm text-gray-400 leading-relaxed">Architected the scheduling logic for one of the most complex, secure, and scrutinized physical workstreams in modern history.</p>
+        <section class="mission-statement" style="margin-bottom: 4rem;">
+            <div class="governance-shield briefing-card" style="text-align: center; border-style: dashed;">
+                <span class="mono-data alert-text">OPERATIONAL OBJECTIVE</span>
+                <h2>REPEALING THE ADMIN TAX.</h2>
+                <div style="max-width: 800px; margin: 2rem auto;">
+                    <p class="briefing-header" style="border: none; padding: 0;">Capital Assurance is a Moral Obligation.</p>
+                    <p>The Architect’s duty is to protect shareholder value from the friction of human sanitization. We operate with a singular philosophy: <strong>If the data cannot be found in the physics of the work (code, logs, transcripts), it does not exist.</strong></p>
+                    <p class="mono-data gold-text" style="margin-top: 2rem;">[ END OF DOSSIER ]</p>
+                </div>
             </div>
+        </section>
+    </main>
 
-            <div class="relative">
-                <div class="absolute -left-[37px] top-0 w-4 h-4 rounded-full bg-zinc-800 border border-zinc-600"></div>
-                <h3 class="text-xl font-bold text-white mb-2 uppercase italic">Morgan Stanley <span class="text-zinc-600 font-light text-sm ml-4">2000</span></h3>
-                <p class="text-sm text-gray-400 leading-relaxed">Built and deployed a global Project Portfolio Management (PPM) system, establishing the foundation for enterprise-scale adjudication.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-16 text-center text-zinc-700 text-[10px] font-mono uppercase tracking-[0.3em] bg-black">
-        &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT // DATA DOES NOT HAVE AN EGO.
+    <footer style="padding: 4rem 2rem; border-top: 1px solid var(--glass-border); text-align: center;">
+        <span class="mono-label">&copy; 2025 MAKCON LLC | FORENSIC GOVERNANCE | SOVEREIGN INTELLIGENCE</span>
     </footer>
-
-    <script src="../js/navigation.js"></script>
-
 </body>
 </html>

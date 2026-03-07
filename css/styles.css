@@ -1,93 +1,175 @@
-/* * The Sentient Architect | Global Design System v5.0
- * Forensic Governance & Sovereign Intelligence Aesthetic
+/* * The Sentient Architect | Global Design System v6.0
+ * Theme: "War Room / Forensic Command Center"
+ * Lead Developer: MAKCON / Michael Kaplan
  */
 
-:root {
-    --gold-primary: #D4AF37;
-    --gold-hover: #F1C40F;
-    --black-pure: #000000;
-    --zinc-dark: #09090b;
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-bg: rgba(9, 9, 11, 0.8);
+ :root {
+    /* Primary Color Palette */
+    --war-room-bg: #0a0a0a;
+    --radiant-gold: #d4af37;
+    --gold-hover: #f1c40f;
+    --surgical-blue: #005f73;
+    --blood-red: #8b0000;
+    
+    /* UI Utility Colors */
+    --zinc-900: #18181b;
+    --zinc-800: #27272a;
+    --glass-border: rgba(212, 175, 55, 0.15);
+    --glass-bg: rgba(10, 10, 10, 0.85);
+    
+    /* Typography */
+    --font-briefing: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
-/* Base Physics */
+/* 1. Base Physics & Layout */
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 body {
-    background-color: var(--black-pure);
+    background-color: var(--war-room-bg);
     color: #ffffff;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-briefing);
+    line-height: 1.6;
     margin: 0;
     overflow-x: hidden;
 }
 
-/* Sovereign Selection Highlight */
-.selection-gold ::selection {
-    background-color: var(--gold-primary);
-    color: var(--black-pure);
+/* 2. The Refinery (Data-Grid Background Pattern) */
+.the-refinery {
+    background-image: 
+        linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center center;
 }
 
-/* Typography */
-h1, h2, h3, .font-display {
-    letter-spacing: -0.05em;
-}
-
-.gold-text {
-    color: var(--gold-primary);
-}
-
-.mono-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
+/* 3. Typography: Forensic Briefing Style */
+h1, h2, h3, .briefing-header {
     text-transform: uppercase;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.15em;
+    font-weight: 800;
+    border-left: 4px solid var(--radiant-gold);
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-/* UI Components */
-.glass-panel {
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.75rem; color: var(--radiant-gold); }
+
+.mono-data {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--surgical-blue);
+    text-transform: uppercase;
+}
+
+/* 4. The Governance Shield (Glowing Border Effect) */
+.governance-shield {
+    position: relative;
+    border: 1px solid var(--radiant-gold);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.1),
+                inset 0 0 10px rgba(212, 175, 55, 0.05);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
 }
 
-.gold-bg {
-    background-color: var(--gold-primary);
-    color: var(--black-pure);
-    transition: all 0.3s ease;
+.governance-shield:hover {
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.3),
+                inset 0 0 15px rgba(212, 175, 55, 0.1);
+    border-color: var(--gold-hover);
 }
 
-.gold-bg:hover {
+/* 5. Indicators & Alerts */
+.status-indicator {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.status-active { background-color: var(--surgical-blue); box-shadow: 0 0 8px var(--surgical-blue); }
+.status-critical { background-color: var(--blood-red); box-shadow: 0 0 10px var(--blood-red); }
+
+/* 6. Command UI Components */
+.briefing-card {
+    background: var(--zinc-900);
+    border: 1px solid var(--zinc-800);
+    padding: 2rem;
+    position: relative;
+}
+
+.btn-command {
+    background-color: var(--radiant-gold);
+    color: var(--war-room-bg);
+    padding: 0.75rem 2rem;
+    font-family: var(--font-mono);
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-command:hover {
     background-color: var(--gold-hover);
     transform: translateY(-2px);
 }
 
-/* Hero & Visual Effects */
-.hero-bg {
-    background: radial-gradient(circle at center, #111 0%, #000 100%);
+/* 7. Forensic Navigation */
+.nav-command-center {
+    border-bottom: 1px solid var(--glass-border);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 10, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.hero-overlay {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4v-4H4v4H0v2h4v4h2v-4h4v-2H6zM36 4v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
 }
 
-/* Mobile Navigation Adjudication */
-#mobile-menu {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+.nav-link:hover {
+    color: var(--radiant-gold);
 }
 
-#mobile-menu.hidden {
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-20px);
+/* 8. Utility Classes */
+.surgical-text { color: var(--surgical-blue); }
+.alert-text { color: var(--blood-red); font-weight: bold; }
+.gold-text { color: var(--radiant-gold); }
+
+/* Selection */
+::selection {
+    background-color: var(--radiant-gold);
+    color: var(--war-room-bg);
 }
 
-/* Forensic Graphic Containers */
-.forensic-frame {
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-    transition: border-color 0.5s ease;
+/* Scrollbar Engineering */
+::-webkit-scrollbar {
+    width: 6px;
 }
-
-.forensic-frame:hover {
-    border-color: var(--gold-primary);
+::-webkit-scrollbar-track {
+    background: var(--war-room-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--zinc-800);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--radiant-gold);
 }
