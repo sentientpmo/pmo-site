@@ -12,7 +12,8 @@
         .gold-text { color: #D4AF37; }
         .gold-bg { background-color: #D4AF37; }
         .glass-panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
-        .hero-bg { background-image: url('./images/hero-bg.jpg'); background-size: cover; background-position: center; }
+        /* Using the hero-bg image from your root directory */
+        .hero-bg { background-image: url('./hero-bg.jpg'); background-size: cover; background-position: center; }
         .hero-overlay { background: radial-gradient(circle, rgba(10,10,10,0.4) 0%, rgba(10,10,10,1) 100%); }
         html { scroll-behavior: smooth; }
     </style>
@@ -20,9 +21,7 @@
 <body class="antialiased selection:bg-yellow-500 selection:text-black">
 
     <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
-        <div class="flex items-center gap-4">
-            <div class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></div>
-        </div>
+        <div class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></div>
         <div class="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
             <a href="briefing/index.html" class="hover:text-yellow-500 transition-colors">The Briefing</a>
             <a href="services/index.html" class="hover:text-yellow-500 transition-colors">Services</a>
@@ -53,7 +52,7 @@
             </div>
             
             <div class="glass-panel p-8 rounded-[2rem] border-zinc-800">
-                <img src="./images/michael_kaplan.jpg" alt="Michael Kaplan" class="w-32 h-32 rounded-2xl mb-6 object-cover border-2 border-gold-text shadow-xl">
+                <img src="./michael_kaplan.jpg" alt="Michael Kaplan" class="w-32 h-32 rounded-2xl mb-6 object-cover border-2 border-gold-text shadow-xl">
                 <h2 class="text-2xl font-bold text-white mb-2 uppercase italic">Michael Kaplan</h2>
                 <p class="text-xs font-mono text-yellow-500 uppercase tracking-widest mb-6">Principal Governance Architect</p>
                 <p class="text-sm text-gray-400 leading-relaxed mb-8">
@@ -70,15 +69,6 @@
             </div>
         </div>
     </header>
-
-    <section class="py-12 bg-black border-y border-zinc-900 overflow-hidden">
-        <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-between items-center opacity-40 grayscale">
-            <span class="font-black text-xl tracking-tighter uppercase italic">MAKCON</span>
-            <span class="font-mono text-[10px] tracking-[0.4em]">PMI SME</span>
-            <span class="font-mono text-[10px] tracking-[0.4em]">AMEREN '22-25</span>
-            <span class="font-mono text-[10px] tracking-[0.4em]">PENTAGON RENOVATION</span>
-        </div>
-    </section>
 
     <footer class="py-12 text-center text-zinc-700 text-[10px] font-mono uppercase tracking-[0.3em]">
         &copy; 2026 MAKCON LLC // DATA DOES NOT HAVE AN EGO.
