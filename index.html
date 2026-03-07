@@ -4,343 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forensic Command Center | Sentient PMO</title>
+    <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* SOVEREIGN ARCHITECTURE V6.2.3 - INTERNALIZED LOGIC */
-        :root {
-            --gold: #d4af37;
-            --void: #0a0a0a;
-            --red-strike: #8b0000;
-            --red-bright: #ef4444;
-            --green: #10b981;
-            --zinc-400: #a1a1aa;
-            --zinc-800: #27272a;
-            --zinc-900: #18181b;
-            --font-main: 'Inter', sans-serif;
-            --font-mono: 'JetBrains Mono', monospace;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body { 
-            background-color: var(--void); 
-            color: #ffffff; 
-            font-family: var(--font-main); 
-            overflow-x: hidden;
-            line-height: 1.5;
-        }
-
-        /* DATA GRID OVERLAY */
-        .data-grid {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-            opacity: 0.05;
-            background-image: 
-                linear-gradient(to right, var(--gold) 1px, transparent 1px),
-                linear-gradient(to bottom, var(--gold) 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 10; }
-
-        /* NAVIGATION */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(10, 10, 10, 0.95);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            backdrop-filter: blur(10px);
-        }
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 4.5rem;
-        }
-        .status-pulse {
-            width: 8px;
-            height: 8px;
-            background: var(--gold);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--gold);
-            animation: pulse 2s infinite;
-            margin-right: 10px;
-        }
-
-        /* HERO SECTION */
-        .hero {
-            min-height: 85vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 4rem 1rem;
-        }
-        .radar {
-            width: 280px;
-            height: 280px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            border-radius: 50%;
-            position: relative;
-            margin-bottom: 3rem;
-            overflow: hidden;
-        }
-        .radar-sweep {
-            position: absolute;
-            width: 50%;
-            height: 50%;
-            top: 0;
-            left: 50%;
-            background: linear-gradient(90deg, rgba(212, 175, 55, 0.3) 0%, transparent 100%);
-            transform-origin: bottom left;
-            animation: sweep 4s linear infinite;
-            border-left: 1px solid var(--gold);
-        }
-        .hero-title {
-            font-size: clamp(2.5rem, 10vw, 6rem);
-            font-weight: 900;
-            line-height: 0.85;
-            letter-spacing: -0.04em;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-        }
-        .hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--zinc-400);
-            max-width: 650px;
-            margin: 0 auto;
-        }
-
-        /* CALCULATOR SECTION */
-        .section-calc {
-            padding: 8rem 0;
-            background: var(--zinc-900);
-            border-top: 1px solid rgba(212, 175, 55, 0.1);
-        }
-        .calc-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        @media (max-width: 768px) { .calc-grid { grid-template-columns: 1fr; } }
-
-        .forensic-card {
-            background: var(--void);
-            border: 2px solid var(--red-strike);
-            padding: 3rem;
-            position: relative;
-        }
-        .erasure-value {
-            font-size: 4.5rem;
-            font-weight: 900;
-            color: var(--red-bright);
-            font-family: var(--font-mono);
-            margin: 1rem 0;
-        }
-
-        /* INPUT STYLING */
-        .input-box {
-            width: 100%;
-            background: #000;
-            border: 1px solid rgba(212, 175, 55, 0.4);
-            padding: 1rem;
-            color: var(--gold);
-            font-family: var(--font-mono);
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-        }
-        input[type="range"] {
-            width: 100%;
-            appearance: none;
-            background: rgba(212, 175, 55, 0.1);
-            height: 6px;
-            margin: 1.5rem 0;
-        }
-        input[type="range"]::-webkit-slider-thumb {
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            background: var(--gold);
-            cursor: pointer;
-        }
-
-        /* TRUTH GAP GRID */
-        .truth-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2px;
-            background: rgba(212, 175, 55, 0.2);
-            margin-top: 4rem;
-        }
-        .truth-panel { background: var(--void); padding: 3rem; }
-        .timeline-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--zinc-800);
-            font-family: var(--font-mono);
-        }
-
-        /* BUTTON */
-        .btn-perimeter {
-            display: inline-block;
-            background: var(--gold);
-            color: #000;
-            padding: 1.5rem 3.5rem;
-            text-decoration: none;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-top: 2rem;
-            transition: 0.3s;
-        }
-        .btn-perimeter:hover { background: #fff; transform: translateY(-3px); }
-
-        /* UTILS */
-        .font-mono { font-family: var(--font-mono); }
-        .text-gold { color: var(--gold); }
-        .text-red { color: var(--red-bright); }
-        .text-green { color: var(--green); }
-        .uppercase { text-transform: uppercase; }
-        .tracking-widest { letter-spacing: 0.3em; }
-
-        @keyframes sweep { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-    </style>
 </head>
 <body>
     <div class="data-grid"></div>
 
-    <nav>
-        <div class="container nav-inner">
-            <div style="display: flex; align-items: center;">
-                <div class="status-pulse"></div>
-                <span class="font-mono text-gold uppercase tracking-widest" style="font-size: 10px;">Sovereign Intelligence / v6.2.3</span>
-            </div>
-            <div class="font-mono" style="font-size: 11px; display: flex; gap: 20px;">
-                <a href="#" style="color: var(--gold); text-decoration: none;">01. COMMAND_CENTER</a>
-                <a href="mailto:michael@makcon.com" style="color: var(--red-bright); text-decoration: none;">[ SECURE PERIMETER ]</a>
-            </div>
-        </div>
-    </nav>
-
     <main>
+        <!-- HERO -->
         <section class="hero">
-            <div class="radar">
-                <div class="radar-sweep"></div>
-                <div style="position: absolute; top: 20%; left: 30%; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 10px var(--gold);"></div>
-            </div>
+            <div class="radar"><div class="radar-sweep"></div></div>
             <h1 class="hero-title">STOP SUBSIDIZING <br><span class="text-gold">A FICTION.</span></h1>
-            <p class="hero-subtitle">Your "Green" status reports are a social construct. We adjudicate the physics. This is the end of the Sanitization Factory.</p>
+            <p class="hero-subtitle">Your "Green" status reports are a social construct. We adjudicate the physics.</p>
         </section>
 
+        <!-- CALCULATOR -->
         <section class="section-calc">
             <div class="container">
                 <div class="calc-grid">
                     <div>
-                        <span class="font-mono text-gold uppercase tracking-widest" style="font-size: 10px;">Module: Forensic_Finance</span>
-                        <h2 style="font-size: 3rem; margin: 1rem 0 2rem; text-transform: uppercase;">Adjudicate the Strike</h2>
-                        
-                        <div style="margin-bottom: 2rem;">
-                            <label class="font-mono text-zinc-400 uppercase" style="font-size: 11px;">Zombie Spend (Monthly Leakage)</label>
-                            <input type="number" id="zombieSpend" value="150000" class="input-box">
-                        </div>
-                        
-                        <div>
-                            <label class="font-mono text-zinc-400 uppercase" style="font-size: 11px; display: flex; justify-content: space-between;">
-                                <span>Valuation Multiple</span>
-                                <span id="multipleVal" class="text-gold">10x</span>
-                            </label>
-                            <input type="range" id="multiple" min="1" max="25" value="10">
-                        </div>
+                        <h2 class="uppercase">Adjudicate the Strike</h2>
+                        <input type="number" id="zombieSpend" value="150000" class="input-box">
+                        <span id="multipleVal" class="text-gold">10x</span>
+                        <input type="range" id="multiple" min="1" max="25" value="10">
                     </div>
-
                     <div class="forensic-card">
-                        <span class="font-mono text-red uppercase" style="font-size: 10px; position: absolute; top: 10px; right: 10px;">Critical_Exposure</span>
-                        <span class="font-mono text-zinc-400 uppercase" style="font-size: 11px;">Total Value Erasure</span>
-                        <div id="totalErasure" class="erasure-value">$1,500,000</div>
-                        <p class="font-mono text-zinc-400" style="font-size: 13px; line-height: 1.6;">
-                            VERDICT: Every dollar of silence destroys <span style="color: #fff;">$10</span> of enterprise value. The "Truth Gap" is not a delay; it is a <span class="text-red">EBITDA Strike</span>.
-                        </p>
+                        <div id="totalErasure" class="erasure-value">$0</div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section style="padding: 8rem 0;">
-            <div class="container">
-                <div style="text-align: center; margin-bottom: 4rem;">
-                    <span class="font-mono text-gold uppercase tracking-widest" style="font-size: 10px;">Case Study: Project RRI'25</span>
-                    <h2 style="font-size: 3rem; text-transform: uppercase;">The 38-Day Truth Gap</h2>
-                </div>
-
-                <div class="truth-grid">
-                    <div class="truth-panel">
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 2rem;">
-                            <span class="font-mono" style="background: #222; padding: 4px 10px; font-size: 10px; text-transform: uppercase;">The Narrative</span>
-                            <span class="font-mono text-zinc-400" style="font-size: 10px;">ARCHAEOLOGY</span>
-                        </div>
-                        <div class="timeline-row"><span>Feb 20</span> <span class="text-green">STATUS: GREEN</span></div>
-                        <div class="timeline-row"><span>Mar 05</span> <span class="text-green">STATUS: GREEN</span></div>
-                        <div class="timeline-row"><span>Mar 15</span> <span class="text-green">STATUS: GREEN</span></div>
-                        <p class="font-mono" style="margin-top: 2rem; font-style: italic; color: #555; font-size: 12px;">"Everything is on track for Q2 delivery."</p>
-                    </div>
-                    <div class="truth-panel" style="border-left: 1px solid rgba(212, 175, 55, 0.2);">
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 2rem;">
-                            <span class="font-mono" style="background: var(--red-strike); padding: 4px 10px; font-size: 10px; text-transform: uppercase;">The Physics</span>
-                            <span class="font-mono text-zinc-400" style="font-size: 10px;">METEOROLOGY</span>
-                        </div>
-                        <div class="timeline-row"><span>Feb 20</span> <span class="text-red">BREACH DETECTED</span></div>
-                        <div class="timeline-row"><span>Mar 16</span> <span class="text-red">SYSTEMIC COLLAPSE</span></div>
-                        <div class="timeline-row"><span>Mar 30</span> <span class="text-red">PROJECT TERMINATED</span></div>
-                        <p class="font-mono text-red" style="margin-top: 2rem; font-style: italic; opacity: 0.7; font-size: 12px;">"Digital exhaust indicated failure 38 days prior to disclosure."</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section style="padding: 8rem 0; text-align: center; background: #050505;">
-            <div class="container">
-                <div style="border: 1px solid rgba(212, 175, 55, 0.3); padding: 5rem 2rem;">
-                    <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 1rem;">Initiate Forensic Diagnostic</h2>
-                    <p class="font-mono text-zinc-400" style="margin-bottom: 3rem;">We expose the Truth Gap in your highest-stakes program in 10 days. Fixed Fee: $15,000.</p>
-                    <a href="mailto:michael@makcon.com?subject=Initiate%20Forensic%20Diagnostic" class="btn-perimeter">Secure the Perimeter</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer style="padding: 4rem 0; text-align: center; border-top: 1px solid var(--zinc-900);">
-        <p class="font-mono text-zinc-800 tracking-widest" style="font-size: 10px;">&copy; 2026 MAKCON LLC | FORENSIC GOVERNANCE | SOVEREIGN INTELLIGENCE</p>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const zombieInput = document.getElementById('zombieSpend');
-            const multipleInput = document.getElementById('multiple');
-            const multipleValDisplay = document.getElementById('multipleVal');
-            const totalErasureDisplay = document.getElementById('totalErasure');
-
-            function adjudicate() {
-                const spend = parseFloat(zombieInput.value) || 0;
-                const multiple = parseInt(multipleInput.value);
-                multipleValDisplay.textContent = `${multiple}x`;
-                const total = spend * multiple;
-                const formatter = new Intl.NumberFormat('en-US', {
-                    style: 'currency', currency: 'USD', maximumFractionDigits: 0
-                });
-                totalErasureDisplay.textContent = formatter.format(total);
-            }
-
-            zombieInput.addEventListener('input', adjudicate);
-            multipleInput.addEventListener('input', adjudicate);
-            adjudicate();
-        });
-    </script>
+    <!-- GLOBAL ENGINES -->
+    <script src="/js/navigation.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>
