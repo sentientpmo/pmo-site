@@ -1,54 +1,93 @@
-/* The Sentient Architect | Global Design System 
-    Author: Michael Kaplan
-    Governance: Forensic Minimalist
-*/
+/* * The Sentient Architect | Global Design System v5.0
+ * Forensic Governance & Sovereign Intelligence Aesthetic
+ */
 
-/* --- Base Configuration --- */
-body { 
-    font-family: 'Inter', sans-serif; 
-    background-color: #0a0a0a; 
-    color: #e5e5e5; 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+:root {
+    --gold-primary: #D4AF37;
+    --gold-hover: #F1C40F;
+    --black-pure: #000000;
+    --zinc-dark: #09090b;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(9, 9, 11, 0.8);
 }
 
-.font-mono { 
-    font-family: 'JetBrains Mono', monospace; 
+/* Base Physics */
+body {
+    background-color: var(--black-pure);
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
 }
 
-/* --- Brand Colors --- */
-.gold-text { color: #D4AF37; }
-.gold-bg { background-color: #D4AF37; }
-
-/* --- UI Components --- */
-.glass-panel { 
-    background: rgba(255, 255, 255, 0.03); 
-    border: 1px solid rgba(255, 255, 255, 0.1); 
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px);
+/* Sovereign Selection Highlight */
+.selection-gold ::selection {
+    background-color: var(--gold-primary);
+    color: var(--black-pure);
 }
 
-/* --- Navigation & Interaction --- */
-html { scroll-behavior: smooth; }
-
-.selection-gold::selection {
-    background-color: #D4AF37;
-    color: #000;
+/* Typography */
+h1, h2, h3, .font-display {
+    letter-spacing: -0.05em;
 }
 
-#mobile-menu.hidden { 
-    display: none; 
+.gold-text {
+    color: var(--gold-primary);
 }
 
-/* --- Layout Elements --- */
-.hero-overlay { 
-    background: radial-gradient(circle, rgba(10,10,10,0.4) 0%, rgba(10,10,10,1) 100%); 
+.mono-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
 }
 
-.timeline-border { 
-    border-left: 1px solid rgba(212, 175, 55, 0.3); 
+/* UI Components */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
 }
 
-.glow-cyan { 
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.05); 
+.gold-bg {
+    background-color: var(--gold-primary);
+    color: var(--black-pure);
+    transition: all 0.3s ease;
+}
+
+.gold-bg:hover {
+    background-color: var(--gold-hover);
+    transform: translateY(-2px);
+}
+
+/* Hero & Visual Effects */
+.hero-bg {
+    background: radial-gradient(circle at center, #111 0%, #000 100%);
+}
+
+.hero-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4v-4H4v4H0v2h4v4h2v-4h4v-2H6zM36 4v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Mobile Navigation Adjudication */
+#mobile-menu {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#mobile-menu.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+}
+
+/* Forensic Graphic Containers */
+.forensic-frame {
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.5s ease;
+}
+
+.forensic-frame:hover {
+    border-color: var(--gold-primary);
 }

@@ -3,107 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Arsenal | Hunter Division | Sentient PMO</title>
+    <title>The Arsenal | Hunters | The Sentient Architect</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-    <style>
-        /* Specific styles for the Arsenal copy/paste functionality */
-        .copy-box { background: #111; border: 1px solid #333; padding: 1.5rem; border-radius: 0.75rem; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; position: relative; }
-        .copy-btn { position: absolute; top: 0.5rem; right: 0.5rem; background: #D4AF37; color: black; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 10px; font-weight: bold; cursor: pointer; }
-        .status-dot { height: 8px; width: 8px; background-color: #ef4444; border-radius: 50%; display: inline-block; }
-    </style>
 </head>
 <body class="antialiased selection-gold">
 
-    <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
-        <a href="../index.html" class="font-extrabold tracking-tighter text-xl uppercase italic">Hunter <span class="gold-text">Arsenal</span></a>
+    <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center text-white">
+        <a href="../index.html" class="font-extrabold tracking-tighter text-xl uppercase italic hover:opacity-80 transition-opacity">
+            The Sentient <span class="gold-text">Architect</span>
+        </a>
         
         <div class="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
-            <a href="../index.html" class="hover:text-yellow-500 transition-colors">Intelligence Home</a>
-            <a href="../briefing/index.html" class="hover:text-yellow-500 transition-colors">Briefing</a>
+            <a href="../briefing/index.html" class="hover:text-yellow-500 transition-colors">The Briefing</a>
             <a href="../services/index.html" class="hover:text-yellow-500 transition-colors">Services</a>
+            <a href="../intelligence/index.html" class="hover:text-yellow-500 transition-colors uppercase">Vault</a>
+            <a href="https://mkaplan.substack.com/" target="_blank" class="hover:text-yellow-500 transition-colors">Substack</a>
+            <a href="../hunters/index.html" class="text-red-500 font-bold tracking-[0.2em]">Hunters</a>
         </div>
 
         <div class="flex items-center gap-4">
-            <span class="status-dot animate-pulse"></span>
-            <div class="text-[10px] font-mono uppercase tracking-widest text-red-500 mr-4">Live Revenue Ops</div>
+            <a href="https://luma.com/xh2r0z47" class="gold-bg text-black text-[10px] font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all shadow-lg uppercase">April 23 Pass</a>
             <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
     </nav>
 
-    <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-black/95 flex flex-col items-center justify-center gap-8 font-mono text-sm uppercase tracking-[0.3em]">
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-black/95 flex flex-col items-center justify-center gap-8 font-mono text-sm uppercase tracking-[0.3em] text-white">
         <a href="../index.html" class="hover:text-yellow-500">Home</a>
-        <a href="../briefing/index.html" class="hover:text-yellow-500">Briefing</a>
-        <a href="../services/index.html" class="hover:text-yellow-500">Services</a>
-        <button id="menu-close" class="mt-8 text-[10px] border border-zinc-800 px-4 py-2 rounded">Close</button>
+        <a href="../briefing/index.html" class="hover:text-yellow-500">The Briefing</a>
+        <a href="../intelligence/index.html" class="hover:text-yellow-500">The Vault</a>
+        <a href="../hunters/index.html" class="text-red-500">Hunters</a>
+        <button id="menu-close" class="mt-8 text-[10px] border border-zinc-800 px-6 py-3 rounded text-zinc-400 hover:text-white hover:border-zinc-600 transition-all uppercase tracking-widest">Close Menu</button>
     </div>
 
-    <header class="pt-40 pb-16 px-6 text-center border-b border-zinc-900">
-        <h1 class="text-4xl md:text-6xl font-black mb-8 tracking-tighter uppercase italic">Load Your <span class="gold-text">Weapon.</span></h1>
-        <p class="text-gray-500 text-lg font-light max-w-2xl mx-auto leading-relaxed">
-            Direct outreach assets for the <strong>March Executive Briefings.</strong> <br>
-            Target the "Admin Tax." Liquidate the Truth Gap.
+    <header class="pt-48 pb-20 px-6 max-w-6xl mx-auto border-b border-zinc-900">
+        <div class="inline-block px-3 py-1 mb-6 text-[10px] font-mono tracking-widest text-red-500 border border-red-900 rounded-full bg-red-900/10 uppercase">
+            Tactical Equipment // The Arsenal
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black mb-8 tracking-tighter uppercase italic leading-tight text-white">
+            Clinical <br><span class="text-red-600">Weaponry.</span>
+        </h1>
+        <p class="text-gray-500 text-lg font-light max-w-lg leading-relaxed">
+            These are the sovereign instruments required to adjudicate Scientific Insolvency. Decommission the status report and install the <strong>Fiduciary Radar</strong>.
         </p>
     </header>
 
-    <section class="py-24 px-6 max-w-4xl mx-auto">
-        
-        <div class="mb-20">
-            <h2 class="text-2xl font-bold text-white mb-8 uppercase italic tracking-widest border-l-4 border-red-600 pl-6">01 / Wave 1: Category Collapse</h2>
-            <p class="text-zinc-500 text-sm mb-8 italic">Use this for LinkedIn posts or long-form DMs. It leverages the structural rejection of Reporting Theater.</p>
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <div class="copy-box">
-                <button class="copy-btn" onclick="copyText('wave-1')">COPY</button>
-                <div id="wave-1">
-                    The market is liquidating the "Admin Tax" in real-time. This isn't a tech winter; it's a structural rejection of Reporting Theater. <br><br>
-                    Your CIO doesn't need another "Pretty Board." They need a Radar System. <br><br>
-                    We are running Forensic Audits that find the Truth Gap and Zombie Spend legacy tools hide. Stop being the middleware. Become the Architect. <br><br>
-                    Join Michael Kaplan for a Surgical Strike on your portfolio. <br><br>
-                    [Your Luma Referral Link Here]
-                </div>
+            <div class="glass-panel p-8 rounded-2xl border-zinc-800 hover:border-red-900 transition-all group">
+                <div class="text-[10px] font-mono text-zinc-500 mb-4 uppercase tracking-widest">Instrument 01</div>
+                <h3 class="text-xl font-bold mb-4 uppercase italic text-white">Architect Battle Card</h3>
+                <p class="text-xs text-gray-500 mb-8 leading-relaxed">The high-density counter-narrative required to humiliate legacy PMO reporting theater.</p>
+                <a href="../intelligence/battle-card.html" class="text-[10px] font-mono uppercase tracking-widest text-red-500 hover:text-white transition-colors">Enter Briefing Room →</a>
             </div>
-        </div>
 
-        <div class="mb-20">
-            <h2 class="text-2xl font-bold text-white mb-8 uppercase italic tracking-widest border-l-4 border-gold-text pl-6">02 / The Sniper DM</h2>
-            <p class="text-zinc-500 text-sm mb-8 italic">High-precision outreach for targeted CIOs/CFOs.</p>
-            
-            <div class="copy-box">
-                <button class="copy-btn" onclick="copyText('sniper-dm')">COPY</button>
-                <div id="sniper-dm">
-                    [Name], saw your portfolio is currently reported as "Green." In my experience auditing $25M portfolios, 80% of those reports are either lagging or masking a material breach. <br><br>
-                    We’ve built a forensic engine that detects "Zombie Spend" in 10 days. Michael Kaplan is hosting an executive briefing to show how it's done. Want a guest pass to see the radar?
-                </div>
+            <div class="glass-panel p-8 rounded-2xl border-zinc-800 hover:border-red-900 transition-all group">
+                <div class="text-[10px] font-mono text-zinc-500 mb-4 uppercase tracking-widest">Instrument 02</div>
+                <h3 class="text-xl font-bold mb-4 uppercase italic text-white">Digital MRI Protocol</h3>
+                <p class="text-xs text-gray-500 mb-8 leading-relaxed">The clinical framework used to bypass human testimony and audit digital exhaust.</p>
+                <a href="../intelligence/briefing-protocol.html" class="text-[10px] font-mono uppercase tracking-widest text-red-500 hover:text-white transition-colors">Enter Briefing Room →</a>
             </div>
-        </div>
 
-        <div class="bg-zinc-950 border border-zinc-800 p-10 rounded-3xl text-center">
-            <h2 class="text-xl font-bold text-white mb-6 uppercase tracking-widest">Tactical Asset Downloads</h2>
-            <div class="grid md:grid-cols-2 gap-4">
-                <a href="../intelligence/assets/Sentient_Architect_Battle_Card_v1.0.pdf" target="_blank" class="flex items-center justify-between glass-panel p-4 rounded-xl hover:border-gold-text transition-all group">
-                    <span class="text-[10px] font-mono uppercase text-gray-400 group-hover:text-white">Battle Card (v5.0)</span>
-                    <span class="text-gold-text font-bold">.PDF</span>
-                </a>
-                <a href="../intelligence/assets/EBITDA_Strike_Radar_Visual_v1.0.pdf" target="_blank" class="flex items-center justify-between glass-panel p-4 rounded-xl hover:border-gold-text transition-all group">
-                    <span class="text-[10px] font-mono uppercase text-gray-400 group-hover:text-white">Strike Radar Sample</span>
-                    <span class="text-gold-text font-bold">.PDF</span>
-                </a>
+            <div class="glass-panel p-8 rounded-2xl border-zinc-800 hover:border-red-900 transition-all group">
+                <div class="text-[10px] font-mono text-zinc-500 mb-4 uppercase tracking-widest">Instrument 03</div>
+                <h3 class="text-xl font-bold mb-4 uppercase italic text-white">EBITDA Strike Radar</h3>
+                <p class="text-xs text-gray-500 mb-8 leading-relaxed">Visualizing the financial strike of Decision Latency on the enterprise P&L.</p>
+                <a href="../intelligence/strike-radar.html" class="text-[10px] font-mono uppercase tracking-widest text-red-500 hover:text-white transition-colors">Calculate Strike →</a>
             </div>
-        </div>
 
+        </div>
     </section>
 
-    <script src="../js/navigation.js"></script>
-    <script>
-        function copyText(id) {
-            const text = document.getElementById(id).innerText;
-            navigator.clipboard.writeText(text);
-            alert("Ammo Copied to Clipboard.");
-        }
-    </script>
+    <footer class="py-24 text-center bg-black border-t border-zinc-900">
+        <div class="mb-12 text-center">
+            <h3 class="text-2xl font-black uppercase italic mb-4 text-white">Harden Your Position</h3>
+            <p class="text-gray-500 text-sm mb-8">Access the complete Intelligence Vault for clinical evidence.</p>
+            <div class="flex justify-center">
+                <a href="../intelligence/index.html" class="gold-bg text-black font-bold py-4 px-12 rounded-xl hover:bg-yellow-500 transition-all uppercase tracking-widest text-sm shadow-2xl">Enter the Vault</a>
+            </div>
+        </div>
+        <div class="text-zinc-800 text-[10px] font-mono uppercase tracking-[0.3em]">
+            &copy; 2026 MAKCON LLC // DATA DOES NOT HAVE AN EGO.
+        </div>
+    </footer>
 
+    <script src="../js/navigation.js"></script>
 </body>
 </html>

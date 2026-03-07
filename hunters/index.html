@@ -3,90 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hunters | Revenue Ops Division | Sentient PMO</title>
+    <title>Hunters | The Sentient Architect | Forensic Governance</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-    <style>
-        /* Specific page enhancements for the Hunter aesthetic */
-        .red-border { border: 1px solid rgba(239, 68, 68, 0.3); }
-        .red-text { color: #ef4444; }
-    </style>
 </head>
-<body class="antialiased selection:bg-red-500 selection:text-white">
+<body class="antialiased selection-gold">
 
-    <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
-        <a href="../index.html" class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></a>
+    <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center text-white">
+        <a href="../index.html" class="font-extrabold tracking-tighter text-xl uppercase italic hover:opacity-80 transition-opacity">
+            The Sentient <span class="gold-text">Architect</span>
+        </a>
         
         <div class="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
-            <a href="../briefing/index.html" class="hover:text-yellow-500 transition-colors">Briefing</a>
-            <a href="../intelligence/index.html" class="hover:text-yellow-500 transition-colors">Vault</a>
+            <a href="../briefing/index.html" class="hover:text-yellow-500 transition-colors">The Briefing</a>
             <a href="../services/index.html" class="hover:text-yellow-500 transition-colors">Services</a>
-            <a href="arsenal.html" class="red-text hover:text-red-400 transition-colors">The Arsenal</a>
+            <a href="../intelligence/index.html" class="hover:text-yellow-500 transition-colors uppercase">Vault</a>
+            <a href="https://mkaplan.substack.com/" target="_blank" class="hover:text-yellow-500 transition-colors">Substack</a>
+            <a href="../hunters/index.html" class="text-red-500 font-bold tracking-[0.2em]">Hunters</a>
         </div>
 
         <div class="flex items-center gap-4">
-            <a href="https://luma.com/xh2r0z47" class="gold-bg text-black text-[10px] font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all uppercase">April 23 Pass</a>
+            <a href="https://luma.com/xh2r0z47" class="gold-bg text-black text-[10px] font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all shadow-lg uppercase">April 23 Pass</a>
             <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
     </nav>
 
-    <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-black/95 flex flex-col items-center justify-center gap-8 font-mono text-sm uppercase tracking-[0.3em]">
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-black/95 flex flex-col items-center justify-center gap-8 font-mono text-sm uppercase tracking-[0.3em] text-white">
         <a href="../index.html" class="hover:text-yellow-500">Home</a>
-        <a href="../briefing/index.html" class="hover:text-yellow-500">Briefing</a>
-        <a href="../intelligence/index.html" class="hover:text-yellow-500">Vault</a>
-        <a href="../services/index.html" class="hover:text-yellow-500">Services</a>
-        <a href="arsenal.html" class="red-text">The Arsenal</a>
-        <button id="menu-close" class="mt-8 text-[10px] border border-zinc-800 px-4 py-2 rounded">Close</button>
+        <a href="../briefing/index.html" class="hover:text-yellow-500">The Briefing</a>
+        <a href="../intelligence/index.html" class="hover:text-yellow-500">The Vault</a>
+        <a href="../hunters/index.html" class="text-red-500">Hunters</a>
+        <button id="menu-close" class="mt-8 text-[10px] border border-zinc-800 px-6 py-3 rounded text-zinc-400 hover:text-white hover:border-zinc-600 transition-all uppercase tracking-widest">Close Menu</button>
     </div>
 
-    <header class="pt-48 pb-20 px-6 text-center border-b border-zinc-900 bg-gradient-to-b from-red-900/10 to-black">
+    <header class="pt-48 pb-20 px-6 max-w-6xl mx-auto border-b border-zinc-900">
         <div class="inline-block px-3 py-1 mb-6 text-[10px] font-mono tracking-widest text-red-500 border border-red-900 rounded-full bg-red-900/10 uppercase">
-            Authorized Personnel Only // Revenue Ops
+            Sovereign Intelligence // Hunters
         </div>
-        <h1 class="text-4xl md:text-6xl font-black mb-8 tracking-tighter uppercase italic">Become a <span class="red-text">Hunter.</span></h1>
-        <p class="text-gray-500 text-lg font-light max-w-2xl mx-auto leading-relaxed">
-            Stop selling software. Start hunting <strong>Zombie Spend</strong>. <br>
-            We are recruiting a decentralized force to liquidate the Admin Tax.
+        <h1 class="text-5xl md:text-7xl font-black mb-8 tracking-tighter uppercase italic leading-tight text-white">
+            Hunt the <br><span class="text-red-600">Truth Gap.</span>
+        </h1>
+        <p class="text-gray-500 text-lg font-light max-w-lg leading-relaxed">
+            We empower fiduciaries to decommission the "Admin Tax" and expose monetized silence. This is the arsenal for those who value <strong>Clinical Evidence</strong> over Reporting Theater.
         </p>
     </header>
 
-    <section class="py-24 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-        <div>
-            <h2 class="text-2xl font-bold mb-6 uppercase italic tracking-widest text-white">The Opportunity</h2>
-            <p class="text-sm text-zinc-400 leading-relaxed mb-6">
-                The market is in a state of <strong>Scientific Insolvency</strong>. Boardrooms are tired of paying the "Admin Tax" for manual reporting theater. As a Hunter, you identify the Truth Gap in your network and deploy the Sentient Architect to close it.
+    <section class="py-24 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+        <div class="glass-panel p-12 rounded-[2rem] border-zinc-800 hover:border-red-900 transition-all">
+            <h2 class="text-xs font-mono text-red-500 uppercase tracking-[0.4em] mb-6">Tactical Asset</h2>
+            <h3 class="text-3xl font-bold mb-6 uppercase italic text-white">The Hunter's <br>Arsenal</h3>
+            <p class="text-gray-400 font-light leading-relaxed mb-8">
+                Access the clinical tools required to adjudicate technical insolvency. From the <strong>EBITDA Strike Radar</strong> to the <strong>Digital MRI Protocol</strong>, find the evidence.
             </p>
-            <div class="space-y-4">
-                <div class="flex items-center gap-4 p-4 glass-panel rounded-xl">
-                    <span class="text-red-500 font-mono text-xl font-bold">$199</span>
-                    <span class="text-[10px] font-mono uppercase text-zinc-500">Bounty per Briefing Attendee</span>
-                </div>
-                <div class="flex items-center gap-4 p-4 glass-panel rounded-xl">
-                    <span class="text-red-500 font-mono text-xl font-bold">$2,500</span>
-                    <span class="text-[10px] font-mono uppercase text-zinc-500">Per Successful Retainer Strike</span>
-                </div>
-            </div>
+            <a href="arsenal.html" class="text-[10px] font-mono uppercase tracking-widest text-white border-b border-red-900 pb-1">Enter Arsenal →</a>
         </div>
 
-        <div class="red-border p-10 rounded-[3rem] bg-zinc-900/20">
-            <h3 class="text-xl font-bold mb-6 uppercase italic tracking-widest text-white">Hunter Profile</h3>
-            <ul class="space-y-4 text-xs text-zinc-500 font-mono uppercase tracking-widest">
-                <li>● High-Level Network in C-Suite / PE</li>
-                <li>● Rejection of "Manual Era" PMO</li>
-                <li>● Ability to Detect "Watermelon Projects"</li>
-                <li>● Mission-Driven for Transparency</li>
-            </ul>
-            <a href="mailto:michael@sentientpmo.com?subject=Hunter Code Request" class="block mt-10 w-full text-center border border-red-600 text-red-500 font-black py-4 rounded-xl hover:bg-red-600 hover:text-white transition-all tracking-widest uppercase">
-                Apply for Hunter Code
-            </a>
+        <div class="glass-panel p-12 rounded-[2rem] border-zinc-800 hover:border-red-900 transition-all">
+            <h2 class="text-xs font-mono text-red-500 uppercase tracking-[0.4em] mb-6">Mission Briefing</h2>
+            <h3 class="text-3xl font-bold mb-6 uppercase italic text-white">The April 23 <br>Briefing Room</h3>
+            <p class="text-gray-400 font-light leading-relaxed mb-8">
+                A high-density live intervention designed to harden your fiduciary stance. Secure your pass to witness the clinical deconstruction of the "Manual Era".
+            </p>
+            <a href="https://luma.com/xh2r0z47" class="text-[10px] font-mono uppercase tracking-widest text-white border-b border-red-900 pb-1">Request Pass →</a>
         </div>
     </section>
 
-    <footer class="py-16 text-center text-zinc-700 text-[10px] font-mono uppercase tracking-[0.3em] bg-black">
-        &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT // DATA DOES NOT HAVE AN EGO.
+    <footer class="py-24 text-center bg-black border-t border-zinc-900">
+        <div class="mb-12">
+            <h3 class="text-2xl font-black uppercase italic mb-4 text-white text-center">Adjudicate the Portfolio</h3>
+            <p class="text-gray-500 text-sm mb-8 text-center">Secure your seat for the April 23 Executive Workshop.</p>
+            <div class="flex justify-center">
+                <a href="https://luma.com/xh2r0z47" class="gold-bg text-black font-bold py-4 px-12 rounded-xl hover:bg-yellow-500 transition-all uppercase tracking-widest text-sm shadow-2xl">April 23 Pass</a>
+            </div>
+        </div>
+        <div class="text-zinc-800 text-[10px] font-mono uppercase tracking-[0.3em] text-center">
+            &copy; 2026 MAKCON LLC // DATA DOES NOT HAVE AN EGO.
+        </div>
     </footer>
 
     <script src="../js/navigation.js"></script>

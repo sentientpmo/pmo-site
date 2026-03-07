@@ -11,15 +11,33 @@
 <body class="antialiased selection-gold">
 
     <nav class="fixed top-0 w-full z-50 glass-panel py-4 px-8 flex justify-between items-center">
-        <a href="../index.html" class="font-extrabold tracking-tighter text-xl uppercase italic">The Sentient <span class="gold-text">Architect</span></a>
+        <a href="../index.html" class="font-extrabold tracking-tighter text-xl uppercase italic">
+            The Sentient <span class="gold-text">Architect</span>
+        </a>
+        
         <div class="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
-            <a href="../briefing/index.html" class="hover:text-yellow-500 transition-colors">Briefing</a>
+            <a href="../briefing/index.html" class="hover:text-yellow-500 transition-colors">The Briefing</a>
             <a href="../services/index.html" class="hover:text-yellow-500 transition-colors">Services</a>
             <a href="../intelligence/index.html" class="gold-text">Vault</a>
+            <a href="https://mkaplan.substack.com/" target="_blank" class="hover:text-yellow-500 transition-colors">Substack</a>
             <a href="../hunters/index.html" class="text-red-500 hover:text-red-400 transition-colors">Hunters</a>
         </div>
-        <a href="https://luma.com/xh2r0z47" class="gold-bg text-black text-[10px] font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all shadow-lg uppercase">April 23 Pass</a>
+
+        <div class="flex items-center gap-4">
+            <a href="https://luma.com/xh2r0z47" class="gold-bg text-black text-[10px] font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-all shadow-lg uppercase">April 23 Pass</a>
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
     </nav>
+
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-black/95 flex flex-col items-center justify-center gap-8 font-mono text-sm uppercase tracking-[0.3em]">
+        <a href="../index.html" class="hover:text-yellow-500">Home</a>
+        <a href="../briefing/index.html" class="hover:text-yellow-500">The Briefing</a>
+        <a href="../intelligence/index.html" class="hover:text-yellow-500">Vault</a>
+        <a href="../services/index.html" class="hover:text-yellow-500">Services</a>
+        <button id="menu-close" class="mt-8 text-[10px] border border-zinc-800 px-4 py-2 rounded">Close Menu</button>
+    </div>
 
     <header class="pt-48 pb-20 px-6 max-w-4xl mx-auto text-center">
         <div class="inline-block px-3 py-1 mb-6 text-[10px] font-mono tracking-widest text-yellow-500 border border-yellow-900 rounded-full bg-yellow-900/10 uppercase">
@@ -28,17 +46,16 @@
         <h1 class="text-4xl md:text-6xl font-black mb-8 tracking-tighter uppercase italic leading-tight">
             Architect <span class="gold-text">Battle Card</span>
         </h1>
-        <p class="text-gray-500 text-lg font-light leading-relaxed">
+        <p class="text-gray-400 text-lg font-light leading-relaxed">
             Decommission the Theater. Install the Radar. This is the high-density counter-narrative required to stop selling "Project Management" and start selling <strong>Capital Protection</strong>.
         </p>
     </header>
 
     <section class="py-12 px-6 max-w-6xl mx-auto">
         <div class="glass-panel rounded-[2rem] border-zinc-800 p-4 md:p-12 mb-16 text-center">
-            <h2 class="text-xs font-mono text-zinc-500 uppercase tracking-[0.4em] mb-8">Visual Evidence: Map vs. Radar</h2>
+            <h2 class="text-xs font-mono text-zinc-500 uppercase tracking-[0.4em] mb-8 italic">Visual Evidence: Map vs. Radar</h2>
             <div class="max-w-5xl mx-auto border border-zinc-900 rounded-xl overflow-hidden shadow-2xl relative group">
                 <img src="../images/battle-map-visual.png" alt="Sovereign Battle Map Visual" class="w-full opacity-90 group-hover:opacity-100 transition-opacity duration-700">
-                <div class="absolute inset-0 pointer-events-none border border-white/5 rounded-xl"></div>
             </div>
             <p class="mt-8 text-[10px] font-mono text-zinc-600 uppercase italic tracking-widest">"DECOMMISSION THE THEATER. INSTALL THE RADAR."</p>
         </div>
@@ -48,7 +65,7 @@
                 <h3 class="text-xs font-mono text-yellow-500 uppercase tracking-widest mb-4">The Problem</h3>
                 <p class="text-sm text-gray-400 leading-relaxed">Legacy models rely on <span class="text-white">Human APIs</span> who manually translate technical noise into sanitized PowerPoints, creating a 38-Day Truth Gap.</p>
             </div>
-            <div class="glass-panel p-8 rounded-2xl border-gold shadow-[0_0_15px_rgba(212,175,55,0.1)]">
+            <div class="glass-panel p-8 rounded-2xl border-zinc-700 bg-zinc-900/50 shadow-[0_0_20px_rgba(212,175,55,0.05)]">
                 <h3 class="text-xs font-mono text-yellow-500 uppercase tracking-widest mb-4">The Solution</h3>
                 <p class="text-sm text-gray-400 leading-relaxed">The Sentient OS bypasses human testimony and adjudicates the <span class="text-white">Digital Exhaust</span> to provide a Fiduciary Radar.</p>
             </div>
@@ -58,37 +75,13 @@
             </div>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-16 items-start mb-24">
-            <div class="space-y-8">
-                <h2 class="text-sm font-mono text-zinc-500 uppercase tracking-[0.4em]">The Taxonomy of Denial</h2>
-                <div class="space-y-4">
-                    <div class="p-6 border-l-2 border-zinc-800 bg-white/5 hover:bg-white/10 transition-colors group">
-                        <p class="text-[10px] font-mono text-zinc-500 uppercase mb-2">Objection: "We use ANSI/ISO standards"</p>
-                        <p class="text-sm italic text-gray-300">"The standards are the map. We are the radar. You can't navigate a 2026 storm using a 1960s map".</p>
-                    </div>
-                    <div class="p-6 border-l-2 border-zinc-800 bg-white/5 hover:bg-white/10 transition-colors group">
-                        <p class="text-[10px] font-mono text-zinc-500 uppercase mb-2">Objection: "Our PMs are calm and steady"</p>
-                        <p class="text-sm italic text-gray-300">"Being calm while burning $100k a week is a fiduciary failure. 'Calm' is often a synonym for 'Polite Historian'".</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="space-y-8">
-                <h2 class="text-sm font-mono text-yellow-500 uppercase tracking-[0.4em]">The Lethal Questions</h2>
-                <div class="glass-panel p-8 rounded-[2rem] border-zinc-800 space-y-6">
-                    <p class="text-lg font-bold italic uppercase tracking-tighter">"Are you governing a project, or are you <span class="gold-text">subsidizing a fiction</span>?"</p>
-                    <p class="text-lg font-bold italic uppercase tracking-tighter">"What is the current dollar amount of <span class="gold-text">Zombie Spend</span> sitting on your balance sheet?"</p>
-                </div>
-            </div>
-        </div>
-
         <div class="py-12 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="text-center md:text-left">
                 <p class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-2 italic">Next Evidence Asset</p>
                 <a href="briefing-protocol.html" class="text-xl font-black italic uppercase hover:text-yellow-500 transition-colors">02. The Digital MRI Protocol →</a>
             </div>
             
-            <div class="flex flex-col items-center gap-4">
+            <div class="flex flex-col items-center gap-4 order-last md:order-none">
                 <a href="assets/Sentient_Architect_Battle_Card_v1.0.pdf" download="Sentient_Architect_Battle_Card_v1.0.pdf" class="gold-bg text-black font-black py-4 px-12 rounded-xl hover:bg-yellow-500 transition-all uppercase tracking-widest text-sm shadow-2xl">
                     Download Battle Card (PDF)
                 </a>
@@ -101,7 +94,7 @@
 
     <footer class="py-16 text-center bg-black border-t border-zinc-900">
         <div class="text-zinc-700 text-[10px] font-mono uppercase tracking-[0.3em]">
-            &copy; 2026 MAKCON LLC // THE SENTIENT ARCHITECT
+            &copy; 2026 MAKCON LLC // DATA DOES NOT HAVE AN EGO.
         </div>
     </footer>
 
